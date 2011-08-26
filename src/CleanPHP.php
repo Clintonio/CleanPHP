@@ -27,9 +27,13 @@ if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 class CleanPHP {
 	
 	/**
-	* Location of CleanAPI modules
+	* Location of CleanAPI main modules
 	*/
 	private static $moduleFolder = "/modules/";
+	/**
+	* User defined module folders
+	*/
+	private static $userModules = array();
 	
 	/**
 	* Loaded module list
@@ -54,13 +58,26 @@ class CleanPHP {
 	*/
 	public static function import($class) {
 		if(!in_array($class, self::$loadedModules, true)) {
-			$location = __DIR__. self::$moduleFolder . preg_replace("/\\" . self::$moduleSeparator . "/", "/", $class) . ".php";
-			
+			$fileName  = preg_replace("/\\" . self::$moduleSeparator . "/", "/", $class) . ".php";
+			// Get class name so we can check import status after inclusion
 			$className = explode(self::$moduleSeparator, $class);
 			$className = end($className); 
+			// Attempt to include from base include folder
+			$location  = __DIR__. self::$moduleFolder . $fileName;
+			$imported  = (@include_once($location));
 			
-			if(!include_once($location)) {
-				throw new ClassNotFoundException($class, "No file found at " . $location);
+			if(!$imported) {
+				$x 		= 0;
+				$size 	= count(self::$userModules);
+				while(!$imported && ($x < $size)) {
+					$location = self::$userModules[$x] . $fileName;
+					$imported = (@include_once($location));
+					$x++;
+				}
+			}
+			
+			if(!$imported) {
+				throw new ClassNotFoundException($class, "No class found in any module folder");
 			} else if((!class_exists($className)) && (!interface_exists($className))) {
 				throw new ClassNotFoundException($class, "No class in file at " . $location);
 			} else {
@@ -68,6 +85,25 @@ class CleanPHP {
 			}
 		}
 	}
+		
+	//============================
+	// Adders
+	//============================
+	
+	/**
+	* Add a new module folder
+	*
+	* @throws	FileNotFoundException
+	* @param	String		New module folder
+	*/
+	public static function addModulePath($folder) {
+		if(is_dir($folder)) {
+			self::$userModules[] = $folder;	
+		} else {
+			throw FileNotFoundException("No such module folder");	
+		}
+	}
+	
 }
 
 //=====
@@ -91,6 +127,13 @@ class ClassNotFoundException extends RuntimeException {
 		parent::__construct($message, 0);
 	}
 }
+
+/**
+* File not found exception
+*
+* @author	Clinton Alexander
+*/
+class FileNotFoundException extends MissingResourceException { }
 
 /**
 * Exception to be thrown when an something that
