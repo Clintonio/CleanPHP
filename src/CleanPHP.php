@@ -19,6 +19,10 @@ if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 		Please install PHP Version 5.3 or contact your system administrator');
 }
 
+// Import some core modules
+CleanPHP::import("core.String");
+CleanPHP::import("core.Cookie");
+
 /**
 * Contains the most important functions and
 * functionality for the framework to load and
@@ -44,13 +48,19 @@ class CleanPHP {
 	* Module separator
 	*/
 	private static $moduleSeparator = ".";
+	
+	/**
+	* The name of the onload method for classes
+	*/
+	const ONLOAD_METHOD	= "onLoad";
 		
 	//============================
 	// Class loaders
 	//============================
 	
 	/**
-	* Load a class from a CleanAPI module
+	* Load a class from a CleanAPI module. If a static public method named "onLoad" is present
+	* it will be automatically executed
 	*
 	* @throws	ClassNotFoundException	When a class was not found
 	* @param	String		The class to load. Java style class name using dots to denote a package
@@ -64,14 +74,22 @@ class CleanPHP {
 			$className = end($className); 
 			// Attempt to include from base include folder
 			$location  = __DIR__. self::$moduleFolder . $fileName;
-			$imported  = (@include_once($location));
 			
+			$imported  = false;
+			if(file_exists($location)) {
+				$imported  = (include_once($location));
+			}
+			
+			// If it has not been found, check user module folders
 			if(!$imported) {
 				$x 		= 0;
 				$size 	= count(self::$userModules);
 				while(!$imported && ($x < $size)) {
 					$location = self::$userModules[$x] . $fileName;
-					$imported = (@include_once($location));
+					
+					if(file_exists($location)) {
+						$imported = (include_once($location));
+					}
 					$x++;
 				}
 			}
@@ -81,7 +99,16 @@ class CleanPHP {
 			} else if((!class_exists($className)) && (!interface_exists($className))) {
 				throw new ClassNotFoundException($class, "No class in file at " . $location);
 			} else {
-				self::$loadedModules[] = $class;	
+				self::$loadedModules[] = $class;
+				
+				// Attempt to run the on load functionality
+				if(method_exists($className, "onLoad")) {
+					$rm = new ReflectionMethod($className, self::ONLOAD_METHOD);
+					
+					if(($rm->isStatic()) && ($rm->isPublic())) {
+						$rm->invoke(NULL);
+					}
+				}
 			}
 		}
 	}
@@ -100,7 +127,7 @@ class CleanPHP {
 		if(is_dir($folder)) {
 			self::$userModules[] = $folder;	
 		} else {
-			throw FileNotFoundException("No such module folder");	
+			throw new FileNotFoundException("No such module folder");	
 		}
 	}
 	

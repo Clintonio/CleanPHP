@@ -14,11 +14,13 @@ if(Debug::isLineMonitorEnabled()) {
 }
 
 class Debug {
-	private static $timers 		= array();
+	private static $timers 			= array();
 	/* Number of lines executed */
-	private static $lineCount 	= 0;
+	private static $lineCount 		= 0;
 	/* Lines that have been executed with file*/
-	private static $executedLines = array();
+	private static $executedLines 	= array();
+	/* Whether debugging is visible or not */
+	private static $enabled 		= false;
 	
 	// Cannot be initialised
 	public function __construct() { 
@@ -175,7 +177,8 @@ class Debug {
 					$args[] = $a;
 					break;
 				case 'string':
-					$a = htmlspecialchars(str_trunc($a, 64));
+					$str = new String($a);
+					$a = htmlspecialchars($str->trunc(64, '...'));
 					$args[] ="\"$a\"";
 					break;
 				case 'array':
@@ -278,7 +281,7 @@ class Debug {
 	}
 	
 	//============================
-	// Status checkers
+	// Debug enabling and disabling
 	//============================
 
 	/**
@@ -288,7 +291,21 @@ class Debug {
 	* @return	Boolean
 	*/
 	public static function enabled() {
-		return false;
+		return self::$enabled;
+	}
+	
+	/**
+	* Turn debug on
+	*/
+	public static function enable() {
+		self::$enabled = true;	
+	}
+	
+	/**
+	* Turn debug off
+	*/
+	public static function disable() {
+		self::$enabled = false;	
 	}
 }
 

@@ -53,4 +53,13 @@ interface Database {
 	* @return	void
 	*/
 	function closeConnection();
+	
+	/**
+	* Clean the input data value to prevent it causing
+	* injections 
+	*
+	* @param	String		Input data (Not a query statement)
+	* @return	String		Clean input data
+	*/
+	function clean($string);
 }

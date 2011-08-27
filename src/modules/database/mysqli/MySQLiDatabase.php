@@ -29,10 +29,7 @@ class MySQLiDatabase implements Database {
 	*/
 	public function __construct($username, $password, $dbname, $host = "localhost") {
 		/* Add said DB to the arrray */
-		$this->mySQLi = new MySQLi($dbArray["host"], 
-									$dbArray["username"], 
-									$dbArray["password"], 
-									$dbArray["dbname"]);
+		$this->mySQLi = new MySQLi($host, $username, $password, $dbname);
 	
 		/* Check to see if the DB connection is working */
 		if($this->mySQLi->connect_errno != 0) {
