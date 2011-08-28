@@ -29,6 +29,16 @@ class String {
 		return $this->str;	
 	}
 	
+	/**
+	* Checking equality between this string and another object. 
+	* For checking if the string *objects* are identical use ===
+	*
+	* @return	Whether the other value evaluates to the string value of this string
+	*/
+	public function equals($value) {
+		return ((string) $value === $this->str); 	
+	}
+	
 	//=======================
 	// String editing methods (methods not available in str_ library)
 	//=======================

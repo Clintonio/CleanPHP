@@ -10,11 +10,11 @@ class Get {
 	*
 	* @param	String		Name of post field
 	* @param	Mixed		Default value
-	* @return	Mixed		Default value or post field (if exists)
+	* @return	Mixed		Default value or String object of post field (if exists)
 	*/
 	public static function value($index, $default = false) {
 		if(isset($_GET[$index])) {
-			return $_GET[$index];
+			return new String($_GET[$index]);
 		} else {
 			// Not in either, return default
 			return $default;

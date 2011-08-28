@@ -14,7 +14,7 @@ class Post {
 	*/
 	public static function value($index, $default = false) {
 		if(isset($_POST[$index])) {
-			return $_POST[$index];
+			return new String($_POST[$index]);
 		} else {
 			// Not in either, return default
 			return $default;

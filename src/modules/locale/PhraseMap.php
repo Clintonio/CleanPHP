@@ -17,6 +17,10 @@ class PhraseMap {
 	* The store of phrases for this map
 	*/
 	private $phrases = array();
+	/**
+	* Default phrase index 
+	*/
+	const DEFAULT_LANG_INDEX = '';
 	
 	/**
 	* Create a phrase map from the given file
@@ -26,7 +30,7 @@ class PhraseMap {
 	* @param	Language	The language of this file
 	*/
 	public function __construct($file, Language $lang) {
-		loadFile($file);
+		$this->loadFile($file);
 		$this->curLang = $lang;
 	}
 	
@@ -35,19 +39,30 @@ class PhraseMap {
 	//============================
 	
 	/**
-	* Gets output text, and formats it if desired. More optional parameters can be specified
-	* which will serve as replacements
-	* If the second param is an array, we will use that as the replacement text
+	* Return a phrase based on the current language or given alternate
+	* language
 	*
 	* @param	String		Text element ID
-	* @param	String		Replacements. Can be more than one of these parameters
+	* @param	Language	Alternate language to get phrase for (as opposed to current language) 
+	* 						(use setLanguage instead if possible)
 	* @return	String		The formatted output or "Invalid element specified";
 	*/
-	public function getPhrase($phraseID) {
+	public function getPhrase($phraseID, Language $altLang = NULL) {
 		if(!isset($this->phrases[$phraseID])) {
 			throw new MissingPhraseException("No such phrase " . $phraseID);	
 		} else {
-			return trim($this->phrases[$phraseID]);	
+			// Pick our current language
+			if(isset($altLang)) {	
+				$langCode = (string) $altLang->getLanguageCode();
+			} else {
+				$langCode = (string) $this->curLang->getLanguageCode();
+			}
+			// Use default if none exists
+			if(!isset($this->phrases[$phraseID][$langCode])) {
+				$langCode = self::DEFAULT_LANG_INDEX;	
+			}
+			
+			return trim($this->phrases[$phraseID][$langCode]);	
 		}
 	}
 	
@@ -58,6 +73,19 @@ class PhraseMap {
 	*/
 	public function getLanguage() {
 		return $this->curLang;
+	}
+	
+	//============================
+	// Setters
+	//============================
+	
+	/**
+	* Set the current language
+	*
+	* @param	Language	Current language
+	*/
+	public function setLanguage(Language $lang) {
+		$this->curLang = $lang;	
 	}
 	
 	//============================
@@ -86,14 +114,13 @@ class PhraseMap {
 	* @return	void
 	*/
 	private function loadFile($filename) {
-		if(file_exists($filename)) {
-			throw new MissingPhraseMapException($filename);
+		if(!file_exists($filename)) {
+			throw new MissingPhraseMapException(realpath($filename));
 		} else {
-			$xml = @simplexml_load_file($filename);
+			$xml = simplexml_load_file($filename);
 			if(!$xml) {
 				throw new MissingPhraseMapException("Could not load phrase map, parse error in " . $filename);
 			} else {
-				$phrases = array();
 				// The top level element of the lang library is <LangLibrary> then <Text name=...>.
 				$children = $xml->children();
 				foreach($children as $textElem) {
@@ -101,19 +128,50 @@ class PhraseMap {
 					
 					$name = (string) $attributes['name'];
 					if(count($textElem) == 0) {
-						$phrases[$name] = $textElem->__toString();
+						$this->phrases[$name][self::DEFAULT_LANG_INDEX] = $textElem->__toString();
 					} else {
-						$patterns = array('/<text name=[\'"][A-Z\-0-9]+[\'"]>/i', '/<\/text>/i');
-						$replacements = array('','');
-						$phrases[$name] = preg_replace($patterns, $replacements, $textElem->asXML());
+						$locales = $textElem->children();
+						foreach($locales as $localeElem) {
+							$this->parseLocaleElement($localeElem, $name);
+						}
 					}
 				}
-				
-				// Every library will by default contain a variable called $elements, whch will be used
-				// to extract language elements
-				$this->phrases = $phrases;
 			}
 		}
+	}
+	
+	/**
+	* Parse the phrases into the phrases list
+	*
+	* @param	SimpleXMLElement	The element to parse
+	* @param	string				The name of this phrase
+	*/
+	private function parseLocaleElement(SimpleXMLElement $elem, $name) {
+		// Whether this is a default element
+		$default = false;
+		
+		$attributes = $elem->attributes();
+		
+		$locale = self::DEFAULT_LANG_INDEX;
+		if(isset($attributes['code'])) {
+			$locale = (string) $attributes['code'];
+		}
+		if(isset($attributes['default'])) {
+			$default = (boolean) $attributes['default'];	
+		}
+		
+		// In the case that there is no phrase for this language yet
+		// or a default exists we will use that if no other does
+		$patterns 		= array('/<locale (code=[\'"][A-Z\-0-9]+[\'"]) (default=[\'"][A-Z\-0-9]+[\'"])>/i', '/<\/locale>/i');
+		$replacements 	= array('','');
+		$phrase 		= new String(preg_replace($patterns, $replacements, $elem->asXML()));
+		
+		$this->phrases[$name][$locale] = $phrase;
+		
+		// Ensure a default is set
+		if(($default) || (!isset($this->phrases[$name][self::DEFAULT_LANG_INDEX]))) {
+			$this->phrases[$name][self::DEFAULT_LANG_INDEX] = $phrase;
+		}	
 	}
 }
 ?>
