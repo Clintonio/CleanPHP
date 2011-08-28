@@ -147,7 +147,7 @@ class ClassNotFoundException extends RuntimeException {
 	* Create a new class not found exception for the given class and message
 	*
 	* @param	String		Name of class not found
-	* @param	String		Message for user
+	* @param	String		Message for developer
 	*/
 	public function __construct($class, $message) {
 		$message = "Could not load class: " . $class . ". " . $message;
@@ -160,7 +160,21 @@ class ClassNotFoundException extends RuntimeException {
 *
 * @author	Clinton Alexander
 */
-class FileNotFoundException extends MissingResourceException { }
+class FileNotFoundException extends MissingResourceException { 
+	/**
+	* Create a new class not found exception for the given class and message
+	*
+	* @param	String		Message for developer
+	* @param	String		File that was missing
+	*/
+	public function __construct($message, $file = NULL) {
+		if($file != NULL) {
+			$message = 'Could not load file: ' . $file . '. ' . $message;
+		}
+		
+		parent::__construct($message, 0);
+	}
+}
 
 /**
 * Exception to be thrown when an something that

@@ -44,7 +44,7 @@ class ConfigJSON implements Config {
 				
 				// Loop over and set all values to protected
 				foreach($configArray as $configName => $configValue) {
-					$this->setConfig($configName, $configValue, true);
+					$this->setTempConfig($configName, $configValue, true);
 				}
 			}
 		}
