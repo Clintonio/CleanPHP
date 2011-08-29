@@ -62,7 +62,7 @@ class PhraseMap {
 				$langCode = self::DEFAULT_LANG_INDEX;	
 			}
 			
-			return trim($this->phrases[$phraseID][$langCode]);	
+			return $this->phrases[$phraseID][$langCode];	
 		}
 	}
 	
@@ -164,7 +164,7 @@ class PhraseMap {
 		// or a default exists we will use that if no other does
 		$patterns 		= array('/<locale (code=[\'"][A-Z\-0-9]+[\'"]) (default=[\'"][A-Z\-0-9]+[\'"])>/i', '/<\/locale>/i');
 		$replacements 	= array('','');
-		$phrase 		= new String(preg_replace($patterns, $replacements, $elem->asXML()));
+		$phrase 		= new String(trim(preg_replace($patterns, $replacements, $elem->asXML())));
 		
 		$this->phrases[$name][$locale] = $phrase;
 		
