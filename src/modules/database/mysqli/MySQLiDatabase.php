@@ -194,8 +194,8 @@ class MySQLiDatabase implements Database {
 	* @param	String		Data to be sanitised
 	* @return	String		Sanitised data
 	*/
-	public function clean($string) {
-		return $this->mySQLi->real_escape_string($string);	
+	public function clean(String $string) {
+		return new String($this->mySQLi->real_escape_string($string));	
 	}
 	
 	/**

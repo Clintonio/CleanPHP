@@ -61,5 +61,5 @@ interface Database {
 	* @param	String		Input data (Not a query statement)
 	* @return	String		Clean input data
 	*/
-	function clean($string);
+	function clean(String $string);
 }

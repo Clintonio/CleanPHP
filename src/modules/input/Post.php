@@ -10,14 +10,19 @@ class Post {
 	*
 	* @param	String		Name of post field
 	* @param	Mixed		Default value
-	* @return	Mixed		Default value or post field (if exists)
+	* @return	Mixed		Default value or post field (if exists). 
+	*						String types are converted to String objects
 	*/
 	public static function value($index, $default = false) {
 		if(isset($_POST[$index])) {
 			return new String($_POST[$index]);
 		} else {
 			// Not in either, return default
-			return $default;
+			if(is_string($default)) {
+				return new String($default);	
+			} else {
+				return $default;
+			}
 		}
 	}
 }

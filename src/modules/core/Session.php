@@ -27,7 +27,7 @@ class Session {
 			session_start();	
 		}
 		
-		$this->updateToken();
+		self::updateToken();
 	}
 	
 	/**
@@ -36,7 +36,7 @@ class Session {
 	* @return	String		Session token
 	*/
 	public static function getToken() {
-		return new String($_SESSION[TOKEN_INDEX]);
+		return new String($_SESSION[self::TOKEN_INDEX]);
 	}
 	
 	/**
@@ -45,28 +45,28 @@ class Session {
 	* @return	int			Session expire timestamp
 	*/
 	public static function getTokenExpireTime() {
-		return $_SESSION[TOKEN_EXPIRE_INDEX];
+		return $_SESSION[self::TOKEN_EXPIRE_INDEX];
 	}
 	
 	/**
 	* Update the user's session token
 	*/
 	private static function updateToken() {
-		if((!isset($_SESSION[TOKEN_EXPIRE_INDEX])) || (!isset($_SESSION[TOKEN_INDEX]))
-			|| ($_SESSION[TOKEN_EXPIRE_INDEX] < time())) {
-			$_SESSION[TOKEN_INDEX] 			= uniqid();
+		if((!isset($_SESSION[self::TOKEN_EXPIRE_INDEX])) || (!isset($_SESSION[self::TOKEN_INDEX]))
+			|| ($_SESSION[self::TOKEN_EXPIRE_INDEX] < time())) {
+			$_SESSION[self::TOKEN_INDEX] 			= uniqid();
 		}
 		
-		$_SESSION[TOKEN_EXPIRE_INDEX] 	= time() + self::SESSION_TOKEN_LIFESPAN;
+		$_SESSION[self::TOKEN_EXPIRE_INDEX] 	= time() + self::SESSION_TOKEN_LIFESPAN;
 	}
 	
 	/**
-	* Check if the given string is a valid session token
+	* Check if the given token is valid
 	*
 	* @param	String		Value to check against
 	*/
-	public static function isValidToken(String $token) {
-		return ($token.equals(self::getToken()));
+	public static function isTokenValid(String $token) {
+		return ($token->equals(self::getToken()));
 	}
 }
 ?>

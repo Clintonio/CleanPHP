@@ -21,6 +21,7 @@ if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 
 // Import some core modules
 CleanPHP::import("core.String");
+CleanPHP::import('core.Session');
 CleanPHP::import("core.Cookie");
 
 /**

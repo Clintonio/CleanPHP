@@ -40,6 +40,48 @@ class String {
 	}
 	
 	//=======================
+	// Basic String Methods
+	//=======================
+	
+	/**
+	* Append a string to this string
+	*
+	* @param	string		String to append
+	* @return	String		Resulting new string
+	*/
+	public function append($string) {
+		return new String($this->str . $string);
+	}
+	
+	/**
+	* Prepend a string to this string
+	*
+	* @param	string		String to Prepend
+	* @return	String		Resulting new string
+	*/
+	public function prepend($string) {
+		return new String($string . $this->str);
+	}
+	
+	//=======================
+	// String editing methods (methods already available in str_ library)
+	//=======================
+	
+	/**
+	* Replace one or more values with one or more others. Identical to
+	* str_replace
+	*
+	* @param	Mixed	The elements to search for
+	* @param	Mixed	The elements to replace
+	* @param	int		Maximum number of replacements. 0 is unlimited [default=0]
+	* @return	String	The new string value
+	*/
+	public function replace($find, $replace, $max = 0) {
+		return new String(str_replace($find, $replace, $this->str, $max));
+	}
+	
+	
+	//=======================
 	// String editing methods (methods not available in str_ library)
 	//=======================
 	
