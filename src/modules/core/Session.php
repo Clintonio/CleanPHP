@@ -6,6 +6,11 @@
 */
 class Session {
 	/**
+	* Current user's IP
+	*/
+	private static $ip;
+	
+	/**
 	* Session token length in seconds
 	*/
 	const SESSION_TOKEN_LIFESPAN = 300;
@@ -27,7 +32,19 @@ class Session {
 			session_start();	
 		}
 		
+		self::$ip = new String(getenv('REMOTE_ADDR'));
+		
 		self::updateToken();
+		
+	}
+	
+	/**
+	* Get IP of current session
+	*
+	* @return	String		IP
+	*/
+	public static function getIP() {
+		return self::$ip;
 	}
 	
 	/**

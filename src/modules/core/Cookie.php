@@ -36,7 +36,7 @@ class Cookie {
 			$value = $this->value; 	
 		}
 		
-		return $value;
+		return new String($value);
 	}
 	
 	/**
@@ -46,8 +46,13 @@ class Cookie {
 	*/
 	public function setValue($value) {
 		$value = (string) $value;
-		setcookie($this->name, $value, $this->expire, $this->path, 
-				  $this->domain, $this->secure, $this->httpOnly);
+		
+		if($_SERVER['HTTP_HOST'] == 'localhost') {
+			setcookie($this->name, $value, false, $this->path, false, $this->secure, $this->httpOnly);
+		} else {
+			setcookie($this->name, $value, $this->expire, $this->path, 
+					  $this->domain, $this->secure, $this->httpOnly);
+		} 
 		$this->value = $value;	
 	}
 	
