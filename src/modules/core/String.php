@@ -20,6 +20,10 @@ class String {
 		$this->str = (string) $string;	
 	}
 	
+	//=======================
+	// Fundemental Methods
+	//=======================
+	
 	/**
 	* To string
 	*
@@ -39,9 +43,45 @@ class String {
 		return ((string) $value === $this->str); 	
 	}
 	
+	/**
+	* Parse the integer value that this string represents
+	*
+	* @return	int		Value this string represents
+	*/
+	public function asInt() {
+		return (int) $this->str;	
+	}
+	
+	/**
+	* Parse the boolean value that this string represents
+	*
+	* @return	bool	Value this string represents
+	*/
+	public function asBoolean() {
+		return (boolean) $this->str;	
+	}
+	
+	/**
+	* Parse the boolean value that this string represents
+	*
+	* @return	bool	Value this string represents
+	*/
+	public function asBool() {
+		return (boolean) $this->str;	
+	}
+	
 	//=======================
 	// Basic String Methods
 	//=======================
+	
+	/**
+	* Get the length of the string
+	*
+	* @return	int		Length of the string
+	*/
+	public function length() {
+		return strlen($this->str);
+	}
 	
 	/**
 	* Append a string to this string
@@ -79,7 +119,16 @@ class String {
 	public function replace($find, $replace, $max = 0) {
 		return new String(str_replace($find, $replace, $this->str, $max));
 	}
-	
+	 
+	/**
+	* Encodes the string to be HTML safe
+	* Alias for htmlspecialchars
+	*
+	* @return	String	HTML safe string
+	*/
+	public function htmlEncode() {
+		return new String(htmlspecialchars($this->str));	
+	}
 	
 	//=======================
 	// String editing methods (methods not available in str_ library)
