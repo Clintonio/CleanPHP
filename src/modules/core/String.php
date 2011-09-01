@@ -131,6 +131,22 @@ class String {
 	}
 	
 	//=======================
+	// String manipulation methods (methods already available in str_ library)
+	//=======================
+	
+	/**
+	* Returns a substring of this string in the same manner
+	* to PHP's substring
+	*
+	* @param	int		Start position
+	* @param	int		Length (default = 0/unlimited)
+	* @return	String	Substring of this string
+	*/
+	public function substring($start, $length = 0) {
+		return new String(substr($this->str, $start, $length));
+	}
+	
+	//=======================
 	// String editing methods (methods not available in str_ library)
 	//=======================
 	
