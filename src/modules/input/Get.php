@@ -25,5 +25,15 @@ class Get {
 			}
 		}
 	}	
+	
+	/**
+	* Check if the get contains the given value
+	*
+	* @param	string		Name of get field
+	* @return	bool		True if value is contained
+	*/
+	public static function contains($index) {
+		return (isset($_GET[$index]));	
+	}
 }
 ?>
