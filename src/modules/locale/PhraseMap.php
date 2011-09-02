@@ -48,6 +48,7 @@ class PhraseMap {
 	* @return	String		The formatted output or "Invalid element specified";
 	*/
 	public function getPhrase($phraseID, Language $altLang = NULL) {
+		$phraseID = (string) $phraseID;
 		if(!isset($this->phrases[$phraseID])) {
 			throw new MissingPhraseException("No such phrase " . $phraseID);	
 		} else {
