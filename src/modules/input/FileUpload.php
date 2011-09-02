@@ -1,6 +1,7 @@
 <?php
 
 CleanPHP::import('error.ErrorHandler');
+CleanPHP::import('io.Folder');
 
 /**
 * An abstract representation of a temporarily uploaded
@@ -45,21 +46,21 @@ class FileUpload {
 	*
 	* @throws	FileNotFoundException	Thrown when file cannot be found
 	* @throws	IOException				When the file cannot be moved
-	* @param	String					Folder to move file to
+	* @param	Folder					Folder to move file to
 	* @param	String					(Optional) Alternative file name
 	* @return
 	*/
-	public function move(String $folder, String $name = NULL) {
+	public function move(Folder $folder, String $name = NULL) {
 		if($name != NULL) {
-			$loc = $folder->append($name);	
+			$file = $folder->getFile($name);	
 		} else {
-			$loc = $folder->append($_FILES[$this->name]['name']);	
+			$file = $folder->getFile($_FILES[$this->name]['name']);	
 		}
 		
 		ErrorHandler::emitExceptions();
 		
 		try {
-			if(!move_uploaded_file($_FILES[$this->name]['tmp_name'], (string) $loc)) {
+			if(!move_uploaded_file($_FILES[$this->name]['tmp_name'], (string) $file)) {
 				throw new FileNotFoundException('Could not move uploaded file, it does not exist');
 			}
 		} catch (ErrorException $e) {
