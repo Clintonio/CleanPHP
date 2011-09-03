@@ -27,7 +27,7 @@ class FileUpload {
 	* @return	bool	True if the file exists
 	*/
 	public function exists() {
-		return (isset($_FILES[$name]));
+		return (isset($_FILES[$this->name]));
 	}
 	
 	/**
@@ -36,7 +36,7 @@ class FileUpload {
 	* @return	bool	True if the file was successful
 	*/
 	public function complete() {
-		return ($this->exists() && $_FILES[$name]['error'] === UPLOAD_ERR_OK);
+		return ($this->exists() && $_FILES[$this->name]['error'] === UPLOAD_ERR_OK);
 	}
 	
 	/**
