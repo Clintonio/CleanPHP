@@ -9,9 +9,9 @@ class IOException extends Exception {
 	* Create an IOException with the given message and optional cause
 	*
 	* @param	String		Message
-	* @param	Exception	Cause
+	* @param	Exception	(Optional) Cause
 	*/
-	public function __construct(String $message, Exception $cause) {
+	public function __construct(String $message, Exception $cause = NULL) {
 		parent::__construct((string) $message, 0, $cause);	
 	}
 }

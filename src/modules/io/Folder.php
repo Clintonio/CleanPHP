@@ -17,11 +17,11 @@ class Folder extends File {
 	* @param	String		Folder path
 	*/
 	public function __construct(String $folder) {
-		if(!$folder->substring($folder->size() - 1, 1)->equals('/')) {
+		if(!$folder->substring($folder->length() - 1, 1)->equals('/')) {
 			$folder = $folder->append('/');	
 		}
 		
-		super::__construct($folder);
+		parent::__construct($folder);
 	}
 	
 	/**
@@ -41,5 +41,19 @@ class Folder extends File {
 	*/
 	public function exists() {
 		return is_dir($this->path);	
+	}
+	
+	/**
+	* Create the directory
+	*/
+	public function mkdir() {
+		mkdir($this->path);	
+	}
+	
+	/**
+	* Create the directory
+	*/
+	public function create() {
+		mkdir($this->path);	
 	}
 }
