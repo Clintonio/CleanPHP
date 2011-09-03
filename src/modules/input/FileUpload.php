@@ -61,7 +61,7 @@ class FileUpload {
 		
 		try {
 			if(!move_uploaded_file($_FILES[$this->name]['tmp_name'], (string) $file)) {
-				throw new FileNotFoundException('Could not move uploaded file, it does not exist');
+				throw new FileNotFoundException(new String('Could not move uploaded file, it does not exist'));
 			}
 		} catch (ErrorException $e) {
 			throw new IOException(new String('Could not upload file, see cause exception', $e));

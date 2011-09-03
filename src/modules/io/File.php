@@ -28,6 +28,15 @@ class File {
 	public function exists() {
 		return (is_file($this->path));
 	}
+	
+	/**
+	* Tostring returns the current path value
+	*
+	* @return	string		Path
+	*/
+	public function __toString() {
+		return (string) $this->path;	
+	}
 }
 
 ?>
