@@ -171,5 +171,16 @@ class String {
 		
 		return new String($text);
 	}
+	
+	/**
+	 * Truncates a string to a certain length
+	 *
+	 * @param 	Int 	Limit to truncase up to	[
+	 * @param 	String 	The end to append 
+	 * @return 	String	Truncated string
+	 */
+	public function truncate($limit, $ending = '') {
+		return $this->trunc($limit, $ending);
+	}
 
 }
