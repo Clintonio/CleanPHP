@@ -137,7 +137,18 @@ class MySQLiDatabase implements Database {
 		
 		//This section will just strip the mysql object
 		// down to an array, associative and numeric.
-		$resultArray = $output->fetch_all($type);
+		// PHP 5.3 
+		if(method_exists($output, 'fetch_all')) {
+			//This section will just strip the mysql object
+			// down to an array, associative and numeric.
+			$resultArray = $output->fetch_all($type);
+		// PHP 5.2 hack
+		} else {
+			//This section will just strip the mysql object down to an array, associative and numeric. For both crowds.
+			for($x = 0; $x < $output->num_rows; $x++) {
+				$resultArray[] = $output->fetch_array($type);
+			}
+		}
 		
 		$output->free_result(); //Make no waste!
 		
