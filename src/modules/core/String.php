@@ -146,6 +146,21 @@ class String {
 		return new String(substr($this->str, $start, $length));
 	}
 	
+	/**
+	* Returns a string split into pieces by a separator
+	*
+	* @param	string		Separator
+	* @param	int			(Optional) Limit
+	* @return	String		This string split by the given separator
+	*/
+	public function split($separator, $limit = 0) {
+		if($limit > 0) {
+			return explode($separator, $this->str, $limit);
+		} else {
+			return explode($separator, $this->str);
+		}
+	}
+	
 	//=======================
 	// String editing methods (methods not available in str_ library)
 	//=======================
