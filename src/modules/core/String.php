@@ -161,6 +161,13 @@ class String {
 		}
 	}
 	
+	/**
+	* Trim a string to remove whitepsace either side of string
+	*/
+	public function trim() {
+		return new String(trim($this->str));
+	}
+	
 	//=======================
 	// String editing methods (methods not available in str_ library)
 	//=======================
