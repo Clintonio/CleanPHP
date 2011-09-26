@@ -53,6 +53,15 @@ class String {
 	}
 	
 	/**
+	* Parse the double value that this string represents
+	*
+	* @return	double	Value this string represents
+	*/
+	public function asDouble() {
+		return (double) $this->str;
+	}
+	
+	/**
 	* Parse the boolean value that this string represents
 	*
 	* @return	bool	Value this string represents
