@@ -40,6 +40,15 @@ class FileUpload {
 	}
 	
 	/**
+	* Get the MIME type of the file
+	*
+	* @return	String		MIME type of the image
+	*/
+	public function getType() {
+		return ($this->exists() ? $_FILES[$this->name]['type'] : '');
+	}
+	
+	/**
 	* Move this file to a new location, it will
 	* be deleted after this script is executed otherwise.
 	* Will overwrite existing files.
