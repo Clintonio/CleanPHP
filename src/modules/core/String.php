@@ -164,10 +164,17 @@ class String {
 	*/
 	public function split($separator, $limit = 0) {
 		if($limit > 0) {
-			return explode($separator, $this->str, $limit);
+			$out = explode($separator, $this->str, $limit);
 		} else {
-			return explode($separator, $this->str);
+			$out = explode($separator, $this->str);
 		}
+		
+		$len = count($out);
+		for($x = 0; $x < $len; $x++) {
+			$out[$x] = new String($out[$x]);
+		}
+		
+		return $out;
 	}
 	
 	/**
