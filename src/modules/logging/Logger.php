@@ -24,6 +24,11 @@ class Logger {
 	protected static $defaultMaxRotate 	= 5;
 	
 	/**
+	* Maximum log size in kB
+	*/
+	const MAX_LOG_SIZE = 5000;
+	
+	/**
 	* Creates a logger for logName
 	*
 	* @param	String		Logname
@@ -126,7 +131,7 @@ class Logger {
 			$this->create();
 		}
 		
-		if(filesize($this->logLoc) > Config::v('log_max_size') * 1024) {
+		if(filesize($this->logLoc) > self::MAX_LOG_SIZE * 1024) {
 			$this->rotate($text);
 		} else {
 			file_put_contents($this->logLoc, $text, FILE_APPEND);
