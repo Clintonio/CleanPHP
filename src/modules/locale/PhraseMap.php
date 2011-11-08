@@ -163,7 +163,7 @@ class PhraseMap {
 		
 		// In the case that there is no phrase for this language yet
 		// or a default exists we will use that if no other does
-		$patterns 		= array('/<locale (code=[\'"][A-Z\-0-9]+[\'"]) (default=[\'"][A-Z\-0-9]+[\'"])>/i', '/<\/locale>/i');
+		$patterns 		= array('/<locale[\s]+code=[\'"][A-Z\-0-9]+[\'"]([\s]+default=[\'"][A-Z\-0-9]+[\'"])?[\s]*>/i', '/<\/locale>/i');
 		$replacements 	= array('','');
 		$phrase 		= new String(trim(preg_replace($patterns, $replacements, $elem->asXML())));
 		
