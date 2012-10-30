@@ -20,6 +20,13 @@ class String {
 		$this->str = (string) $string;	
 	}
 	
+	/**
+	* On loading, set the internal encoding to UTF8
+	*/
+	public static function onLoad() {
+		mb_internal_encoding("UTF-8");
+	}
+	
 	//=======================
 	// Fundemental Methods
 	//=======================
@@ -89,7 +96,7 @@ class String {
 	* @return	int		Length of the string
 	*/
 	public function length() {
-		return strlen($this->str);
+		return mb_strlen($this->str);
 	}
 	
 	/**
@@ -152,7 +159,7 @@ class String {
 	* @return	String	Substring of this string
 	*/
 	public function substring($start, $length = 0) {
-		return new String(substr($this->str, $start, $length));
+		return new String(mb_substr($this->str, $start, $length));
 	}
 	
 	/**
@@ -198,13 +205,13 @@ class String {
 	 */
 	public function trunc($limit, $ending = '') {
 		$text = $this->str;
-		$tLen = strlen($text);
-		$eLen = strlen($ending);
+		$tLen = mb_strlen($text);
+		$eLen = mb_strlen($ending);
 		
 		if($eLen >= $limit) {
-			$text = substr($text, 0, $limit);
+			$text = mb_substr($text, 0, $limit);
 		} else if($tLen > $limit) {
-			$text = substr($text, 0, $limit - $eLen) . $ending;
+			$text = mb_substr($text, 0, $limit - $eLen) . $ending;
 		} 
 		
 		return new String($text);
@@ -220,5 +227,4 @@ class String {
 	public function truncate($limit, $ending = '') {
 		return $this->trunc($limit, $ending);
 	}
-
 }
