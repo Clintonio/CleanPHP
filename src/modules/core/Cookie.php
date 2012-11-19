@@ -47,7 +47,8 @@ class Cookie {
 	public function setValue($value) {
 		$value = (string) $value;
 		
-		if($_SERVER['HTTP_HOST'] == 'localhost') {
+		$host = $_SERVER['HTTP_HOST'];
+		if(($host == 'localhost') || filter_var($host, FILTER_VALIDATE_IP)) {
 			setcookie($this->name, $value, false, $this->path, false, $this->secure, $this->httpOnly);
 		} else {
 			setcookie($this->name, $value, $this->expire, $this->path, 
