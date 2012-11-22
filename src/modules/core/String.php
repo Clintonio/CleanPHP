@@ -69,6 +69,15 @@ class String {
 	}
 	
 	/**
+	* Parse the float value that this string represents
+	*
+	* @return	double	Value that this string represents
+	*/
+	public function asFloat() {
+		return (float) $this->str;
+	}
+	
+	/**
 	* Parse the boolean value that this string represents
 	*
 	* @return	bool	Value this string represents
