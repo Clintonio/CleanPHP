@@ -115,6 +115,46 @@ class CleanPHP {
 	}
 		
 	//============================
+	// Verifiers
+	//============================
+		
+	/**
+	* Check if a given class exists on the module path with the given module
+	* name, following the standard module name rules
+	*
+	* @param	class	The class module being loaded
+	* @return	bool	True if the module is found on the module path
+	*/
+	public static function moduleExists($class) {
+		if(!in_array($class, self::$loadedModules, true)) {
+			$fileName  = preg_replace("/\\" . self::$moduleSeparator . "/", "/", $class) . ".php";
+			// Get class name so we can check import status after inclusion
+			$className = explode(self::$moduleSeparator, $class);
+			$className = end($className); 
+			// Attempt to include from base include folder
+			$location  = __DIR__. self::$moduleFolder . $fileName;
+			
+			$found  = file_exists($location);
+			
+			// If it has not been found, check user module folders
+			if(!$found) {
+				$x 		= 0;
+				$size 	= count(self::$userModules);
+				while(!$found && ($x < $size)) {
+					$location = self::$userModules[$x] . $fileName;
+					
+					$found = file_exists($location);
+					$x++;
+				}
+			}
+			
+			return $found;
+		} else {
+			return true;
+		}
+	}
+	
+	//============================
 	// Adders
 	//============================
 	
