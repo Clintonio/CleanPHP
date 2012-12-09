@@ -195,6 +195,24 @@ class MySQLiDatabase implements Database {
 		return $this->mySQLi;	
 	}
 	
+	/**
+	* Get the number of queries executed on MySQLi databases
+	*
+	* @return	Number of queries executed on MySQLi databases
+	*/
+	public static function getTotalQueryCount() {
+		return self::$queryCount;
+	}
+	
+	/**
+	* Get the array of query strings executed on all MySQLi databases
+	*
+	* @return	Array of query string executed
+	*/
+	public static function getAllQueries() {
+		return self::$queries;
+	}
+	
 	//============================
 	// Processors
 	//============================
