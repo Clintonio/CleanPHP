@@ -2,6 +2,7 @@
 
 CleanPHP::import("config.Config");
 CleanPHP::import("config.MissingConfigException");
+CleanPHP::import('io.IOException');
 
 /**
 * Configuration accessing class for JSON based configuration files
@@ -47,6 +48,31 @@ class ConfigJSON implements Config {
 					$this->setTempConfig($configName, $configValue, true);
 				}
 			}
+		}
+	}
+	
+	//============================
+	// Creation
+	//============================
+	
+	/**
+	* Creates an empty config file at the given location, erasing any existing ones
+	* then returns it as a new config object
+	*
+	* @throws	IOException		When the existing file can't be removed, or the
+	*							the new one can't be written
+	* @param	file	The location of the new config
+	* @return	The new config file
+	*/
+	public static function createConfigFile($file) {
+		$file = (string) $file;
+		
+		if(file_exists($file) && !@unlink($file)) {
+			throw new IOException(new String('Could not remove existing file'));
+		} else if(!@file_put_contents($file, '{}')) {
+			throw new IOException(new String('Could not create new file'));
+		} else {
+			return new ConfigJSON($file);
 		}
 	}
 	
