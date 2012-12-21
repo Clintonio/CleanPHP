@@ -51,7 +51,7 @@ class FileUpload {
 	/**
 	* Get the MIME type of the file
 	*
-	* @return	String		MIME type of the image
+	* @return	string		MIME type of the image
 	*/
 	public function getType() {
 		return ($this->exists() ? $_FILES[$this->name]['type'] : '');
@@ -65,12 +65,11 @@ class FileUpload {
 	* @throws	FileNotFoundException	Thrown when file cannot be found
 	* @throws	IOException				When the file cannot be moved
 	* @param	\Folder		folder		Folder to move file to
-	* @param	\String		name		(Optional) Alternative file name
-	* @return
+	* @param	string		name		(Optional) Alternative file name
 	*/
-	public function move(Folder $folder, String $name = NULL) {
-		if($name != NULL) {
-			$file = $folder->getFile($name);	
+	public function move(Folder $folder, $name = NULL) {
+		if($name !== NULL) {
+			$file = $folder->getFile((string) $name);	
 		} else {
 			$file = $folder->getFile($_FILES[$this->name]['name']);	
 		}
