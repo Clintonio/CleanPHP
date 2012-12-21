@@ -20,9 +20,10 @@ class Folder extends File {
 	/**
 	* Create this representation of a folder
 	*
-	* @param	\String		folder		Folder path
+	* @param	string		folder		Folder path
 	*/
-	public function __construct(String $folder) {
+	public function __construct($folder) {
+		$folder = (string) $folder;
 		if(!$folder->substring($folder->length() - 1, 1)->equals('/')) {
 			$folder = $folder->append('/');	
 		}
@@ -33,11 +34,11 @@ class Folder extends File {
 	/**
 	* Get a file from within this folder
 	*
-	* @param	\String		filename	File name
+	* @param	string		filename	File name
 	* @return	File		File from within this folder
 	*/
-	public function getFile(String $filename) {
-		return new File($this->path->append($filename));	
+	public function getFile($filename) {
+		return new File($this->path->append((string) $filename));	
 	}
 	
 	/**

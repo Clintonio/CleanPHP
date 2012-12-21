@@ -23,10 +23,10 @@ class File {
 	/**
 	* Create a new file at a given path
 	*
-	* @param	\String		path	Path of the file we are representing
+	* @param	string		path	Path of the file we are representing
 	*/
-	public function __construct(String $path) {
-		$this->path = $path;
+	public function __construct($path) {
+		$this->path = (string) $path;
 	}
 	
 	/**

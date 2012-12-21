@@ -14,10 +14,10 @@ class IOException extends Exception {
 	/**
 	* Create an IOException with the given message and optional cause
 	*
-	* @param	\String		message		Message
+	* @param	string		message		Message
 	* @param	Exception	case		(Optional) Cause
 	*/
-	public function __construct(String $message, Exception $cause = NULL) {
+	public function __construct($message, Exception $cause = NULL) {
 		parent::__construct((string) $message, 0, $cause);	
 	}
 }
