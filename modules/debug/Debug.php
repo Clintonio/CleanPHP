@@ -13,19 +13,27 @@ if(Debug::isLineMonitorEnabled()) {
 	Debug::monitorLinesExecuted();
 }
 
+/**
+* Static debugger class
+*/
 class Debug {
+	/**
+	* Currently stored timers that record time passed, dictionary storage
+	*/
 	private static $timers 			= array();
-	/* Number of lines executed */
+	/**
+	* Number of lines executed, only counted if line monitor is enabled
+	*/
 	private static $lineCount 		= 0;
-	/* Lines that have been executed with file*/
+	/**
+	* Lines that have been executed with file, only populated if line monitor
+	* is enabled
+	*/
 	private static $executedLines 	= array();
-	/* Whether debugging is visible or not */
+	/**
+	* Whether debugging is visible or not 
+	*/
 	private static $enabled 		= false;
-	
-	// Cannot be initialised
-	public function __construct() { 
-		throw new BadMethodCallException('Do not initialise Debug class');
-	}
 		
 	//============================
 	// Timer
