@@ -232,11 +232,11 @@ class MySQLiDatabase implements Database {
 	/** 
 	* Sanitises the given input
 	* 
-	* @param	\String		Data to be sanitised
+	* @param	string		Data to be sanitised
 	* @return	String		Sanitised data
 	*/
-	public function clean(String $string) {
-		return new String($this->mySQLi->real_escape_string($string));	
+	public function clean($string) {
+		return new String($this->mySQLi->real_escape_string((string) $string));	
 	}
 	
 	/**
