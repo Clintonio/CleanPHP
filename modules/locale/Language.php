@@ -25,10 +25,11 @@ class Language {
 	/**
 	* Create a new language
 	*
-	* @param	\String		lang	Language ID, preferably an ISO language code
+	* @param	string		lang	Language ID, preferably an ISO language code
 	*/
-	private function __construct(String $lang) {
-		self::$languages[(string) $lang] = $this;
+	private function __construct($lang) {
+		$lang = (string) $lang;
+		self::$languages[$lang] = $this;
 		
 		$this->code = $lang;
 	}
@@ -36,7 +37,7 @@ class Language {
 	/**
 	* Get the ID of this language
 	*
-	* @return	String	ID of this language
+	* @return	string	ID of this language
 	*/
 	public function getLanguageCode() {
 		return $this->code;
@@ -45,22 +46,23 @@ class Language {
 	/**
 	* Check if a language exists.
 	*
-	* @param	\String		lang	Language code
+	* @param	string		lang	Language code
 	* @return	True if the language is has been created
 	*/
-	public static function languageExists(String $lang) {
+	public static function languageExists($lang) {
 		return isset(self::$languages[(string) $lang]);	
 	}
 	
 	/**
 	* Get a language given by an ID
 	*
-	* @param	\String		lang	Language code
+	* @param	string		lang	Language code
 	* @return	The language object
 	*/
-	public static function getLanguage(String $lang) {
+	public static function getLanguage($lang) {
+		$lang = (string) $lang;
 		if(self::languageExists($lang)) {
-			return self::$languages[(string) $lang];
+			return self::$languages[$lang];
 		} else {
 			return new Language($lang);	
 		}
@@ -69,10 +71,11 @@ class Language {
 	/**
 	* Create a given language
 	*
-	* @param	\String		lang	Language code
+	* @param	string		lang	Language code
 	* @return	void
 	*/
-	public static function createLanguage(String $lang) {
+	public static function createLanguage($lang) {
+		$lang = (string) $lang;
 		if(!self::languageExists($lang)) {
 			new Language($lang);	
 		}
