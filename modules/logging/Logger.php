@@ -8,6 +8,8 @@
 
 /**
 * A logger for creating logs
+*
+* @package	logging
 */
 class Logger {
 	/**

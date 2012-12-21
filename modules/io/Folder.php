@@ -12,6 +12,8 @@ CleanPHP::import('io.IOException');
 
 /**
 * Representation of a folder
+*
+* @package	io
 */
 class Folder extends File {
 	

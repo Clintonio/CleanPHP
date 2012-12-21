@@ -8,6 +8,8 @@
 
 /**
 * String class for object oriented string access
+*
+* @package	core
 */
 class String {
 	/** 

@@ -8,6 +8,8 @@
 
 /**
 * A representation of a language
+*
+* @package	locale
 */
 class Language {
 	/**

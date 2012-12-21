@@ -8,6 +8,9 @@
 
 /**
 * Post representation and interface
+*
+* @package	input
+*/
 class Post {
 	/**
 	* Get a post value with an optional default

@@ -28,6 +28,8 @@ CleanPHP::import("core.Cookie");
 * Contains the most important functions and
 * functionality for the framework to load and
 * work
+*
+* @package		CleanPHP
 */
 class CleanPHP {
 	
@@ -182,6 +184,9 @@ class CleanPHP {
 * Exception to be thrown when a class could not be found
 *
 * @author	Clinton Alexander
+* @package	CleanPHP
+* @since 	2
+* @version	1
 */
 class ClassNotFoundException extends RuntimeException {
 	/**
@@ -202,8 +207,9 @@ class ClassNotFoundException extends RuntimeException {
 * Or objects
 *
 * @author	Clinton Alexander
-* @since 	2.0.0.0
-* @version	1.0.0.0
+* @package	CleanPHP
+* @since 	2
+* @version	1
 */
 class MissingResourceException extends RuntimeException { }
 
@@ -213,44 +219,49 @@ class MissingResourceException extends RuntimeException { }
 * in associative arrays
 *
 * @author	Clinton Alexander
-* @since 	2.0.0.0
-* @version	1.0.0.0
+* @package	CleanPHP
+* @since 	2
+* @version	1
 */
 class MissingIndexException extends MissingResourceException { }
 
 /**
 * Resource update failure
 * 
-* @author	Clinton Alexandr
-* @since	2.0.0.0
-* @version	1.0.0.0
+* @author	Clinton Alexander
+* @package	CleanPHP
+* @since	2
+* @version	1
 */
 class ResourceUpdateException extends RuntimeException { }
 
 /**
 * Permissions failure
 * 
-* @author	Clinton Alexandr
-* @since	2.0.0.0
-* @version	1.0.0.0
+* @author	Clinton Alexander
+* @package	CleanPHP
+* @since	2
+* @version	1
 */
 class PermissionsException extends RuntimeException { }
 
 /**
 * Form validation exception
 *
-* @author	Clinton Alexandr
-* @since	2.0.0.0
-* @version	1.0.0.0
+* @author	Clinton Alexander
+* @package	CleanPHP
+* @since	2
+* @version	1
 */
 class FormValidatorException extends InvalidArgumentException { }
 
 /**
 * Unexpected field exception
 *
-* @author	Clinton Alexandr
-* @since	2.0.0.0
-* @version	1.0.0.0
+* @author	Clinton Alexander
+* @package	CleanPHP
+* @since	2
+* @version	1
 */
 class UnexpectedFieldException extends RuntimeException { }
 ?>

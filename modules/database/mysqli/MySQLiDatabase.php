@@ -14,6 +14,8 @@ CleanPHP::import("database.DatabaseQueryException");
 * Each database instance holds onto a single connection
 * and acts as a wrapper to MySQLi intending to 
 * abstract out the PHP mess
+*
+* @package	database\mysqli
 */
 class MySQLiDatabase implements Database {
 	/**

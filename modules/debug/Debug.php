@@ -15,6 +15,8 @@ if(Debug::isLineMonitorEnabled()) {
 
 /**
 * Static debugger class
+*
+* @package	debug
 */
 class Debug {
 	/**

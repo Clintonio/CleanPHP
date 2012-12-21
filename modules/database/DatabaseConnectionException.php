@@ -8,6 +8,8 @@
 
 /**
 * Database exception thrown when the database can't be connected to
+*
+* @package	database
 */
 class DatabaseConnectionException extends RuntimeException { }
 

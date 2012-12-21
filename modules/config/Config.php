@@ -8,6 +8,11 @@
 
 CleanPHP::import("config.MissingConfigException");
 
+/**
+* Configuration interface
+*
+* @package	config
+*/
 interface Config {
 	
 	//============================

@@ -12,6 +12,8 @@ CleanPHP::import('io.Folder');
 
 /** 
 * File upload representation
+*
+* @package	input
 */
 class FileUpload {
 	/**

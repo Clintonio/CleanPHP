@@ -8,6 +8,8 @@
 
 /**
 * Missing configuration exception
+*
+* @package	config
 */
 class MissingConfigException extends MissingResourceException {}
 

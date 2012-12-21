@@ -8,6 +8,8 @@
 
 /**
 * Exception that is thrown when a query is invalid
+*
+* @package	database
 */
 class DatabaseQueryException extends RuntimeException { }
 

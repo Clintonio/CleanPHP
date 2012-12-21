@@ -10,6 +10,8 @@ CleanPHP::import('io.IOException');
 
 /**
 * Exception to throw when a file isn't found
+*
+* @package	io
 */
 class FileNotFoundException extends IOException { 
 	/**

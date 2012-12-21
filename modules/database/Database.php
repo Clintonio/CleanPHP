@@ -8,6 +8,8 @@
 
 /**
 * Abstract database representation
+*
+* @package	database
 */
 interface Database {
 	

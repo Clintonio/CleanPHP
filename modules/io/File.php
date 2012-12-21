@@ -11,6 +11,8 @@ CleanPHP::import('io.IOException');
 
 /**
 * File representation
+*
+* @package	io
 */
 class File {
 	/**

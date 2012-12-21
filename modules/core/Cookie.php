@@ -8,6 +8,8 @@
 
 /**
 * Object oriented cookie class
+*
+* @package	core
 */
 class Cookie {
 	/**

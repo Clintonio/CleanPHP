@@ -8,6 +8,8 @@
 
 /**
 * Exception thrown when a phrase map is missing
+*
+* @package	locale
 */
 class MissingPhraseMapException extends MissingResourceException { }
 ?>

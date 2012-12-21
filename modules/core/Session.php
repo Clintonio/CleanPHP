@@ -8,6 +8,8 @@
 
 /**
 * Session object oriented interface with token management
+*
+* @package	core
 */
 class Session {
 	/**

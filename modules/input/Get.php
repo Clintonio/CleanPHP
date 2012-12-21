@@ -8,6 +8,8 @@
 
 /**
 * Get representation and interface
+*
+* @package	input
 */
 class Get {
 	/**

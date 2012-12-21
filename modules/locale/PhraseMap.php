@@ -12,6 +12,8 @@ CleanPHP::import("locale.MissingPhraseException");
 
 /**
 * A map of phrases loaded from a given file
+*
+* @package	locale
 */
 class PhraseMap {
 	/**

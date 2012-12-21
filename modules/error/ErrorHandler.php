@@ -8,6 +8,8 @@
 
 /**
 * An error handler class for handling both PHP exceptions and custom ones
+*
+* @package	error
 */
 class ErrorHandler {
 	/**

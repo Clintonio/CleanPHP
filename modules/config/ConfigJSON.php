@@ -12,6 +12,8 @@ CleanPHP::import('io.IOException');
 
 /**
 * A configuration implementation for JSON configuration files
+*
+* @package	config
 */
 class ConfigJSON implements Config {
 	/** 

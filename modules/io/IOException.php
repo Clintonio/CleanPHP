@@ -7,6 +7,8 @@
 
 /**
 * IOException that represents an exception caused by IO interruption
+*
+* @package	io
 */
 class IOException extends Exception {
 	/**
