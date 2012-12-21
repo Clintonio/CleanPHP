@@ -38,7 +38,7 @@ class ConfigJSON implements Config {
 		} else {
 			$configArray = self::parseConfigFile($config);
 			
-			if($configArray == NULL) {
+			if($configArray === NULL) {
 				throw new MissingConfigException('Config &quot;' . $configLocation . '&quot; invalid format');
 			} else {
 				$this->location = $configLocation;
