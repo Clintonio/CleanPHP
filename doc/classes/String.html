@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \String</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/CleanPHP.html"><i class="icon-folder-open"></i> CleanPHP</a></li>
+<li><a href="../packages/config.html"><i class="icon-folder-open"></i> config</a></li>
+<li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
+<li><a href="../packages/database.html"><i class="icon-folder-open"></i> database</a></li>
+<li><a href="../packages/debug.html"><i class="icon-folder-open"></i> debug</a></li>
+<li><a href="../packages/error.html"><i class="icon-folder-open"></i> error</a></li>
+<li><a href="../packages/input.html"><i class="icon-folder-open"></i> input</a></li>
+<li><a href="../packages/io.html"><i class="icon-folder-open"></i> io</a></li>
+<li><a href="../packages/layout.html"><i class="icon-folder-open"></i> layout</a></li>
+<li><a href="../packages/locale.html"><i class="icon-folder-open"></i> locale</a></li>
+<li><a href="../packages/logging.html"><i class="icon-folder-open"></i> logging</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">1</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Construct a new String"><span class="description">Construct a new String</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___toString" title="__toString :: To string"><span class="description">To string</span><pre>__toString()</pre></a></li>
+<li class="method public "><a href="#method_append" title="append :: Append a string to this string"><span class="description">Append a string to this string</span><pre>append()</pre></a></li>
+<li class="method public "><a href="#method_asBool" title="asBool :: Parse the boolean value that this string represents"><span class="description">Parse the boolean value that this string represents</span><pre>asBool()</pre></a></li>
+<li class="method public "><a href="#method_asBoolean" title="asBoolean :: Parse the boolean value that this string represents"><span class="description">Parse the boolean value that this string represents</span><pre>asBoolean()</pre></a></li>
+<li class="method public "><a href="#method_asDouble" title="asDouble :: Parse the double value that this string represents"><span class="description">Parse the double value that this string represents</span><pre>asDouble()</pre></a></li>
+<li class="method public "><a href="#method_asFloat" title="asFloat :: Parse the float value that this string represents"><span class="description">Parse the float value that this string represents</span><pre>asFloat()</pre></a></li>
+<li class="method public "><a href="#method_asInt" title="asInt :: Parse the integer value that this string represents"><span class="description">Parse the integer value that this string represents</span><pre>asInt()</pre></a></li>
+<li class="method public "><a href="#method_equals" title="equals :: Checking equality between this string and another object."><span class="description">Checking equality between this string and another object.</span><pre>equals()</pre></a></li>
+<li class="method public "><a href="#method_htmlEncode" title="htmlEncode :: Encodes the string to be HTML safe
+Alias for htmlspecialchars"><span class="description">Encodes the string to be HTML safe
+Alias for htmlspecialchars</span><pre>htmlEncode()</pre></a></li>
+<li class="method public "><a href="#method_length" title="length :: Get the length of the string"><span class="description">Get the length of the string</span><pre>length()</pre></a></li>
+<li class="method public "><a href="#method_onLoad" title="onLoad :: On loading, set the internal encoding to UTF8"><span class="description">On loading, set the internal encoding to UTF8</span><pre>onLoad()</pre></a></li>
+<li class="method public "><a href="#method_prepend" title="prepend :: Prepend a string to this string"><span class="description">Prepend a string to this string</span><pre>prepend()</pre></a></li>
+<li class="method public "><a href="#method_replace" title="replace :: Replace one or more values with one or more others."><span class="description">Replace one or more values with one or more others.</span><pre>replace()</pre></a></li>
+<li class="method public "><a href="#method_split" title="split :: Returns a string split into pieces by a separator"><span class="description">Returns a string split into pieces by a separator</span><pre>split()</pre></a></li>
+<li class="method public "><a href="#method_substring" title="substring :: Returns a substring of this string in the same manner
+to PHP's substring"><span class="description">Returns a substring of this string in the same manner
+to PHP's substring</span><pre>substring()</pre></a></li>
+<li class="method public "><a href="#method_trim" title="trim :: Trim a string to remove whitepsace either side of string"><span class="description">Trim a string to remove whitepsace either side of string</span><pre>trim()</pre></a></li>
+<li class="method public "><a href="#method_trunc" title="trunc :: Truncates a string to a certain length"><span class="description">Truncates a string to a certain length</span><pre>trunc()</pre></a></li>
+<li class="method public "><a href="#method_truncate" title="truncate :: Truncates a string to a certain length"><span class="description">Truncates a string to a certain length</span><pre>truncate()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_str" title="$str :: The raw string this object represents"><span class="description"></span><pre>$str</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\String"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/String.html">String</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">String class for object oriented string access</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/core.html">core</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Construct a new String</h2>
+<pre>__construct(String $string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>String</code><p>The string to construct</p></div>
+</div></div>
+</div>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>To string</h2>
+<pre>__toString() : \The</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\The</code>value of this string</div>
+</div></div>
+</div>
+<a id="method_append"></a><div class="element clickable method public method_append" data-toggle="collapse" data-target=".method_append .collapse">
+<h2>Append a string to this string</h2>
+<pre>append(string $string) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>String to append</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Resulting new string</div>
+</div></div>
+</div>
+<a id="method_asBool"></a><div class="element clickable method public method_asBool" data-toggle="collapse" data-target=".method_asBool .collapse">
+<h2>Parse the boolean value that this string represents</h2>
+<pre>asBool() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Value this string represents</div>
+</div></div>
+</div>
+<a id="method_asBoolean"></a><div class="element clickable method public method_asBoolean" data-toggle="collapse" data-target=".method_asBoolean .collapse">
+<h2>Parse the boolean value that this string represents</h2>
+<pre>asBoolean() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Value this string represents</div>
+</div></div>
+</div>
+<a id="method_asDouble"></a><div class="element clickable method public method_asDouble" data-toggle="collapse" data-target=".method_asDouble .collapse">
+<h2>Parse the double value that this string represents</h2>
+<pre>asDouble() : double</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>double</code>Value this string represents</div>
+</div></div>
+</div>
+<a id="method_asFloat"></a><div class="element clickable method public method_asFloat" data-toggle="collapse" data-target=".method_asFloat .collapse">
+<h2>Parse the float value that this string represents</h2>
+<pre>asFloat() : double</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>double</code>Value that this string represents</div>
+</div></div>
+</div>
+<a id="method_asInt"></a><div class="element clickable method public method_asInt" data-toggle="collapse" data-target=".method_asInt .collapse">
+<h2>Parse the integer value that this string represents</h2>
+<pre>asInt() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Value this string represents</div>
+</div></div>
+</div>
+<a id="method_equals"></a><div class="element clickable method public method_equals" data-toggle="collapse" data-target=".method_equals .collapse">
+<h2>Checking equality between this string and another object.</h2>
+<pre>equals(mixed $value) : \Whether</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>For checking if the string <em>objects</em> are identical use ===</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>value	The value we are comparing</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Whether</code>the other value evaluates to the string value of this string</div>
+</div></div>
+</div>
+<a id="method_htmlEncode"></a><div class="element clickable method public method_htmlEncode" data-toggle="collapse" data-target=".method_htmlEncode .collapse">
+<h2>Encodes the string to be HTML safe
+Alias for htmlspecialchars</h2>
+<pre>htmlEncode() : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>HTML safe string</div>
+</div></div>
+</div>
+<a id="method_length"></a><div class="element clickable method public method_length" data-toggle="collapse" data-target=".method_length .collapse">
+<h2>Get the length of the string</h2>
+<pre>length() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Length of the string</div>
+</div></div>
+</div>
+<a id="method_onLoad"></a><div class="element clickable method public method_onLoad" data-toggle="collapse" data-target=".method_onLoad .collapse">
+<h2>On loading, set the internal encoding to UTF8</h2>
+<pre>onLoad() </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_prepend"></a><div class="element clickable method public method_prepend" data-toggle="collapse" data-target=".method_prepend .collapse">
+<h2>Prepend a string to this string</h2>
+<pre>prepend(string $string) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>String to Prepend</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Resulting new string</div>
+</div></div>
+</div>
+<a id="method_replace"></a><div class="element clickable method public method_replace" data-toggle="collapse" data-target=".method_replace .collapse">
+<h2>Replace one or more values with one or more others.</h2>
+<pre>replace(Mixed $find, Mixed $replace, int $max) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Identical to
+str_replace</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$find</h4>
+<code>Mixed</code><p>The elements to search for</p></div>
+<div class="subelement argument">
+<h4>$replace</h4>
+<code>Mixed</code><p>The elements to replace</p></div>
+<div class="subelement argument">
+<h4>$max</h4>
+<code>int</code><p>Maximum number of replacements. 0 is unlimited [default=0]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>The new string value</div>
+</div></div>
+</div>
+<a id="method_split"></a><div class="element clickable method public method_split" data-toggle="collapse" data-target=".method_split .collapse">
+<h2>Returns a string split into pieces by a separator</h2>
+<pre>split(string $separator, int $limit) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$separator</h4>
+<code>string</code><p>Separator</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code><p>(Optional) Limit</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>This string split by the given separator</div>
+</div></div>
+</div>
+<a id="method_substring"></a><div class="element clickable method public method_substring" data-toggle="collapse" data-target=".method_substring .collapse">
+<h2>Returns a substring of this string in the same manner
+to PHP's substring</h2>
+<pre>substring(int $start, int $length) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$start</h4>
+<code>int</code><p>Start position</p></div>
+<div class="subelement argument">
+<h4>$length</h4>
+<code>int</code><p>Length (default = 0/unlimited)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Substring of this string</div>
+</div></div>
+</div>
+<a id="method_trim"></a><div class="element clickable method public method_trim" data-toggle="collapse" data-target=".method_trim .collapse">
+<h2>Trim a string to remove whitepsace either side of string</h2>
+<pre>trim() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_trunc"></a><div class="element clickable method public method_trunc" data-toggle="collapse" data-target=".method_trunc .collapse">
+<h2>Truncates a string to a certain length</h2>
+<pre>trunc(Int $limit, String $ending) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>Int</code><p>Limit to truncase up to [</p>
+</div>
+<div class="subelement argument">
+<h4>$ending</h4>
+<code>String</code><p>The end to append</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Truncated string</div>
+</div></div>
+</div>
+<a id="method_truncate"></a><div class="element clickable method public method_truncate" data-toggle="collapse" data-target=".method_truncate .collapse">
+<h2>Truncates a string to a certain length</h2>
+<pre>truncate(Int $limit, String $ending) : String</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>Int</code><p>Limit to truncase up to [</p>
+</div>
+<div class="subelement argument">
+<h4>$ending</h4>
+<code>String</code><p>The end to append</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Truncated string</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_str"> </a><div class="element clickable property private property_str" data-toggle="collapse" data-target=".property_str .collapse">
+<h2></h2>
+<pre>$str </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-21T20:15:53Z.<br></footer></div>
+</div>
+</body>
+</html>

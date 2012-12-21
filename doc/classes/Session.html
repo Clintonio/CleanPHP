@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Session</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/CleanPHP.html"><i class="icon-folder-open"></i> CleanPHP</a></li>
+<li><a href="../packages/config.html"><i class="icon-folder-open"></i> config</a></li>
+<li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
+<li><a href="../packages/database.html"><i class="icon-folder-open"></i> database</a></li>
+<li><a href="../packages/debug.html"><i class="icon-folder-open"></i> debug</a></li>
+<li><a href="../packages/error.html"><i class="icon-folder-open"></i> error</a></li>
+<li><a href="../packages/input.html"><i class="icon-folder-open"></i> input</a></li>
+<li><a href="../packages/io.html"><i class="icon-folder-open"></i> io</a></li>
+<li><a href="../packages/layout.html"><i class="icon-folder-open"></i> layout</a></li>
+<li><a href="../packages/locale.html"><i class="icon-folder-open"></i> locale</a></li>
+<li><a href="../packages/logging.html"><i class="icon-folder-open"></i> logging</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">1</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getIP" title="getIP :: Get IP of current session"><span class="description">Get IP of current session</span><pre>getIP()</pre></a></li>
+<li class="method public "><a href="#method_getToken" title="getToken :: Get the session token"><span class="description">Get the session token</span><pre>getToken()</pre></a></li>
+<li class="method public "><a href="#method_getTokenExpireTime" title="getTokenExpireTime :: Get the session expire time"><span class="description">Get the session expire time</span><pre>getTokenExpireTime()</pre></a></li>
+<li class="method public "><a href="#method_isTokenValid" title="isTokenValid :: Check if the given token is valid"><span class="description">Check if the given token is valid</span><pre>isTokenValid()</pre></a></li>
+<li class="method public "><a href="#method_onLoad" title="onLoad :: Called when this class is loaded by CleanPHP
+And begins the session"><span class="description">Called when this class is loaded by CleanPHP
+And begins the session</span><pre>onLoad()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method_updateToken" title="updateToken :: Update the user's session token"><span class="description">Update the user's session token</span><pre>updateToken()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_ip" title="$ip :: Current user's IP"><span class="description"></span><pre>$ip</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_SESSION_TOKEN_LIFESPAN" title="SESSION_TOKEN_LIFESPAN :: Session token length in seconds"><span class="description">Session token length in seconds</span><pre>SESSION_TOKEN_LIFESPAN</pre></a></li>
+<li class="constant  "><a href="#constant_TOKEN_EXPIRE_INDEX" title="TOKEN_EXPIRE_INDEX :: Expire time field name"><span class="description">Expire time field name</span><pre>TOKEN_EXPIRE_INDEX</pre></a></li>
+<li class="constant  "><a href="#constant_TOKEN_INDEX" title="TOKEN_INDEX :: Token field name"><span class="description">Token field name</span><pre>TOKEN_INDEX</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Session"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Session.html">Session</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Session object oriented interface with token management</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/core.html">core</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_getIP"></a><div class="element clickable method public method_getIP" data-toggle="collapse" data-target=".method_getIP .collapse">
+<h2>Get IP of current session</h2>
+<pre>getIP() : String</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>IP</div>
+</div></div>
+</div>
+<a id="method_getToken"></a><div class="element clickable method public method_getToken" data-toggle="collapse" data-target=".method_getToken .collapse">
+<h2>Get the session token</h2>
+<pre>getToken() : String</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>String</code>Session token</div>
+</div></div>
+</div>
+<a id="method_getTokenExpireTime"></a><div class="element clickable method public method_getTokenExpireTime" data-toggle="collapse" data-target=".method_getTokenExpireTime .collapse">
+<h2>Get the session expire time</h2>
+<pre>getTokenExpireTime() : int</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Session expire timestamp</div>
+</div></div>
+</div>
+<a id="method_isTokenValid"></a><div class="element clickable method public method_isTokenValid" data-toggle="collapse" data-target=".method_isTokenValid .collapse">
+<h2>Check if the given token is valid</h2>
+<pre>isTokenValid(string $token) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$token</h4>
+<code>string</code><p>token	Value to check against</p></div>
+</div></div>
+</div>
+<a id="method_onLoad"></a><div class="element clickable method public method_onLoad" data-toggle="collapse" data-target=".method_onLoad .collapse">
+<h2>Called when this class is loaded by CleanPHP
+And begins the session</h2>
+<pre>onLoad() </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_updateToken"></a><div class="element clickable method private method_updateToken" data-toggle="collapse" data-target=".method_updateToken .collapse">
+<h2>Update the user's session token</h2>
+<pre>updateToken() </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_ip"> </a><div class="element clickable property private property_ip" data-toggle="collapse" data-target=".property_ip .collapse">
+<h2></h2>
+<pre>$ip </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_SESSION_TOKEN_LIFESPAN"> </a><div class="element clickable constant  constant_SESSION_TOKEN_LIFESPAN" data-toggle="collapse" data-target=".constant_SESSION_TOKEN_LIFESPAN .collapse">
+<h2>Session token length in seconds</h2>
+<pre>SESSION_TOKEN_LIFESPAN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_TOKEN_EXPIRE_INDEX"> </a><div class="element clickable constant  constant_TOKEN_EXPIRE_INDEX" data-toggle="collapse" data-target=".constant_TOKEN_EXPIRE_INDEX .collapse">
+<h2>Expire time field name</h2>
+<pre>TOKEN_EXPIRE_INDEX </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_TOKEN_INDEX"> </a><div class="element clickable constant  constant_TOKEN_INDEX" data-toggle="collapse" data-target=".constant_TOKEN_INDEX .collapse">
+<h2>Token field name</h2>
+<pre>TOKEN_INDEX </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-21T20:15:53Z.<br></footer></div>
+</div>
+</body>
+</html>
