@@ -88,6 +88,7 @@ class ConfigJSON implements Config {
 	* @return	String		Config Value
 	*/
 	public function getConfig($name) {
+		$name = (string) $name;
 		if(!isset($this->configArray[$name])) {
 			throw new MissingConfigException('Config ' . $name . ' does not exist');
 		} else {
@@ -122,6 +123,7 @@ class ConfigJSON implements Config {
 	* @return	void
 	*/
 	public function setTempConfig($name, $value) {
+		$name = (string) $name;
 		if(!isset($this->configArray[$name])) {
 			$this->configArray[$name] = $value;
 		}
