@@ -1,15 +1,22 @@
 <?php
-
-CleanPHP::import('error.ErrorHandler');
-CleanPHP::import('io.Folder');
-
 /**
 * An abstract representation of a temporarily uploaded
 * file uploaded via the POST file upload mechanism
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+CleanPHP::import('error.ErrorHandler');
+CleanPHP::import('io.Folder');
+
+/** 
+* File upload representation
 */
 class FileUpload {
+	/**
+	* Name of the file upload in the $_FILES array
+	*/
 	private $name;
 	
 	/**
@@ -55,8 +62,8 @@ class FileUpload {
 	*
 	* @throws	FileNotFoundException	Thrown when file cannot be found
 	* @throws	IOException				When the file cannot be moved
-	* @param	Folder					Folder to move file to
-	* @param	String					(Optional) Alternative file name
+	* @param	\Folder		folder		Folder to move file to
+	* @param	\String		name		(Optional) Alternative file name
 	* @return
 	*/
 	public function move(Folder $folder, String $name = NULL) {

@@ -1,20 +1,27 @@
 <?php
+/**
+* Representation of a file in PHP
+*
+* @author	Clinton Alexander
+* @version	1
+*/
 
 CleanPHP::import('io.FileNotFoundException');
 CleanPHP::import('io.IOException');
 
 /**
-* Representation of a file in PHP
-*
-* @author	Clinton Alexander
+* File representation
 */
 class File {
+	/**
+	* Path of the file
+	*/
 	protected $path;
 	
 	/**
 	* Create a new file at a given path
 	*
-	* @param	String		Path
+	* @param	\String		path	Path of the file we are representing
 	*/
 	public function __construct(String $path) {
 		$this->path = $path;

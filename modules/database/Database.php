@@ -1,8 +1,13 @@
 <?php
 /**
-* Abstract database representation
+* An interface for abstract database representation
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+/**
+* Abstract database representation
 */
 interface Database {
 	
@@ -58,7 +63,7 @@ interface Database {
 	* Clean the input data value to prevent it causing
 	* injections 
 	*
-	* @param	String		Input data (Not a query statement)
+	* @param	\String		Input data (Not a query statement)
 	* @return	String		Clean input data
 	*/
 	function clean(String $string);

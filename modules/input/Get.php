@@ -3,6 +3,11 @@
 * A class to abstract out some pains in using get values
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+/**
+* Get representation and interface
 */
 class Get {
 	/**

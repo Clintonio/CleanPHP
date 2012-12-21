@@ -3,7 +3,11 @@
 * A class to abstract out some pains in using post values
 *
 * @author	Clinton Alexander
+* @version	1
 */
+
+/**
+* Post representation and interface
 class Post {
 	/**
 	* Get a post value with an optional default

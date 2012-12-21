@@ -1,4 +1,10 @@
 <?php
+/**
+* MySQLi class wrapper for the Database interface
+* 
+* @author		Clinton Alexander
+* @version		3.0
+*/
 
 CleanPHP::import("database.Database");
 CleanPHP::import("database.DatabaseConnectionException");
@@ -8,16 +14,21 @@ CleanPHP::import("database.DatabaseQueryException");
 * Each database instance holds onto a single connection
 * and acts as a wrapper to MySQLi intending to 
 * abstract out the PHP mess
-*
-* @author		Clinton Alexander
-* @version		3.0
 */
-
 class MySQLiDatabase implements Database {
+	/**
+	* A store of all queries run during this session
+	*/
 	private	static $queries 	= array();
+	/**
+	* A counter of the number of queries run during this session
+	*/
 	private	static $queryCount 	= 0;
 	
-	private $mySQLi 		= array();
+	/**
+	* Current MySQLi connection
+	*/
+	private $mySQLi;
 	
 	/** 
 	* Create a new MySQLi database with the given connection details
@@ -83,9 +94,8 @@ class MySQLiDatabase implements Database {
 	* Returns all results as an associative array
 	* 
 	* @throws	DatabaseQueryException	When a query is invalid
-	* @param	String		MySQL Query to execute
-	* @param	Constant	MySQL Query type
-	* @return	Array		Array of results or false
+	* @param	string	query		MySQL Query to execute
+	* @return	array		Array of results or false
 	*/
 	public function getQuery($query) {
 		return $this->getQueryInternal($query, true);
@@ -220,7 +230,7 @@ class MySQLiDatabase implements Database {
 	/** 
 	* Sanitises the given input
 	* 
-	* @param	String		Data to be sanitised
+	* @param	\String		Data to be sanitised
 	* @return	String		Sanitised data
 	*/
 	public function clean(String $string) {

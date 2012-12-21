@@ -1,4 +1,10 @@
 <?php
+/**
+* A representation of a folder as an extention of a file
+*
+* @author	Clinton Alexander
+* @version	1
+*/
 
 CleanPHP::import('io.File');
 CleanPHP::import('io.FileNotFoundException');
@@ -6,15 +12,13 @@ CleanPHP::import('io.IOException');
 
 /**
 * Representation of a folder
-*
-* @author	Clinton Alexander
 */
 class Folder extends File {
 	
 	/**
 	* Create this representation of a folder
 	*
-	* @param	String		Folder path
+	* @param	\String		folder		Folder path
 	*/
 	public function __construct(String $folder) {
 		if(!$folder->substring($folder->length() - 1, 1)->equals('/')) {
@@ -27,7 +31,7 @@ class Folder extends File {
 	/**
 	* Get a file from within this folder
 	*
-	* @param	String		File name
+	* @param	\String		filename	File name
 	* @return	File		File from within this folder
 	*/
 	public function getFile(String $filename) {

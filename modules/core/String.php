@@ -5,6 +5,10 @@
 * @author	Clinton Alexander
 * @version	1
 */
+
+/**
+* String class for object oriented string access
+*/
 class String {
 	/** 
 	* The raw string this object represents
@@ -44,6 +48,7 @@ class String {
 	* Checking equality between this string and another object. 
 	* For checking if the string *objects* are identical use ===
 	*
+	* @param	mixed	value	The value we are comparing
 	* @return	Whether the other value evaluates to the string value of this string
 	*/
 	public function equals($value) {

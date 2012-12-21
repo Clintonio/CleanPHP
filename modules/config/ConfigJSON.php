@@ -1,14 +1,17 @@
 <?php
+/**
+* Configuration accessing class for JSON based configuration files
+*
+* @author		Clinton Alexander
+* @version		2.0
+*/
 
 CleanPHP::import("config.Config");
 CleanPHP::import("config.MissingConfigException");
 CleanPHP::import('io.IOException');
 
 /**
-* Configuration accessing class for JSON based configuration files
-*
-* @author		Clinton Alexander
-* @version		2.0
+* A configuration implementation for JSON configuration files
 */
 class ConfigJSON implements Config {
 	/** 

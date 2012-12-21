@@ -1,17 +1,22 @@
 <?php
+/**
+* A map of phrases identified by an ID and parsed from a file
+*
+* @author		Clinton Alexander
+* @version		2
+*/
 
 CleanPHP::import("locale.Language");
 CleanPHP::import("locale.MissingPhraseMapException");
 CleanPHP::import("locale.MissingPhraseException");
 
 /**
-* A map of phrases identified by an ID and parsed from a file
-*
-* @author		Clinton Alexander
-* @version		v2
+* A map of phrases loaded from a given file
 */
 class PhraseMap {
-	/* The current language */
+	/**
+	* The current language 
+	*/
 	private $curLang;
 	/**
 	* The store of phrases for this map

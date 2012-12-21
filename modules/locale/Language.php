@@ -5,6 +5,10 @@
 * @author	Clinton Alexander
 * @version	1.0
 */
+
+/**
+* A representation of a language
+*/
 class Language {
 	/**
 	* Languages that are known to be in use
@@ -19,7 +23,7 @@ class Language {
 	/**
 	* Create a new language
 	*
-	* @param	String		Language ID
+	* @param	\String		lang	Language ID, preferably an ISO language code
 	*/
 	private function __construct(String $lang) {
 		self::$languages[(string) $lang] = $this;
@@ -39,7 +43,7 @@ class Language {
 	/**
 	* Check if a language exists.
 	*
-	* @param	String		Language code
+	* @param	\String		lang	Language code
 	* @return	True if the language is has been created
 	*/
 	public static function languageExists(String $lang) {
@@ -49,7 +53,7 @@ class Language {
 	/**
 	* Get a language given by an ID
 	*
-	* @param	String		Language code
+	* @param	\String		lang	Language code
 	* @return	The language object
 	*/
 	public static function getLanguage(String $lang) {
@@ -63,7 +67,7 @@ class Language {
 	/**
 	* Create a given language
 	*
-	* @param	String		Language code
+	* @param	\String		lang	Language code
 	* @return	void
 	*/
 	public static function createLanguage(String $lang) {

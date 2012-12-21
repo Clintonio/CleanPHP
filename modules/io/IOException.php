@@ -4,12 +4,16 @@
 *
 * @author	Clinton Alexander
 */
+
+/**
+* IOException that represents an exception caused by IO interruption
+*/
 class IOException extends Exception {
 	/**
 	* Create an IOException with the given message and optional cause
 	*
-	* @param	String		Message
-	* @param	Exception	(Optional) Cause
+	* @param	\String		message		Message
+	* @param	Exception	case		(Optional) Cause
 	*/
 	public function __construct(String $message, Exception $cause = NULL) {
 		parent::__construct((string) $message, 0, $cause);	

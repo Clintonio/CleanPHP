@@ -2,7 +2,12 @@
 /**
 * An attempt to access a missing phrase
 *
-* @author	Clinton Alexande
+* @author	Clinton Alexander
+* @version	1
+*/
+
+/**
+* Exception thrown when a phrase is missing
 */
 class MissingPhraseException extends MissingResourceException { }
 ?>

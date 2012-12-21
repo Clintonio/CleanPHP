@@ -1,16 +1,42 @@
 <?php
 /**
-* Useful method for abstracting out cookie behaviour
+* Cookie class for accessing cookies in an object oriented manner
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+/**
+* Object oriented cookie class
 */
 class Cookie {
+	/**
+	* Name of cookie in the $_COOKIE array
+	*/
 	private $name;
+	/**
+	* Value of the cookie
+	*/
 	private $value;
+	/**
+	* When the cookie is to expire in UTC time
+	*/
 	private $expire		= 0;
+	/**
+	* Path on which the cookie is valid
+	*/
 	private $path		= "/";
+	/**
+	* Domain on which the cookie is valid, default HTTP_HOST
+	*/
 	private $domain;
+	/**
+	* Whether the cookie is a HTTPS cookie
+	*/
 	private $secure		= false;
+	/**
+	* Whether the cookie can be edited by Javascript or HTTP only
+	*/
 	private $httpOnly	= false;
 	
 	/**

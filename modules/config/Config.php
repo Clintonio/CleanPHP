@@ -1,13 +1,13 @@
 <?php
-
-CleanPHP::import("config.MissingConfigException");
-
 /**
 * Configuration class interface
 *
 * @author		Clinton Alexander
 * @version		3.0
 */
+
+CleanPHP::import("config.MissingConfigException");
+
 interface Config {
 	
 	//============================

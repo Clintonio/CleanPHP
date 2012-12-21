@@ -31,7 +31,7 @@ class Logger {
 	*/
 	protected $maxLogSize;
 	/**
-	* 
+	* Current log text
 	*/ 
 	protected $log;
 	
@@ -110,7 +110,8 @@ class Logger {
 	/**
 	* Log data to EOF
 	*
-	* @param	string		Level of severity	[default='']
+	* @param	string	text		Level of severity
+	* @param	string	severity	The text for the severity of the log entry
 	* @return	void
 	*/
 	public function log($text, $severity = '') {

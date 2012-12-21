@@ -1,18 +1,22 @@
 <?php
-
-CleanPHP::import('io.IOException');
-
 /**
 * File not found exception
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+CleanPHP::import('io.IOException');
+
+/**
+* Exception to throw when a file isn't found
 */
 class FileNotFoundException extends IOException { 
 	/**
 	* Create a new class not found exception for the given class and message
 	*
-	* @param	String		Message for developer
-	* @param	String		File that was missing
+	* @param	string	message		Message for developer
+	* @param	string	file		File that was missing
 	*/
 	public function __construct($message, $file = NULL) {
 		if($file != NULL) {

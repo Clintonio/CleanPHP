@@ -90,7 +90,9 @@ class Debug {
 	}
 	
 	/**
-	* fdump with death/ deathdump
+	* fdump with death/ deathdump that exits upon call
+	*
+	* @param	mixed	variable	The variable to dump before exiting
 	*/
 	public static function ddump($variable) {
 		if(Debug::enabled()) {
@@ -107,7 +109,7 @@ class Debug {
 				echo "</pre>"; 
 			}
 		}
-		die();
+		exit(-1);
 	}
 
 	/**
@@ -156,8 +158,9 @@ class Debug {
 	/**
 	* Prints a usable debug backtrace
 	*
-	* @param	String		New line type
-	* @param	int			Max length of trace
+	* @param	string	NL		New line type
+	* @param	int		length	Max length of trace
+	* @param	string	dbgMsg	Message to display with the output
 	* @return	void
 	*/
 	public static function getBacktrace($NL = "<br />", $length = NULL, $dbgMsg = NULL) {

@@ -1,8 +1,13 @@
 <?php
 /**
-* A class representing session data.
+* A class representing session data with some useful environment accessors
 *
 * @author	Clinton Alexander
+* @version	1
+*/
+
+/**
+* Session object oriented interface with token management
 */
 class Session {
 	/**
@@ -80,7 +85,7 @@ class Session {
 	/**
 	* Check if the given token is valid
 	*
-	* @param	String		Value to check against
+	* @param	\String 	token	Value to check against
 	*/
 	public static function isTokenValid(String $token) {
 		return ($token->equals(self::getToken()));
