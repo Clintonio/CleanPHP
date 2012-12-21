@@ -1,2 +1,5 @@
 *~
 src/test/
+/tests/
+/test/
+/test.php
