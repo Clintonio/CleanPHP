@@ -87,9 +87,10 @@ class Session {
 	/**
 	* Check if the given token is valid
 	*
-	* @param	\String 	token	Value to check against
+	* @param	string 	token	Value to check against
 	*/
-	public static function isTokenValid(String $token) {
+	public static function isTokenValid($token) {
+		$token = new String($token);
 		return ($token->equals(self::getToken()));
 	}
 }
