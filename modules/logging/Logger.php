@@ -6,12 +6,33 @@
 * @version		v1.0
 */
 
+/**
+* A logger for creating logs
+*/
 class Logger {
+	/**
+	* Name of the log, will be used in the file name
+	*/
 	protected $logName;
+	/**
+	* Directory to store this log
+	*/
 	protected $logDir;
+	/**
+	* Log location, depends on the logName and logDir
+	*/
 	protected $logLoc;
+	/**
+	* Maximum number of times to rotate the log file
+	*/
 	protected $rotateMax;
+	/**
+	* Maximum filesize of the log in kB
+	*/
 	protected $maxLogSize;
+	/**
+	* 
+	*/ 
 	protected $log;
 	
 	/**
@@ -108,7 +129,7 @@ class Logger {
 	*
 	* @return	string		text
 	*/
-	public static function read() {
+	public function read() {
 		if(!isset($this->log)) {
 			if(false === ($log = file_get_contents($this->logLoc))) {
 				throw new MissingResourceException($this->logLoc . ' log file is missing');
