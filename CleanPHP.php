@@ -10,9 +10,6 @@
 // SYSTEM REQUIREMENTS
 //============================
 
-// Since System is Rotatr's lifeblood and all scripts
-// use it, requirements go in system
-
 // We need to have a recent version
 if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 	die('<h1>Critical Error - Site cannot function</h1><br />PHP Version too low, current installed: ' . PHP_VERSION . '. 
