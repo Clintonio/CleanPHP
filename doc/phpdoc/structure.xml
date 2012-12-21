@@ -1,250 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a12" title="">
-  <file path="CleanPHP.php" hash="f821e42b2acf666feeccda3b58fd6b85" package="Default">
+  <file path="CleanPHP.php" hash="70a31d658835d1f22e7750ad929042e4" package="Default">
     <docblock line="2">
       <description>CleanPHP Core API</description>
       <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2.0"/>
     </docblock>
-    <include line="83" type="Include Once" package="Default">
+    <include line="80" type="Include Once" package="Default">
       <name/>
     </include>
-    <include line="94" type="Include Once" package="Default">
+    <include line="91" type="Include Once" package="Default">
       <name/>
     </include>
-    <class final="false" abstract="false" namespace="global" line="34" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="31" package="CleanPHP">
       <extends/>
       <name>CleanPHP</name>
       <full_name>\CleanPHP</full_name>
-      <docblock line="27">
+      <docblock line="24">
         <description>Contains the most important functions and
 functionality for the framework to load and
 work</description>
         <long-description></long-description>
-        <tag line="27" name="package" description="CleanPHP"/>
+        <tag line="24" name="package" description="CleanPHP"/>
       </docblock>
-      <constant namespace="global" line="58" package="CleanPHP">
+      <constant namespace="global" line="55" package="CleanPHP">
         <name>ONLOAD_METHOD</name>
         <full_name>ONLOAD_METHOD</full_name>
         <value>"onLoad"</value>
-        <docblock line="55">
+        <docblock line="52">
           <description>The name of the onload method for classes</description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <property final="false" static="true" visibility="private" line="39" namespace="global" package="Default">
+      <property final="false" static="true" visibility="private" line="36" namespace="global" package="Default">
         <name>$moduleFolder</name>
         <default>"/modules/"</default>
-        <docblock line="36">
+        <docblock line="33">
           <description>Location of CleanAPI main modules</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property final="false" static="true" visibility="private" line="43" namespace="global" package="Default">
+      <property final="false" static="true" visibility="private" line="40" namespace="global" package="Default">
         <name>$userModules</name>
         <default>array()</default>
-        <docblock line="40">
+        <docblock line="37">
           <description>User defined module folders</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property final="false" static="true" visibility="private" line="48" namespace="global" package="Default">
+      <property final="false" static="true" visibility="private" line="45" namespace="global" package="Default">
         <name>$loadedModules</name>
         <default>array()</default>
-        <docblock line="45">
+        <docblock line="42">
           <description>Loaded module list</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property final="false" static="true" visibility="private" line="53" namespace="global" package="Default">
+      <property final="false" static="true" visibility="private" line="50" namespace="global" package="Default">
         <name>$moduleSeparator</name>
         <default>"."</default>
-        <docblock line="50">
+        <docblock line="47">
           <description>Module separator</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="72" package="CleanPHP">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="69" package="CleanPHP">
         <name>import</name>
         <full_name>import</full_name>
-        <docblock line="64">
+        <docblock line="61">
           <description>Load a class from a CleanAPI module.</description>
           <long-description>&lt;p&gt;If a static public method named "onLoad" is present
 it will be automatically executed&lt;/p&gt;</long-description>
-          <tag line="64" name="throws" description="When a class was not found" type="\ClassNotFoundException">
+          <tag line="61" name="throws" description="When a class was not found" type="\ClassNotFoundException">
             <type by_reference="false">\ClassNotFoundException</type>
           </tag>
-          <tag line="64" name="param" description="The class to load. Java style class name using dots to denote a package" type="String" variable="$class">
+          <tag line="61" name="param" description="The class to load. Java style class name using dots to denote a package" type="String" variable="$class">
             <type by_reference="false">String</type>
           </tag>
-          <tag line="64" name="return" description="" type="void">
+          <tag line="61" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
-        <argument line="72">
+        <argument line="69">
           <name>$class</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="130" package="CleanPHP">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="127" package="CleanPHP">
         <name>moduleExists</name>
         <full_name>moduleExists</full_name>
-        <docblock line="123">
+        <docblock line="120">
           <description>Check if a given class exists on the module path with the given module
 name, following the standard module name rules</description>
           <long-description></long-description>
-          <tag line="123" name="param" description="The class module being loaded" type="\class" variable="$class">
+          <tag line="120" name="param" description="The class module being loaded" type="\class" variable="$class">
             <type by_reference="false">\class</type>
           </tag>
-          <tag line="123" name="return" description="True if the module is found on the module path" type="bool">
+          <tag line="120" name="return" description="True if the module is found on the module path" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="130">
+        <argument line="127">
           <name>$class</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="169" package="CleanPHP">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="166" package="CleanPHP">
         <name>addModulePath</name>
         <full_name>addModulePath</full_name>
-        <docblock line="163">
+        <docblock line="160">
           <description>Add a new module folder</description>
           <long-description></long-description>
-          <tag line="163" name="throws" description="" type="\FileNotFoundException">
+          <tag line="160" name="throws" description="" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
-          <tag line="163" name="param" description="New module folder" type="String" variable="$folder">
+          <tag line="160" name="param" description="New module folder" type="String" variable="$folder">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
-        <argument line="169">
+        <argument line="166">
           <name>$folder</name>
           <default></default>
           <type/>
         </argument>
       </method>
     </class>
-    <class final="false" abstract="false" namespace="global" line="191" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="188" package="CleanPHP">
       <extends>\RuntimeException</extends>
       <name>ClassNotFoundException</name>
       <full_name>\ClassNotFoundException</full_name>
-      <docblock line="183">
+      <docblock line="180">
         <description>Exception to be thrown when a class could not be found</description>
         <long-description></long-description>
-        <tag line="183" name="author" description="Clinton Alexander"/>
-        <tag line="183" name="package" description="CleanPHP"/>
-        <tag line="183" name="since" description="2"/>
-        <tag line="183" name="version" description="1"/>
+        <tag line="180" name="author" description="Clinton Alexander"/>
+        <tag line="180" name="package" description="CleanPHP"/>
+        <tag line="180" name="since" description="2"/>
+        <tag line="180" name="version" description="1"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="198" package="CleanPHP">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="195" package="CleanPHP">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="192">
+        <docblock line="189">
           <description>Create a new class not found exception for the given class and message</description>
           <long-description></long-description>
-          <tag line="192" name="param" description="Name of class not found" type="String" variable="$class">
+          <tag line="189" name="param" description="Name of class not found" type="String" variable="$class">
             <type by_reference="false">String</type>
           </tag>
-          <tag line="192" name="param" description="Message for developer" type="String" variable="$message">
+          <tag line="189" name="param" description="Message for developer" type="String" variable="$message">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
-        <argument line="198">
+        <argument line="195">
           <name>$class</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="198">
+        <argument line="195">
           <name>$message</name>
           <default></default>
           <type/>
         </argument>
       </method>
     </class>
-    <class final="false" abstract="false" namespace="global" line="214" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="211" package="CleanPHP">
       <extends>\RuntimeException</extends>
       <name>MissingResourceException</name>
       <full_name>\MissingResourceException</full_name>
-      <docblock line="204">
+      <docblock line="201">
         <description>Exception to be thrown when an something that
 should exist does not.Primarily items in the DB
 Or objects</description>
         <long-description></long-description>
-        <tag line="204" name="author" description="Clinton Alexander"/>
-        <tag line="204" name="package" description="CleanPHP"/>
-        <tag line="204" name="since" description="2"/>
-        <tag line="204" name="version" description="1"/>
+        <tag line="201" name="author" description="Clinton Alexander"/>
+        <tag line="201" name="package" description="CleanPHP"/>
+        <tag line="201" name="since" description="2"/>
+        <tag line="201" name="version" description="1"/>
       </docblock>
     </class>
-    <class final="false" abstract="false" namespace="global" line="226" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="223" package="CleanPHP">
       <extends>\MissingResourceException</extends>
       <name>MissingIndexException</name>
       <full_name>\MissingIndexException</full_name>
-      <docblock line="216">
+      <docblock line="213">
         <description>Exception to be thrown when an something that
 should exist does not.</description>
         <long-description>&lt;p&gt;Primarily array indexes
 in associative arrays&lt;/p&gt;</long-description>
-        <tag line="216" name="author" description="Clinton Alexander"/>
-        <tag line="216" name="package" description="CleanPHP"/>
-        <tag line="216" name="since" description="2"/>
-        <tag line="216" name="version" description="1"/>
+        <tag line="213" name="author" description="Clinton Alexander"/>
+        <tag line="213" name="package" description="CleanPHP"/>
+        <tag line="213" name="since" description="2"/>
+        <tag line="213" name="version" description="1"/>
       </docblock>
     </class>
-    <class final="false" abstract="false" namespace="global" line="236" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="233" package="CleanPHP">
       <extends>\RuntimeException</extends>
       <name>ResourceUpdateException</name>
       <full_name>\ResourceUpdateException</full_name>
-      <docblock line="228">
+      <docblock line="225">
         <description>Resource update failure</description>
         <long-description></long-description>
-        <tag line="228" name="author" description="Clinton Alexander"/>
-        <tag line="228" name="package" description="CleanPHP"/>
-        <tag line="228" name="since" description="2"/>
-        <tag line="228" name="version" description="1"/>
+        <tag line="225" name="author" description="Clinton Alexander"/>
+        <tag line="225" name="package" description="CleanPHP"/>
+        <tag line="225" name="since" description="2"/>
+        <tag line="225" name="version" description="1"/>
       </docblock>
     </class>
-    <class final="false" abstract="false" namespace="global" line="246" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="243" package="CleanPHP">
       <extends>\RuntimeException</extends>
       <name>PermissionsException</name>
       <full_name>\PermissionsException</full_name>
-      <docblock line="238">
+      <docblock line="235">
         <description>Permissions failure</description>
         <long-description></long-description>
-        <tag line="238" name="author" description="Clinton Alexander"/>
-        <tag line="238" name="package" description="CleanPHP"/>
-        <tag line="238" name="since" description="2"/>
-        <tag line="238" name="version" description="1"/>
+        <tag line="235" name="author" description="Clinton Alexander"/>
+        <tag line="235" name="package" description="CleanPHP"/>
+        <tag line="235" name="since" description="2"/>
+        <tag line="235" name="version" description="1"/>
       </docblock>
     </class>
-    <class final="false" abstract="false" namespace="global" line="256" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="253" package="CleanPHP">
       <extends>\InvalidArgumentException</extends>
       <name>FormValidatorException</name>
       <full_name>\FormValidatorException</full_name>
-      <docblock line="248">
+      <docblock line="245">
         <description>Form validation exception</description>
         <long-description></long-description>
-        <tag line="248" name="author" description="Clinton Alexander"/>
-        <tag line="248" name="package" description="CleanPHP"/>
-        <tag line="248" name="since" description="2"/>
-        <tag line="248" name="version" description="1"/>
+        <tag line="245" name="author" description="Clinton Alexander"/>
+        <tag line="245" name="package" description="CleanPHP"/>
+        <tag line="245" name="since" description="2"/>
+        <tag line="245" name="version" description="1"/>
       </docblock>
     </class>
-    <class final="false" abstract="false" namespace="global" line="266" package="CleanPHP">
+    <class final="false" abstract="false" namespace="global" line="263" package="CleanPHP">
       <extends>\RuntimeException</extends>
       <name>UnexpectedFieldException</name>
       <full_name>\UnexpectedFieldException</full_name>
-      <docblock line="258">
+      <docblock line="255">
         <description>Unexpected field exception</description>
         <long-description></long-description>
-        <tag line="258" name="author" description="Clinton Alexander"/>
-        <tag line="258" name="package" description="CleanPHP"/>
-        <tag line="258" name="since" description="2"/>
-        <tag line="258" name="version" description="1"/>
+        <tag line="255" name="author" description="Clinton Alexander"/>
+        <tag line="255" name="package" description="CleanPHP"/>
+        <tag line="255" name="since" description="2"/>
+        <tag line="255" name="version" description="1"/>
       </docblock>
     </class>
   </file>
@@ -2556,6 +2556,112 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
+  <file path="modules/layout/Layout.php" hash="b0736e456aee6d143f2930658106302a" package="Default">
+    <docblock line="2">
+      <description>A PHP template class that loads templates written in PHP in an object
+oriented manner.</description>
+      <long-description>&lt;p&gt;An example can be found in the examples folder.&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Clinton Alexander"/>
+      <tag line="2" name="version" description="1"/>
+    </docblock>
+    <include line="72" type="Include" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="18" package="layout">
+      <extends/>
+      <name>Layout</name>
+      <full_name>\Layout</full_name>
+      <docblock line="13">
+        <description>PHP Templating layout class</description>
+        <long-description></long-description>
+        <tag line="13" name="package" description="layout"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
+        <name>$file</name>
+        <default></default>
+        <docblock line="19">
+          <description>The file for this layout</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
+        <name>$variables</name>
+        <default>array()</default>
+        <docblock line="23">
+          <description>Variables for this layout</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="layout">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="28">
+          <description>Create a new layout with the given file</description>
+          <long-description></long-description>
+          <tag line="28" name="param" description="file&#9;The layout file" type="\File" variable="$file">
+            <type by_reference="false">\File</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$file</name>
+          <default></default>
+          <type>\File</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="layout">
+        <name>addVariable</name>
+        <full_name>addVariable</full_name>
+        <docblock line="37">
+          <description>Add a new variable to the layout symbol table.</description>
+          <long-description>&lt;p&gt;Reserved names:
+_file, standard PHP reserved names.&lt;/p&gt;</long-description>
+          <tag line="37" name="param" description="name&#9;Name of variable" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="37" name="param" description="value&#9;Value of the variable" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="53" package="layout">
+        <name>addVariables</name>
+        <full_name>addVariables</full_name>
+        <docblock line="48">
+          <description>Add an array of variables.</description>
+          <long-description>&lt;p&gt;Variables with the same key will use the newer value&lt;/p&gt;</long-description>
+          <tag line="48" name="param" description="variables&#9;An array of key value pairs following addVariable parameters" type="array" variable="$variables">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="53">
+          <name>$variables</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="layout">
+        <name>display</name>
+        <full_name>display</full_name>
+        <docblock line="57">
+          <description>Output this template by including the template</description>
+          <long-description></long-description>
+          <tag line="57" name="throws" description="If the file cannot be found" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
   <file path="modules/locale/Language.php" hash="08790ed245a1e76d3cb1b6c522953649" package="Default">
     <docblock line="2">
       <description>A language identifier.</description>
@@ -3196,6 +3302,7 @@ language</description>
   <package name="error" full_name="error"/>
   <package name="input" full_name="input"/>
   <package name="io" full_name="io"/>
+  <package name="layout" full_name="layout"/>
   <package name="locale" full_name="locale"/>
   <package name="logging" full_name="logging"/>
   <namespace name="global" full_name="global"/>

@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \MissingPhraseException</title>
+<title>phpDocumentor » \Layout</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -64,36 +64,115 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list"></ul>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Create a new layout with the given file"><span class="description">Create a new layout with the given file</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addVariable" title="addVariable :: Add a new variable to the layout symbol table."><span class="description">Add a new variable to the layout symbol table.</span><pre>addVariable()</pre></a></li>
+<li class="method public "><a href="#method_addVariables" title="addVariables :: Add an array of variables."><span class="description">Add an array of variables.</span><pre>addVariables()</pre></a></li>
+<li class="method public "><a href="#method_display" title="display :: Output this template by including the template"><span class="description">Output this template by including the template</span><pre>display()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_file" title="$file :: The file for this layout"><span class="description"></span><pre>$file</pre></a></li>
+<li class="property private "><a href="#property_variables" title="$variables :: Variables for this layout"><span class="description"></span><pre>$variables</pre></a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="span8">
-<a id="\MissingPhraseException"></a><ul class="breadcrumb">
+<a id="\Layout"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/global.html">global</a></li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/MissingPhraseException.html">MissingPhraseException</a>
+<span class="divider">\</span><a href="../classes/Layout.html">Layout</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Exception thrown when a phrase is missing</p>
+<p class="short_description">PHP Templating layout class</p>
 <div class="details">
 <div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
+<table class="table table-bordered"><tr>
 <th>package</th>
-<td><a href="../packages/locale.html">locale</a></td>
-</tr>
-<tr>
-<th>author</th>
-<td><a href="">Clinton Alexander</a></td>
-</tr>
-<tr>
-<th>version</th>
-<td>1</td>
-</tr>
-</table>
+<td><a href="../packages/layout.html">layout</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Create a new layout with the given file</h2>
+<pre>__construct(\File $file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code><a href="../classes/File.html">\File</a></code><p>file	The layout file</p></div>
+</div></div>
+</div>
+<a id="method_addVariable"></a><div class="element clickable method public method_addVariable" data-toggle="collapse" data-target=".method_addVariable .collapse">
+<h2>Add a new variable to the layout symbol table.</h2>
+<pre>addVariable(string $name, mixed $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Reserved names:
+_file, standard PHP reserved names.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>name	Name of variable</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>value	Value of the variable</p></div>
+</div></div>
+</div>
+<a id="method_addVariables"></a><div class="element clickable method public method_addVariables" data-toggle="collapse" data-target=".method_addVariables .collapse">
+<h2>Add an array of variables.</h2>
+<pre>addVariables(array $variables) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Variables with the same key will use the newer value</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$variables</h4>
+<code>array</code><p>variables	An array of key value pairs following addVariable parameters</p></div>
+</div></div>
+</div>
+<a id="method_display"></a><div class="element clickable method public method_display" data-toggle="collapse" data-target=".method_display .collapse">
+<h2>Output this template by including the template</h2>
+<pre>display() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/FileNotFoundException.html">\FileNotFoundException</a></code></th>
+<td>If the file cannot be found</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_file"> </a><div class="element clickable property private property_file" data-toggle="collapse" data-target=".property_file .collapse">
+<h2></h2>
+<pre>$file </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_variables"> </a><div class="element clickable property private property_variables" data-toggle="collapse" data-target=".property_variables .collapse">
+<h2></h2>
+<pre>$variables </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -101,7 +180,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-12-21T20:15:53Z.<br></footer></div>
+            generated on 2012-12-21T20:19:38Z.<br></footer></div>
 </div>
 </body>
 </html>
