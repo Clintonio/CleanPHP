@@ -26,7 +26,7 @@ class File {
 	* @param	string		path	Path of the file we are representing
 	*/
 	public function __construct($path) {
-		$this->path = (string) $path;
+		$this->path = new String($path);
 	}
 	
 	/**
@@ -35,7 +35,7 @@ class File {
 	* @return	bool	True if this file exists (and is not a folder)
 	*/
 	public function exists() {
-		return (is_file($this->path));
+		return (is_file((string) $this->path));
 	}
 	
 	/**
