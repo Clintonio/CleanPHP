@@ -117,10 +117,11 @@ class Folder extends File {
 	* current folder and the parent folders respectively. Does not match
 	* Unix hidden folders (.foldername)
 	*
-	* @return	True if the folder location is . or ..
+	* @return	True if the folder location is  a . or .. folder
 	*/
 	public function isDotFolder() {
-		return (($this->path->equals('./')) || ($this->path->equals('../'))); 
+		return (($this->path->substring(-2, 2)->equals('./')) 
+			 || ($this->path->substring(-3, 3)->equals('../'))); 
 	}
 	
 	/**
