@@ -91,6 +91,7 @@ class Folder extends File {
 			} else {
 				$listing = array();
 				while(($entry = readdir($dirHandle)) !== false) {
+					$entry = $this->path . $entry;
 					$isDir = is_dir($entry);
 					if($isDir && ($mask & self::FOLDER)) {
 						$folder = new Folder($entry);
