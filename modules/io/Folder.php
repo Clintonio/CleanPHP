@@ -54,6 +54,16 @@ class Folder extends File {
 	}
 	
 	/**
+	* Get a folder from within this folder
+	*
+	* @param	string		folderName	Folder name
+	* @return	Folder		The folder from within this folder
+	*/
+	public function getFolder($folderName) {
+		return new Folder($this->path->append((string) $folderName));
+	}
+	
+	/**
 	* Get the listing of all folders in this directory
 	*
 	* @throws	FileNotFoundException	When the directory doesn't exist
