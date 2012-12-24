@@ -73,6 +73,11 @@
 <li class="method public "><a href="#method_create" title="create :: Create the directory"><span class="description">Create the directory</span><pre>create()</pre></a></li>
 <li class="method public "><a href="#method_exists" title="exists :: Check if this folder exists"><span class="description">Check if this folder exists</span><pre>exists()</pre></a></li>
 <li class="method public "><a href="#method_getFile" title="getFile :: Get a file from within this folder"><span class="description">Get a file from within this folder</span><pre>getFile()</pre></a></li>
+<li class="method public "><a href="#method_getFileList" title="getFileList :: Get the listing of all files in this directory"><span class="description">Get the listing of all files in this directory</span><pre>getFileList()</pre></a></li>
+<li class="method public "><a href="#method_getFolder" title="getFolder :: Get a folder from within this folder"><span class="description">Get a folder from within this folder</span><pre>getFolder()</pre></a></li>
+<li class="method public "><a href="#method_getFolderList" title="getFolderList :: Get the listing of all folders in this directory"><span class="description">Get the listing of all folders in this directory</span><pre>getFolderList()</pre></a></li>
+<li class="method public "><a href="#method_getListing" title="getListing :: Get the listing of objects in this folder based on a mask"><span class="description">Get the listing of objects in this folder based on a mask</span><pre>getListing()</pre></a></li>
+<li class="method public "><a href="#method_isDotFolder" title="isDotFolder :: Check if the given folder is a dot folder, ."><span class="description">Check if the given folder is a dot folder, .</span><pre>isDotFolder()</pre></a></li>
 <li class="method public "><a href="#method_mkdir" title="mkdir :: Create the directory"><span class="description">Create the directory</span><pre>mkdir()</pre></a></li>
 </ul>
 </li>
@@ -82,6 +87,14 @@
 </li>
 <li class="nav-header protected">» Protected
                     <ul><li class="property protected inherited"><a href="#property_path" title="$path :: Path of the file"><span class="description"></span><pre>$path</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_FILE" title="FILE :: File mask"><span class="description">File mask</span><pre>FILE</pre></a></li>
+<li class="constant  "><a href="#constant_FOLDER" title="FOLDER :: Folder mask"><span class="description">Folder mask</span><pre>FOLDER</pre></a></li>
+<li class="constant  "><a href="#constant_INCLUDE_DOT_FOLDERS" title="INCLUDE_DOT_FOLDERS :: Include ., ."><span class="description">Include ., .</span><pre>INCLUDE_DOT_FOLDERS</pre></a></li>
+</ul>
 </li>
 </ul>
 </div>
@@ -164,6 +177,102 @@
 <code><a href="../classes/File.html">\File</a></code>File from within this folder</div>
 </div></div>
 </div>
+<a id="method_getFileList"></a><div class="element clickable method public method_getFileList" data-toggle="collapse" data-target=".method_getFileList .collapse">
+<h2>Get the listing of all files in this directory</h2>
+<pre>getFileList() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/FileNotFoundException.html">\FileNotFoundException</a></code></th>
+<td>When the directory doesn't exist</td>
+</tr>
+<tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>When an error reading occurs</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of File objects</div>
+</div></div>
+</div>
+<a id="method_getFolder"></a><div class="element clickable method public method_getFolder" data-toggle="collapse" data-target=".method_getFolder .collapse">
+<h2>Get a folder from within this folder</h2>
+<pre>getFolder(string $folderName) : <a href="../classes/Folder.html">\Folder</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$folderName</h4>
+<code>string</code><p>folderName	Folder name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Folder.html">\Folder</a></code>The folder from within this folder</div>
+</div></div>
+</div>
+<a id="method_getFolderList"></a><div class="element clickable method public method_getFolderList" data-toggle="collapse" data-target=".method_getFolderList .collapse">
+<h2>Get the listing of all folders in this directory</h2>
+<pre>getFolderList() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/FileNotFoundException.html">\FileNotFoundException</a></code></th>
+<td>When the directory doesn't exist</td>
+</tr>
+<tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>When an error reading occurs</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of folder objects</div>
+</div></div>
+</div>
+<a id="method_getListing"></a><div class="element clickable method public method_getListing" data-toggle="collapse" data-target=".method_getListing .collapse">
+<h2>Get the listing of objects in this folder based on a mask</h2>
+<pre>getListing(\mask $mask) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mask</h4>
+<code>\mask</code><p>The mask of which objects to list, default is everything
+				except . and ..</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/FileNotFoundException.html">\FileNotFoundException</a></code></th>
+<td>When the directory doesn't exist</td>
+</tr>
+<tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>When an error reading occurs</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_isDotFolder"></a><div class="element clickable method public method_isDotFolder" data-toggle="collapse" data-target=".method_isDotFolder .collapse">
+<h2>Check if the given folder is a dot folder, .</h2>
+<pre>isDotFolder() : True</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>or .., which represent the
+current folder and the parent folders respectively. Does not match
+Unix hidden folders (.foldername)</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>True</code>if the folder location is  a . or .. folder</div>
+</div></div>
+</div>
 <a id="method_mkdir"></a><div class="element clickable method public method_mkdir" data-toggle="collapse" data-target=".method_mkdir .collapse">
 <h2>Create the directory</h2>
 <pre>mkdir() </pre>
@@ -184,14 +293,33 @@
 </tr></table>
 </div></div>
 </div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_FILE"> </a><div class="element clickable constant  constant_FILE" data-toggle="collapse" data-target=".constant_FILE .collapse">
+<h2>File mask</h2>
+<pre>FILE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_FOLDER"> </a><div class="element clickable constant  constant_FOLDER" data-toggle="collapse" data-target=".constant_FOLDER .collapse">
+<h2>Folder mask</h2>
+<pre>FOLDER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_INCLUDE_DOT_FOLDERS"> </a><div class="element clickable constant  constant_INCLUDE_DOT_FOLDERS" data-toggle="collapse" data-target=".constant_INCLUDE_DOT_FOLDERS .collapse">
+<h2>Include ., .</h2>
+<pre>INCLUDE_DOT_FOLDERS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>. folders, does not include hidden files/folders</p></div></div></div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-12-21T20:19:38Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a>.<br></footer></div>
 </div>
 </body>
 </html>

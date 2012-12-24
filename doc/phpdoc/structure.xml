@@ -3,7 +3,7 @@
   <file path="CleanPHP.php" hash="70a31d658835d1f22e7750ad929042e4" package="Default">
     <docblock line="2">
       <description>CleanPHP Core API</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2.0"/>
     </docblock>
@@ -21,7 +21,7 @@
         <description>Contains the most important functions and
 functionality for the framework to load and
 work</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="24" name="package" description="CleanPHP"/>
       </docblock>
       <constant namespace="global" line="55" package="CleanPHP">
@@ -30,7 +30,7 @@ work</description>
         <value>"onLoad"</value>
         <docblock line="52">
           <description>The name of the onload method for classes</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="true" visibility="private" line="36" namespace="global" package="Default">
@@ -38,7 +38,7 @@ work</description>
         <default>"/modules/"</default>
         <docblock line="33">
           <description>Location of CleanAPI main modules</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="40" namespace="global" package="Default">
@@ -46,7 +46,7 @@ work</description>
         <default>array()</default>
         <docblock line="37">
           <description>User defined module folders</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="45" namespace="global" package="Default">
@@ -54,7 +54,7 @@ work</description>
         <default>array()</default>
         <docblock line="42">
           <description>Loaded module list</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="50" namespace="global" package="Default">
@@ -62,7 +62,7 @@ work</description>
         <default>"."</default>
         <docblock line="47">
           <description>Module separator</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="69" package="CleanPHP">
@@ -84,7 +84,7 @@ it will be automatically executed&lt;/p&gt;</long-description>
         </docblock>
         <argument line="69">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -94,7 +94,7 @@ it will be automatically executed&lt;/p&gt;</long-description>
         <docblock line="120">
           <description>Check if a given class exists on the module path with the given module
 name, following the standard module name rules</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="120" name="param" description="The class module being loaded" type="\class" variable="$class">
             <type by_reference="false">\class</type>
           </tag>
@@ -104,7 +104,7 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="127">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -113,7 +113,7 @@ name, following the standard module name rules</description>
         <full_name>addModulePath</full_name>
         <docblock line="160">
           <description>Add a new module folder</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="160" name="throws" description="" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -123,7 +123,7 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="166">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -134,7 +134,7 @@ name, following the standard module name rules</description>
       <full_name>\ClassNotFoundException</full_name>
       <docblock line="180">
         <description>Exception to be thrown when a class could not be found</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="180" name="author" description="Clinton Alexander"/>
         <tag line="180" name="package" description="CleanPHP"/>
         <tag line="180" name="since" description="2"/>
@@ -145,7 +145,7 @@ name, following the standard module name rules</description>
         <full_name>__construct</full_name>
         <docblock line="189">
           <description>Create a new class not found exception for the given class and message</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="189" name="param" description="Name of class not found" type="String" variable="$class">
             <type by_reference="false">String</type>
           </tag>
@@ -155,12 +155,12 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="195">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="195">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -173,7 +173,7 @@ name, following the standard module name rules</description>
         <description>Exception to be thrown when an something that
 should exist does not.Primarily items in the DB
 Or objects</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="201" name="author" description="Clinton Alexander"/>
         <tag line="201" name="package" description="CleanPHP"/>
         <tag line="201" name="since" description="2"/>
@@ -201,7 +201,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\ResourceUpdateException</full_name>
       <docblock line="225">
         <description>Resource update failure</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="225" name="author" description="Clinton Alexander"/>
         <tag line="225" name="package" description="CleanPHP"/>
         <tag line="225" name="since" description="2"/>
@@ -214,7 +214,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\PermissionsException</full_name>
       <docblock line="235">
         <description>Permissions failure</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="235" name="author" description="Clinton Alexander"/>
         <tag line="235" name="package" description="CleanPHP"/>
         <tag line="235" name="since" description="2"/>
@@ -227,7 +227,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\FormValidatorException</full_name>
       <docblock line="245">
         <description>Form validation exception</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="245" name="author" description="Clinton Alexander"/>
         <tag line="245" name="package" description="CleanPHP"/>
         <tag line="245" name="since" description="2"/>
@@ -240,7 +240,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\UnexpectedFieldException</full_name>
       <docblock line="255">
         <description>Unexpected field exception</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="255" name="author" description="Clinton Alexander"/>
         <tag line="255" name="package" description="CleanPHP"/>
         <tag line="255" name="since" description="2"/>
@@ -251,7 +251,7 @@ in associative arrays&lt;/p&gt;</long-description>
   <file path="modules/config/Config.php" hash="cc079e9ef0b85d52151fffea5afe9137" package="Default">
     <docblock line="2">
       <description>Configuration class interface</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="3.0"/>
     </docblock>
@@ -260,7 +260,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\Config</full_name>
       <docblock line="11">
         <description>Configuration interface</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="11" name="package" description="config"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="config">
@@ -268,7 +268,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <full_name>__construct</full_name>
         <docblock line="22">
           <description>Loads a config file into the memory</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="22" name="throws" description="Configuration file is missing" type="\MissingConfigException">
             <type by_reference="false">\MissingConfigException</type>
           </tag>
@@ -278,7 +278,7 @@ in associative arrays&lt;/p&gt;</long-description>
         </docblock>
         <argument line="28">
           <name>$configLocation</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -287,7 +287,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <full_name>getConfig</full_name>
         <docblock line="34">
           <description>Get a config value</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="34" name="throws" description="When a configuration is missing" type="\MissingConfigException">
             <type by_reference="false">\MissingConfigException</type>
           </tag>
@@ -300,7 +300,7 @@ in associative arrays&lt;/p&gt;</long-description>
         </docblock>
         <argument line="41">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -309,7 +309,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <full_name>setConfig</full_name>
         <docblock line="47">
           <description>Set a config value and write to disk</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="47" name="param" description="Config name" type="String" variable="$name">
             <type by_reference="false">String</type>
           </tag>
@@ -322,12 +322,12 @@ in associative arrays&lt;/p&gt;</long-description>
         </docblock>
         <argument line="54">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="54">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -336,7 +336,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <full_name>setTempConfig</full_name>
         <docblock line="56">
           <description>Set a config value and do not write to disk</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="56" name="param" description="Config name" type="String" variable="$name">
             <type by_reference="false">String</type>
           </tag>
@@ -349,12 +349,12 @@ in associative arrays&lt;/p&gt;</long-description>
         </docblock>
         <argument line="63">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="63">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -363,7 +363,7 @@ in associative arrays&lt;/p&gt;</long-description>
   <file path="modules/config/ConfigJSON.php" hash="aa17c461800a6baf02b9b855e7b9bfac" package="Default">
     <docblock line="2">
       <description>Configuration accessing class for JSON based configuration files</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2.0"/>
     </docblock>
@@ -374,7 +374,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\ConfigJSON</full_name>
       <docblock line="13">
         <description>A configuration implementation for JSON configuration files</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="config"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
@@ -382,15 +382,15 @@ in associative arrays&lt;/p&gt;</long-description>
         <default>array()</default>
         <docblock line="19">
           <description>All Config values</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="27" namespace="global" package="Default">
         <name>$location</name>
-        <default></default>
+        <default/>
         <docblock line="24">
           <description>Config file location</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="config">
@@ -398,7 +398,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <full_name>__construct</full_name>
         <docblock line="33">
           <description>Loads a config file into the memory</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="33" name="throws" description="Configuration file is missing" type="\MissingConfigException">
             <type by_reference="false">\MissingConfigException</type>
           </tag>
@@ -408,7 +408,7 @@ in associative arrays&lt;/p&gt;</long-description>
         </docblock>
         <argument line="39">
           <name>$configLocation</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -418,7 +418,7 @@ in associative arrays&lt;/p&gt;</long-description>
         <docblock line="63">
           <description>Creates an empty config file at the given location, erasing any existing ones
 then returns it as a new config object</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="63" name="throws" description="When the existing file can't be removed, or the&#10;&#9;&#9;&#9;&#9;&#9;&#9;the new one can't be written" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
@@ -431,7 +431,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="72">
           <name>$file</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -440,7 +440,7 @@ then returns it as a new config object</description>
         <full_name>getConfig</full_name>
         <docblock line="88">
           <description>Get a config value</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="88" name="throws" description="When a configuration is missing" type="\MissingConfigException">
             <type by_reference="false">\MissingConfigException</type>
           </tag>
@@ -453,7 +453,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="95">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -462,7 +462,7 @@ then returns it as a new config object</description>
         <full_name>setConfig</full_name>
         <docblock line="108">
           <description>Set a config value and write to disk</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="108" name="param" description="Config name" type="String" variable="$name">
             <type by_reference="false">String</type>
           </tag>
@@ -475,12 +475,12 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="115">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="115">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -489,7 +489,7 @@ then returns it as a new config object</description>
         <full_name>setTempConfig</full_name>
         <docblock line="123">
           <description>Set a config value and do not write to disk</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="123" name="param" description="Config name" type="String" variable="$name">
             <type by_reference="false">String</type>
           </tag>
@@ -502,12 +502,12 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="130">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="130">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -516,7 +516,7 @@ then returns it as a new config object</description>
         <full_name>parseConfigFile</full_name>
         <docblock line="141">
           <description>Parses a config file into array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="141" name="param" description="Config file string" type="String" variable="$config">
             <type by_reference="false">String</type>
           </tag>
@@ -526,7 +526,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="147">
           <name>$config</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -535,7 +535,7 @@ then returns it as a new config object</description>
   <file path="modules/config/MissingConfigException.php" hash="67274a8311fa138b1f4b870b9f5819fb" package="Default">
     <docblock line="2">
       <description>Missing Config Exception</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -545,7 +545,7 @@ then returns it as a new config object</description>
       <full_name>\MissingConfigException</full_name>
       <docblock line="9">
         <description>Missing configuration exception</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="config"/>
       </docblock>
     </class>
@@ -553,7 +553,7 @@ then returns it as a new config object</description>
   <file path="modules/core/Cookie.php" hash="98a1bd7befc184bdd8cea2fc9a36c44b" package="Default">
     <docblock line="2">
       <description>Cookie class for accessing cookies in an object oriented manner</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -563,23 +563,23 @@ then returns it as a new config object</description>
       <full_name>\Cookie</full_name>
       <docblock line="9">
         <description>Object oriented cookie class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="core"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
         <name>$name</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>Name of cookie in the $_COOKIE array</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$value</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>Value of the cookie</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -587,7 +587,7 @@ then returns it as a new config object</description>
         <default>0</default>
         <docblock line="23">
           <description>When the cookie is to expire in UTC time</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="30" namespace="global" package="Default">
@@ -595,15 +595,15 @@ then returns it as a new config object</description>
         <default>"/"</default>
         <docblock line="27">
           <description>Path on which the cookie is valid</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="34" namespace="global" package="Default">
         <name>$domain</name>
-        <default></default>
+        <default/>
         <docblock line="31">
           <description>Domain on which the cookie is valid, default HTTP_HOST</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="38" namespace="global" package="Default">
@@ -611,7 +611,7 @@ then returns it as a new config object</description>
         <default>false</default>
         <docblock line="35">
           <description>Whether the cookie is a HTTPS cookie</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="42" namespace="global" package="Default">
@@ -619,7 +619,7 @@ then returns it as a new config object</description>
         <default>false</default>
         <docblock line="39">
           <description>Whether the cookie can be edited by Javascript or HTTP only</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="core">
@@ -627,14 +627,14 @@ then returns it as a new config object</description>
         <full_name>__construct</full_name>
         <docblock line="44">
           <description>Create a new cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="44" name="param" description="Name of cookie" type="String" variable="$name">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="49">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -643,7 +643,7 @@ then returns it as a new config object</description>
         <full_name>getValue</full_name>
         <docblock line="54">
           <description>Get the value of this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="54" name="return" description="Cookie value" type="String">
             <type by_reference="false">String</type>
           </tag>
@@ -654,14 +654,14 @@ then returns it as a new config object</description>
         <full_name>setValue</full_name>
         <docblock line="70">
           <description>Set the value for this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="70" name="param" description="New value" type="String" variable="$value">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="75">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -670,7 +670,7 @@ then returns it as a new config object</description>
         <full_name>setExpire</full_name>
         <docblock line="88">
           <description>Set the expire time for this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="88" name="param" description="time&#9;&#9;&#9;&#9;&#9;[default=0]" type="\Expire" variable="$expire">
             <type by_reference="false">\Expire</type>
           </tag>
@@ -689,7 +689,7 @@ then returns it as a new config object</description>
         <full_name>setPath</full_name>
         <docblock line="100">
           <description>Set the path for this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="100" name="param" description="for this cookie&#9;&#9;[default=&quot;/&quot;]" type="\Path" variable="$path">
             <type by_reference="false">\Path</type>
           </tag>
@@ -708,7 +708,7 @@ then returns it as a new config object</description>
         <full_name>setDomain</full_name>
         <docblock line="112">
           <description>Set the domain for this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="112" name="param" description="for this cookie" type="\Domain" variable="$domain">
             <type by_reference="false">\Domain</type>
           </tag>
@@ -718,7 +718,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="118">
           <name>$domain</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -727,7 +727,7 @@ then returns it as a new config object</description>
         <full_name>setSecure</full_name>
         <docblock line="124">
           <description>Set whether this cookie is secure or not</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="124" name="param" description="True if this cookie is secure" type="Boolean" variable="$secure">
             <type by_reference="false">Boolean</type>
           </tag>
@@ -737,7 +737,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="130">
           <name>$secure</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -746,7 +746,7 @@ then returns it as a new config object</description>
         <full_name>setHttpOnly</full_name>
         <docblock line="136">
           <description>Set the HTTP only status of this cookie</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="136" name="param" description="True if HTTP only/ no javascript for this cookie" type="Boolean" variable="$httpOnly">
             <type by_reference="false">Boolean</type>
           </tag>
@@ -756,7 +756,7 @@ then returns it as a new config object</description>
         </docblock>
         <argument line="142">
           <name>$httpOnly</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -765,7 +765,7 @@ then returns it as a new config object</description>
   <file path="modules/core/Session.php" hash="e4d1b0e4c1bd5fdea7c710ab5c0beede" package="Default">
     <docblock line="2">
       <description>A class representing session data with some useful environment accessors</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -775,7 +775,7 @@ then returns it as a new config object</description>
       <full_name>\Session</full_name>
       <docblock line="9">
         <description>Session object oriented interface with token management</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="core"/>
       </docblock>
       <constant namespace="global" line="23" package="core">
@@ -784,7 +784,7 @@ then returns it as a new config object</description>
         <value>300</value>
         <docblock line="20">
           <description>Session token length in seconds</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <constant namespace="global" line="27" package="core">
@@ -793,7 +793,7 @@ then returns it as a new config object</description>
         <value>'cleanphp_token'</value>
         <docblock line="24">
           <description>Token field name</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <constant namespace="global" line="31" package="core">
@@ -802,15 +802,15 @@ then returns it as a new config object</description>
         <value>'cleanphp_sess_expire'</value>
         <docblock line="28">
           <description>Expire time field name</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="true" visibility="private" line="18" namespace="global" package="Default">
         <name>$ip</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>Current user's IP</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="37" package="core">
@@ -819,7 +819,7 @@ then returns it as a new config object</description>
         <docblock line="33">
           <description>Called when this class is loaded by CleanPHP
 And begins the session</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="53" package="core">
@@ -827,7 +827,7 @@ And begins the session</description>
         <full_name>getIP</full_name>
         <docblock line="48">
           <description>Get IP of current session</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="48" name="return" description="IP" type="String">
             <type by_reference="false">String</type>
           </tag>
@@ -838,7 +838,7 @@ And begins the session</description>
         <full_name>getToken</full_name>
         <docblock line="57">
           <description>Get the session token</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="return" description="Session token" type="String">
             <type by_reference="false">String</type>
           </tag>
@@ -849,7 +849,7 @@ And begins the session</description>
         <full_name>getTokenExpireTime</full_name>
         <docblock line="66">
           <description>Get the session expire time</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="66" name="return" description="Session expire timestamp" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -860,7 +860,7 @@ And begins the session</description>
         <full_name>updateToken</full_name>
         <docblock line="75">
           <description>Update the user's session token</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="92" package="core">
@@ -868,14 +868,14 @@ And begins the session</description>
         <full_name>isTokenValid</full_name>
         <docblock line="87">
           <description>Check if the given token is valid</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="87" name="param" description="token&#9;Value to check against" type="string" variable="$token">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="92">
           <name>$token</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -884,7 +884,7 @@ And begins the session</description>
   <file path="modules/core/String.php" hash="aab21267bf0096a64eb07055a53f8f25" package="Default">
     <docblock line="2">
       <description>A PHP based simple OO string with convenience functions</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -894,15 +894,15 @@ And begins the session</description>
       <full_name>\String</full_name>
       <docblock line="9">
         <description>String class for object oriented string access</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="core"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
         <name>$str</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>The raw string this object represents</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="25" package="core">
@@ -910,7 +910,7 @@ And begins the session</description>
         <full_name>__construct</full_name>
         <docblock line="20">
           <description>Construct a new String</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="20" name="param" description="The string to construct" type="String" variable="$string">
             <type by_reference="false">String</type>
           </tag>
@@ -926,7 +926,7 @@ And begins the session</description>
         <full_name>onLoad</full_name>
         <docblock line="29">
           <description>On loading, set the internal encoding to UTF8</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="45" package="core">
@@ -934,7 +934,7 @@ And begins the session</description>
         <full_name>__toString</full_name>
         <docblock line="40">
           <description>To string</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="40" name="return" description="value of this string" type="\The">
             <type by_reference="false">\The</type>
           </tag>
@@ -955,7 +955,7 @@ And begins the session</description>
         </docblock>
         <argument line="56">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -964,7 +964,7 @@ And begins the session</description>
         <full_name>asInt</full_name>
         <docblock line="60">
           <description>Parse the integer value that this string represents</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="60" name="return" description="Value this string represents" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -975,7 +975,7 @@ And begins the session</description>
         <full_name>asDouble</full_name>
         <docblock line="69">
           <description>Parse the double value that this string represents</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="69" name="return" description="Value this string represents" type="double">
             <type by_reference="false">double</type>
           </tag>
@@ -986,7 +986,7 @@ And begins the session</description>
         <full_name>asFloat</full_name>
         <docblock line="78">
           <description>Parse the float value that this string represents</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="78" name="return" description="Value that this string represents" type="double">
             <type by_reference="false">double</type>
           </tag>
@@ -997,7 +997,7 @@ And begins the session</description>
         <full_name>asBoolean</full_name>
         <docblock line="87">
           <description>Parse the boolean value that this string represents</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="87" name="return" description="Value this string represents" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -1008,7 +1008,7 @@ And begins the session</description>
         <full_name>asBool</full_name>
         <docblock line="96">
           <description>Parse the boolean value that this string represents</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="96" name="return" description="Value this string represents" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -1019,7 +1019,7 @@ And begins the session</description>
         <full_name>length</full_name>
         <docblock line="109">
           <description>Get the length of the string</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="109" name="return" description="Length of the string" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1030,7 +1030,7 @@ And begins the session</description>
         <full_name>append</full_name>
         <docblock line="118">
           <description>Append a string to this string</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="118" name="param" description="String to append" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1040,7 +1040,7 @@ And begins the session</description>
         </docblock>
         <argument line="124">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1049,7 +1049,7 @@ And begins the session</description>
         <full_name>prepend</full_name>
         <docblock line="128">
           <description>Prepend a string to this string</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="128" name="param" description="String to Prepend" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1059,7 +1059,7 @@ And begins the session</description>
         </docblock>
         <argument line="134">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1085,12 +1085,12 @@ str_replace&lt;/p&gt;</long-description>
         </docblock>
         <argument line="151">
           <name>$find</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="151">
           <name>$replace</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="151">
@@ -1105,7 +1105,7 @@ str_replace&lt;/p&gt;</long-description>
         <docblock line="155">
           <description>Encodes the string to be HTML safe
 Alias for htmlspecialchars</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="155" name="return" description="HTML safe string" type="String">
             <type by_reference="false">String</type>
           </tag>
@@ -1117,7 +1117,7 @@ Alias for htmlspecialchars</description>
         <docblock line="169">
           <description>Returns a substring of this string in the same manner
 to PHP's substring</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="169" name="param" description="Start position" type="int" variable="$start">
             <type by_reference="false">int</type>
           </tag>
@@ -1130,7 +1130,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="177">
           <name>$start</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="177">
@@ -1144,7 +1144,7 @@ to PHP's substring</description>
         <full_name>split</full_name>
         <docblock line="181">
           <description>Returns a string split into pieces by a separator</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="181" name="param" description="Separator" type="string" variable="$separator">
             <type by_reference="false">string</type>
           </tag>
@@ -1157,7 +1157,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="188">
           <name>$separator</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="188">
@@ -1171,7 +1171,7 @@ to PHP's substring</description>
         <full_name>trim</full_name>
         <docblock line="203">
           <description>Trim a string to remove whitepsace either side of string</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="222" package="core">
@@ -1179,7 +1179,7 @@ to PHP's substring</description>
         <full_name>trunc</full_name>
         <docblock line="215">
           <description>Truncates a string to a certain length</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="215" name="param" description="Limit to truncase up to&#9;[" type="Int" variable="$limit">
             <type by_reference="false">Int</type>
           </tag>
@@ -1192,7 +1192,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="222">
           <name>$limit</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="222">
@@ -1206,7 +1206,7 @@ to PHP's substring</description>
         <full_name>truncate</full_name>
         <docblock line="236">
           <description>Truncates a string to a certain length</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="236" name="param" description="Limit to truncase up to&#9;[" type="Int" variable="$limit">
             <type by_reference="false">Int</type>
           </tag>
@@ -1219,7 +1219,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="243">
           <name>$limit</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="243">
@@ -1233,7 +1233,7 @@ to PHP's substring</description>
   <file path="modules/database/Database.php" hash="08caa679c33a9a19cd8aa9721ab3eadc" package="Default">
     <docblock line="2">
       <description>An interface for abstract database representation</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1242,7 +1242,7 @@ to PHP's substring</description>
       <full_name>\Database</full_name>
       <docblock line="9">
         <description>Abstract database representation</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="database"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="database">
@@ -1250,7 +1250,7 @@ to PHP's substring</description>
         <full_name>getQueryNumeric</full_name>
         <docblock line="16">
           <description>Gets numeric ordered query (no field names)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="16" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1263,7 +1263,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="23">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1272,7 +1272,7 @@ to PHP's substring</description>
         <full_name>getQuery</full_name>
         <docblock line="25">
           <description>Gets an associative query</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="25" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1285,7 +1285,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="32">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1294,7 +1294,7 @@ to PHP's substring</description>
         <full_name>sendQuery</full_name>
         <docblock line="34">
           <description>Send a query with a boolean response such as INSERT</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="34" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1307,7 +1307,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="41">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1316,7 +1316,7 @@ to PHP's substring</description>
         <full_name>getAffectedRows</full_name>
         <docblock line="43">
           <description>Get the number of affected rows</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="43" name="return" description="of affected rows" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
@@ -1327,7 +1327,7 @@ to PHP's substring</description>
         <full_name>getInsertID</full_name>
         <docblock line="50">
           <description>Get the ID of the last insert</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="50" name="return" description="insert ID" type="\Last">
             <type by_reference="false">\Last</type>
           </tag>
@@ -1338,7 +1338,7 @@ to PHP's substring</description>
         <full_name>closeConnection</full_name>
         <docblock line="57">
           <description>Closes the connection</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1350,7 +1350,7 @@ to PHP's substring</description>
         <docblock line="64">
           <description>Clean the input data value to prevent it causing
 injections</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="64" name="param" description="Input data (Not a query statement)" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1360,7 +1360,7 @@ injections</description>
         </docblock>
         <argument line="71">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1369,7 +1369,7 @@ injections</description>
   <file path="modules/database/DatabaseConnectionException.php" hash="75ca25bd7e27b9c3af148b85f5602f9b" package="Default">
     <docblock line="2">
       <description>Exception thrown when database cannot be connected to</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1379,7 +1379,7 @@ injections</description>
       <full_name>\DatabaseConnectionException</full_name>
       <docblock line="9">
         <description>Database exception thrown when the database can't be connected to</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="database"/>
       </docblock>
     </class>
@@ -1387,7 +1387,7 @@ injections</description>
   <file path="modules/database/DatabaseQueryException.php" hash="40617ba812908bb21043a576e851c060" package="Default">
     <docblock line="2">
       <description>Exception thrown when a query fails</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1397,7 +1397,7 @@ injections</description>
       <full_name>\DatabaseQueryException</full_name>
       <docblock line="9">
         <description>Exception that is thrown when a query is invalid</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="database"/>
       </docblock>
     </class>
@@ -1405,7 +1405,7 @@ injections</description>
   <file path="modules/database/mysqli/MySQLiDatabase.php" hash="e31b0fc9b5747572d1402015fdca7f51" package="Default">
     <docblock line="2">
       <description>MySQLi class wrapper for the Database interface</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="3.0"/>
     </docblock>
@@ -1418,7 +1418,7 @@ injections</description>
         <description>Each database instance holds onto a single connection
 and acts as a wrapper to MySQLi intending to
 abstract out the PHP mess</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="database\mysqli"/>
       </docblock>
       <property final="false" static="true" visibility="private" line="24" namespace="global" package="Default">
@@ -1426,7 +1426,7 @@ abstract out the PHP mess</description>
         <default>array()</default>
         <docblock line="21">
           <description>A store of all queries run during this session</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="28" namespace="global" package="Default">
@@ -1434,15 +1434,15 @@ abstract out the PHP mess</description>
         <default>0</default>
         <docblock line="25">
           <description>A counter of the number of queries run during this session</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="33" namespace="global" package="Default">
         <name>$mySQLi</name>
-        <default></default>
+        <default/>
         <docblock line="30">
           <description>Current MySQLi connection</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="database\mysqli">
@@ -1450,7 +1450,7 @@ abstract out the PHP mess</description>
         <full_name>__construct</full_name>
         <docblock line="35">
           <description>Create a new MySQLi database with the given connection details</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="35" name="param" description="Username for database" type="String" variable="$username">
             <type by_reference="false">String</type>
           </tag>
@@ -1466,17 +1466,17 @@ abstract out the PHP mess</description>
         </docblock>
         <argument line="43">
           <name>$username</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
           <name>$dbname</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
@@ -1505,7 +1505,7 @@ Intended for non-select queries.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="66">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1515,7 +1515,7 @@ Intended for non-select queries.&lt;/p&gt;</long-description>
         <docblock line="94">
           <description>Database Query
 Returns all results as an associative array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="94" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1528,7 +1528,7 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="102">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1538,7 +1538,7 @@ Returns all results as an associative array</description>
         <docblock line="106">
           <description>Database query
 Returns a numeric array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="106" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1551,7 +1551,7 @@ Returns a numeric array</description>
         </docblock>
         <argument line="114">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1561,7 +1561,7 @@ Returns a numeric array</description>
         <docblock line="118">
           <description>Database Query
 Returns all results as an associative array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="118" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1577,12 +1577,12 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="127">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="127">
           <name>$assoc</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1591,7 +1591,7 @@ Returns all results as an associative array</description>
         <full_name>getAffectedRows</full_name>
         <docblock line="174">
           <description>Returns the amount of affected rows of the last query</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="174" name="return" description="Count" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1602,7 +1602,7 @@ Returns all results as an associative array</description>
         <full_name>getInsertID</full_name>
         <docblock line="188">
           <description>Gets the last inputted ID</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="188" name="return" description="Last ID or NULL" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1613,7 +1613,7 @@ Returns all results as an associative array</description>
         <full_name>getMySQLiObject</full_name>
         <docblock line="201">
           <description>Get the MySQLi object related to this database abstractor</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="201" name="return" description="related to this abstracted database" type="Object">
             <type by_reference="false">Object</type>
           </tag>
@@ -1624,7 +1624,7 @@ Returns all results as an associative array</description>
         <full_name>getTotalQueryCount</full_name>
         <docblock line="210">
           <description>Get the number of queries executed on MySQLi databases</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="210" name="return" description="of queries executed on MySQLi databases" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
@@ -1635,7 +1635,7 @@ Returns all results as an associative array</description>
         <full_name>getAllQueries</full_name>
         <docblock line="219">
           <description>Get the array of query strings executed on all MySQLi databases</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="219" name="return" description="of query string executed" type="Array">
             <type by_reference="false">Array</type>
           </tag>
@@ -1646,7 +1646,7 @@ Returns all results as an associative array</description>
         <full_name>clean</full_name>
         <docblock line="232">
           <description>Sanitises the given input</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="232" name="param" description="Data to be sanitised" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1656,7 +1656,7 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="238">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1665,7 +1665,7 @@ Returns all results as an associative array</description>
         <full_name>closeConnection</full_name>
         <docblock line="242">
           <description>Close the connection to the database</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="242" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1687,7 +1687,7 @@ common/useful debugging methods for aiding debugging&lt;/p&gt;</long-description
       <full_name>\Debug</full_name>
       <docblock line="16">
         <description>Static debugger class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="16" name="package" description="debug"/>
       </docblock>
       <property final="false" static="true" visibility="private" line="25" namespace="global" package="Default">
@@ -1695,7 +1695,7 @@ common/useful debugging methods for aiding debugging&lt;/p&gt;</long-description
         <default>array()</default>
         <docblock line="22">
           <description>Currently stored timers that record time passed, dictionary storage</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="29" namespace="global" package="Default">
@@ -1703,7 +1703,7 @@ common/useful debugging methods for aiding debugging&lt;/p&gt;</long-description
         <default>0</default>
         <docblock line="26">
           <description>Number of lines executed, only counted if line monitor is enabled</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="34" namespace="global" package="Default">
@@ -1712,7 +1712,7 @@ common/useful debugging methods for aiding debugging&lt;/p&gt;</long-description
         <docblock line="30">
           <description>Lines that have been executed with file, only populated if line monitor
 is enabled</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="38" namespace="global" package="Default">
@@ -1720,7 +1720,7 @@ is enabled</description>
         <default>false</default>
         <docblock line="35">
           <description>Whether debugging is visible or not</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="51" package="debug">
@@ -1728,7 +1728,7 @@ is enabled</description>
         <full_name>timer</full_name>
         <docblock line="44">
           <description>A timer to track CPU time of parts of script</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="44" name="param" description="ID for the timer" type="String" variable="$type">
             <type by_reference="false">String</type>
           </tag>
@@ -1741,7 +1741,7 @@ is enabled</description>
         </docblock>
         <argument line="51">
           <name>$type</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="51">
@@ -1755,7 +1755,7 @@ is enabled</description>
         <full_name>fdump</full_name>
         <docblock line="71">
           <description>Displays a formatted var_dump</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="71" name="param" description="To be dumped" type="Object" variable="$variable">
             <type by_reference="false">Object</type>
           </tag>
@@ -1765,7 +1765,7 @@ is enabled</description>
         </docblock>
         <argument line="77">
           <name>$variable</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1774,14 +1774,14 @@ is enabled</description>
         <full_name>ddump</full_name>
         <docblock line="94">
           <description>fdump with death/ deathdump that exits upon call</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="94" name="param" description="variable&#9;The variable to dump before exiting" type="mixed" variable="$variable">
             <type by_reference="false">mixed</type>
           </tag>
         </docblock>
         <argument line="99">
           <name>$variable</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1790,7 +1790,7 @@ is enabled</description>
         <full_name>vdump</full_name>
         <docblock line="117">
           <description>Returns a formatted var_dump</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="117" name="param" description="To be dumped" type="Object" variable="$variable">
             <type by_reference="false">Object</type>
           </tag>
@@ -1800,7 +1800,7 @@ is enabled</description>
         </docblock>
         <argument line="123">
           <name>$variable</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1810,7 +1810,7 @@ is enabled</description>
         <docblock line="145">
           <description>Alias to fdump
 A leaf taken from JS</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="145" name="param" description="To be dumped" type="Object" variable="$variable">
             <type by_reference="false">Object</type>
           </tag>
@@ -1820,7 +1820,7 @@ A leaf taken from JS</description>
         </docblock>
         <argument line="152">
           <name>$variable</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1829,7 +1829,7 @@ A leaf taken from JS</description>
         <full_name>getBacktrace</full_name>
         <docblock line="160">
           <description>Prints a usable debug backtrace</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="160" name="param" description="NL&#9;&#9;New line type" type="string" variable="$NL">
             <type by_reference="false">string</type>
           </tag>
@@ -1864,7 +1864,7 @@ A leaf taken from JS</description>
         <full_name>getLastExecutedLines</full_name>
         <docblock line="225">
           <description>Gets most recently executed lines</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="225" name="param" description="Max number of lines&#9;[default=NULL/ALL]" type="int" variable="$length">
             <type by_reference="false">int</type>
           </tag>
@@ -1883,7 +1883,7 @@ A leaf taken from JS</description>
         <full_name>monitorLinesExecuted</full_name>
         <docblock line="254">
           <description>Monitor all lines executed</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="254" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1894,7 +1894,7 @@ A leaf taken from JS</description>
         <full_name>tickLineMonitor</full_name>
         <docblock line="263">
           <description>Tick line monitor</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="263" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1905,7 +1905,7 @@ A leaf taken from JS</description>
         <full_name>getExecutedLines</full_name>
         <docblock line="278">
           <description>Get executed lines</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="278" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1916,7 +1916,7 @@ A leaf taken from JS</description>
         <full_name>isLineMonitorEnabled</full_name>
         <docblock line="287">
           <description>Check if lines are being monitored</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="287" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1927,7 +1927,7 @@ A leaf taken from JS</description>
         <full_name>enabled</full_name>
         <docblock line="300">
           <description>Whether to output debugging text at current execution.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="300" name="todo" description="Add permissions checking after moved into object"/>
           <tag line="300" name="return" description="" type="Boolean">
             <type by_reference="false">Boolean</type>
@@ -1939,7 +1939,7 @@ A leaf taken from JS</description>
         <full_name>enable</full_name>
         <docblock line="310">
           <description>Turn debug on</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="320" package="debug">
@@ -1947,7 +1947,7 @@ A leaf taken from JS</description>
         <full_name>disable</full_name>
         <docblock line="317">
           <description>Turn debug off</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
     </class>
@@ -1955,7 +1955,7 @@ A leaf taken from JS</description>
   <file path="modules/error/ErrorHandler.php" hash="04d3f02f2f7e8f134e8474ae043e4632" package="Default">
     <docblock line="2">
       <description>Class designated for handling PHP errors</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1965,15 +1965,15 @@ A leaf taken from JS</description>
       <full_name>\ErrorHandler</full_name>
       <docblock line="9">
         <description>An error handler class for handling both PHP exceptions and custom ones</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="error"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
         <name>$callback</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>The callback that is called upon errors</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
@@ -1981,7 +1981,7 @@ A leaf taken from JS</description>
         <default>NULL</default>
         <docblock line="19">
           <description>The level of errors that this handler handles</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="error">
@@ -1989,7 +1989,7 @@ A leaf taken from JS</description>
         <full_name>__construct</full_name>
         <docblock line="24">
           <description>Create this error handler</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="24" name="param" description="callback&#9;Error handler callback" type="callback" variable="$callback">
             <type by_reference="false">callback</type>
           </tag>
@@ -1999,7 +1999,7 @@ A leaf taken from JS</description>
         </docblock>
         <argument line="30">
           <name>$callback</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="30">
@@ -2013,14 +2013,14 @@ A leaf taken from JS</description>
         <full_name>setLevel</full_name>
         <docblock line="34">
           <description>Set level to use</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="34" name="param" description="level&#9;Level to handle for" type="int" variable="$level">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
         <argument line="39">
           <name>$level</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2029,7 +2029,7 @@ A leaf taken from JS</description>
         <full_name>handleErrors</full_name>
         <docblock line="43">
           <description>Set the error handler to this current one</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="66" package="error">
@@ -2037,7 +2037,7 @@ A leaf taken from JS</description>
         <full_name>handleException</full_name>
         <docblock line="57">
           <description>Default error exception handler</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="param" description="errno&#9;The serverity of the error" type="int" variable="$errno">
             <type by_reference="false">int</type>
           </tag>
@@ -2056,22 +2056,22 @@ A leaf taken from JS</description>
         </docblock>
         <argument line="66">
           <name>$errno</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="66">
           <name>$errstr</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="66">
           <name>$errfile</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="66">
           <name>$errline</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2081,7 +2081,7 @@ A leaf taken from JS</description>
         <docblock line="70">
           <description>Emit inbuild ErrorExceptions upon all exceptions
 This overwrites any current exception handler</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="81" package="error">
@@ -2089,7 +2089,7 @@ This overwrites any current exception handler</description>
         <full_name>reset</full_name>
         <docblock line="78">
           <description>Restore default PHP behaviour</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
     </class>
@@ -2098,7 +2098,7 @@ This overwrites any current exception handler</description>
     <docblock line="2">
       <description>An abstract representation of a temporarily uploaded
 file uploaded via the POST file upload mechanism</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2108,15 +2108,15 @@ file uploaded via the POST file upload mechanism</description>
       <full_name>\FileUpload</full_name>
       <docblock line="13">
         <description>File upload representation</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="input"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$name</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>Name of the file upload in the $_FILES array</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="input">
@@ -2124,14 +2124,14 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>__construct</full_name>
         <docblock line="24">
           <description>Create a new file upload object</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="24" name="param" description="Name of file upload in POST form" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="29">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2140,7 +2140,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>exists</full_name>
         <docblock line="33">
           <description>Check if this is a valid file upload</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="33" name="return" description="True if the file exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2151,7 +2151,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>complete</full_name>
         <docblock line="42">
           <description>Check if this file upload completed successfully</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="42" name="return" description="True if the file was successful" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2162,7 +2162,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>getType</full_name>
         <docblock line="51">
           <description>Get the MIME type of the file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="51" name="return" description="MIME type of the image" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -2190,7 +2190,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="70">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type>\Folder</type>
         </argument>
         <argument line="70">
@@ -2204,7 +2204,7 @@ be deleted after this script is executed otherwise.</description>
   <file path="modules/input/Get.php" hash="b3e3d0f5d792924744a2f261c79cab69" package="Default">
     <docblock line="2">
       <description>A class to abstract out some pains in using get values</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2214,7 +2214,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Get</full_name>
       <docblock line="9">
         <description>Get representation and interface</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="input"/>
       </docblock>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="23" package="input">
@@ -2222,7 +2222,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>value</full_name>
         <docblock line="15">
           <description>Get a get value with an optional default</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="15" name="param" description="Name of post field" type="String" variable="$index">
             <type by_reference="false">String</type>
           </tag>
@@ -2235,7 +2235,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="23">
           <name>$index</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="23">
@@ -2249,7 +2249,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>contains</full_name>
         <docblock line="36">
           <description>Check if the get contains the given value</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="36" name="param" description="Name of get field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
@@ -2259,7 +2259,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="42">
           <name>$index</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2268,7 +2268,7 @@ be deleted after this script is executed otherwise.</description>
   <file path="modules/input/Post.php" hash="ad1a733580523ec47aa724cc4eacac88" package="Default">
     <docblock line="2">
       <description>A class to abstract out some pains in using post values</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2278,7 +2278,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Post</full_name>
       <docblock line="9">
         <description>Post representation and interface</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="input"/>
       </docblock>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="23" package="input">
@@ -2286,7 +2286,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>value</full_name>
         <docblock line="15">
           <description>Get a post value with an optional default</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="15" name="param" description="Name of post field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
@@ -2299,7 +2299,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="23">
           <name>$index</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="23">
@@ -2313,7 +2313,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>contains</full_name>
         <docblock line="36">
           <description>Check if the post contains the given value</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="36" name="param" description="Name of post field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
@@ -2323,16 +2323,16 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="42">
           <name>$index</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="modules/io/File.php" hash="ca7cce86d952603f992ebc5711b2ced7" package="Default">
+  <file path="modules/io/File.php" hash="bde287faf20a6ed099e3ed2e7724cfa0" package="Default">
     <docblock line="2">
       <description>Representation of a file in PHP</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2342,15 +2342,15 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\File</full_name>
       <docblock line="12">
         <description>File representation</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="12" name="package" description="io"/>
       </docblock>
       <property final="false" static="false" visibility="protected" line="21" namespace="global" package="Default">
         <name>$path</name>
-        <default></default>
+        <default/>
         <docblock line="18">
           <description>Path of the file</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="io">
@@ -2358,14 +2358,14 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="23">
           <description>Create a new file at a given path</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="23" name="param" description="path&#9;Path of the file we are representing" type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="28">
           <name>$path</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2374,7 +2374,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>exists</full_name>
         <docblock line="32">
           <description>Check if this file exists</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="32" name="return" description="True if this file exists (and is not a folder)" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2385,7 +2385,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__toString</full_name>
         <docblock line="41">
           <description>Tostring returns the current path value</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="41" name="return" description="Path" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -2396,7 +2396,7 @@ be deleted after this script is executed otherwise.</description>
   <file path="modules/io/FileNotFoundException.php" hash="23dd536874f47e2510c8ce885762b1e8" package="Default">
     <docblock line="2">
       <description>File not found exception</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2406,7 +2406,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\FileNotFoundException</full_name>
       <docblock line="11">
         <description>Exception to throw when a file isn't found</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="11" name="package" description="io"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="io">
@@ -2414,7 +2414,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="17">
           <description>Create a new class not found exception for the given class and message</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="17" name="param" description="message&#9;&#9;Message for developer" type="string" variable="$message">
             <type by_reference="false">string</type>
           </tag>
@@ -2424,7 +2424,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="23">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="23">
@@ -2435,10 +2435,10 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/Folder.php" hash="81699fd2c0dd71d9f4e29123e5beeed5" package="Default">
+  <file path="modules/io/Folder.php" hash="f983ae25635880fe7824a570cdbc8522" package="Default">
     <docblock line="2">
       <description>A representation of a folder as an extention of a file</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2448,69 +2448,184 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Folder</full_name>
       <docblock line="13">
         <description>Representation of a folder</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="io"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="25" package="io">
+      <constant namespace="global" line="22" package="io">
+        <name>FOLDER</name>
+        <full_name>FOLDER</full_name>
+        <value>1</value>
+        <docblock line="19">
+          <description>Folder mask</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="26" package="io">
+        <name>FILE</name>
+        <full_name>FILE</full_name>
+        <value>2</value>
+        <docblock line="23">
+          <description>File mask</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="30" package="io">
+        <name>INCLUDE_DOT_FOLDERS</name>
+        <full_name>INCLUDE_DOT_FOLDERS</full_name>
+        <value>4</value>
+        <docblock line="27">
+          <description>Include ., .</description>
+          <long-description>&lt;p&gt;. folders, does not include hidden files/folders&lt;/p&gt;</long-description>
+        </docblock>
+      </constant>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="io">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="20">
+        <docblock line="32">
           <description>Create this representation of a folder</description>
-          <long-description></long-description>
-          <tag line="20" name="param" description="folder&#9;&#9;Folder path" type="string" variable="$folder">
+          <long-description/>
+          <tag line="32" name="param" description="folder&#9;&#9;Folder path" type="string" variable="$folder">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="25">
+        <argument line="37">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="52" package="io">
         <name>getFile</name>
         <full_name>getFile</full_name>
-        <docblock line="34">
+        <docblock line="46">
           <description>Get a file from within this folder</description>
-          <long-description></long-description>
-          <tag line="34" name="param" description="filename&#9;File name" type="string" variable="$filename">
+          <long-description/>
+          <tag line="46" name="param" description="filename&#9;File name" type="string" variable="$filename">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="34" name="return" description="File from within this folder" type="\File">
+          <tag line="46" name="return" description="File from within this folder" type="\File">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
-        <argument line="40">
+        <argument line="52">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="io">
+        <name>getFolder</name>
+        <full_name>getFolder</full_name>
+        <docblock line="56">
+          <description>Get a folder from within this folder</description>
+          <long-description/>
+          <tag line="56" name="param" description="folderName&#9;Folder name" type="string" variable="$folderName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="56" name="return" description="The folder from within this folder" type="\Folder">
+            <type by_reference="false">\Folder</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$folderName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="73" package="io">
+        <name>getFolderList</name>
+        <full_name>getFolderList</full_name>
+        <docblock line="66">
+          <description>Get the listing of all folders in this directory</description>
+          <long-description/>
+          <tag line="66" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="66" name="throws" description="When an error reading occurs" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="66" name="return" description="An array of folder objects" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="84" package="io">
+        <name>getFileList</name>
+        <full_name>getFileList</full_name>
+        <docblock line="77">
+          <description>Get the listing of all files in this directory</description>
+          <long-description/>
+          <tag line="77" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="77" name="throws" description="When an error reading occurs" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="77" name="return" description="An array of File objects" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="96" package="io">
+        <name>getListing</name>
+        <full_name>getListing</full_name>
+        <docblock line="88">
+          <description>Get the listing of objects in this folder based on a mask</description>
+          <long-description/>
+          <tag line="88" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="88" name="throws" description="When an error reading occurs" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="88" name="param" description="The mask of which objects to list, default is everything&#10;&#9;&#9;&#9;&#9;except . and .." type="\mask" variable="$mask">
+            <type by_reference="false">\mask</type>
+          </tag>
+        </docblock>
+        <argument line="96">
+          <name>$mask</name>
+          <default>3</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="132" package="io">
+        <name>isDotFolder</name>
+        <full_name>isDotFolder</full_name>
+        <docblock line="125">
+          <description>Check if the given folder is a dot folder, .</description>
+          <long-description>&lt;p&gt;or .., which represent the
+current folder and the parent folders respectively. Does not match
+Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
+          <tag line="125" name="return" description="if the folder location is  a . or .. folder" type="True">
+            <type by_reference="false">True</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="142" package="io">
         <name>exists</name>
         <full_name>exists</full_name>
-        <docblock line="44">
+        <docblock line="137">
           <description>Check if this folder exists</description>
-          <long-description></long-description>
-          <tag line="44" name="return" description="True if exists" type="bool">
+          <long-description/>
+          <tag line="137" name="return" description="True if exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="149" package="io">
         <name>mkdir</name>
         <full_name>mkdir</full_name>
-        <docblock line="53">
+        <docblock line="146">
           <description>Create the directory</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="63" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="156" package="io">
         <name>create</name>
         <full_name>create</full_name>
-        <docblock line="60">
+        <docblock line="153">
           <description>Create the directory</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
     </class>
@@ -2518,7 +2633,7 @@ be deleted after this script is executed otherwise.</description>
   <file path="modules/io/IOException.php" hash="16aa64a5e4d03afb32ecf560bb890f6b" package="Default">
     <docblock line="2">
       <description>Thrown upon an IO exception occuring</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
     </docblock>
     <class final="false" abstract="false" namespace="global" line="13" package="io">
@@ -2527,7 +2642,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\IOException</full_name>
       <docblock line="8">
         <description>IOException that represents an exception caused by IO interruption</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="8" name="package" description="io"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="20" package="io">
@@ -2535,7 +2650,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="14">
           <description>Create an IOException with the given message and optional cause</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="14" name="param" description="message&#9;&#9;Message" type="string" variable="$message">
             <type by_reference="false">string</type>
           </tag>
@@ -2545,7 +2660,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="20">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="20">
@@ -2573,15 +2688,15 @@ oriented manner.</description>
       <full_name>\Layout</full_name>
       <docblock line="13">
         <description>PHP Templating layout class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="layout"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$file</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>The file for this layout</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -2589,7 +2704,7 @@ oriented manner.</description>
         <default>array()</default>
         <docblock line="23">
           <description>Variables for this layout</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="layout">
@@ -2597,14 +2712,14 @@ oriented manner.</description>
         <full_name>__construct</full_name>
         <docblock line="28">
           <description>Create a new layout with the given file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="28" name="param" description="file&#9;The layout file" type="\File" variable="$file">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
         <argument line="33">
           <name>$file</name>
-          <default></default>
+          <default/>
           <type>\File</type>
         </argument>
       </method>
@@ -2624,12 +2739,12 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="44">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="44">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2645,7 +2760,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="53">
           <name>$variables</name>
-          <default></default>
+          <default/>
           <type>array</type>
         </argument>
       </method>
@@ -2654,7 +2769,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>display</full_name>
         <docblock line="57">
           <description>Output this template by including the template</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="throws" description="If the file cannot be found" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2675,7 +2790,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
       <full_name>\Language</full_name>
       <docblock line="9">
         <description>A representation of a language</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="locale"/>
       </docblock>
       <property final="false" static="true" visibility="private" line="18" namespace="global" package="Default">
@@ -2683,15 +2798,15 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <default>array()</default>
         <docblock line="15">
           <description>Languages that are known to be in use</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="23" namespace="global" package="Default">
         <name>$code</name>
-        <default></default>
+        <default/>
         <docblock line="20">
           <description>Identifier of this language</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="30" package="locale">
@@ -2699,14 +2814,14 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>__construct</full_name>
         <docblock line="25">
           <description>Create a new language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="25" name="param" description="lang&#9;Language ID, preferably an ISO language code" type="string" variable="$lang">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="30">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2715,7 +2830,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>getLanguageCode</full_name>
         <docblock line="37">
           <description>Get the ID of this language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="37" name="return" description="ID of this language" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -2726,7 +2841,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>languageExists</full_name>
         <docblock line="46">
           <description>Check if a language exists.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="46" name="param" description="lang&#9;Language code" type="string" variable="$lang">
             <type by_reference="false">string</type>
           </tag>
@@ -2736,7 +2851,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="52">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2745,7 +2860,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>getLanguage</full_name>
         <docblock line="56">
           <description>Get a language given by an ID</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="56" name="param" description="lang&#9;Language code" type="string" variable="$lang">
             <type by_reference="false">string</type>
           </tag>
@@ -2755,7 +2870,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="62">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2764,7 +2879,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>createLanguage</full_name>
         <docblock line="71">
           <description>Create a given language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="71" name="param" description="lang&#9;Language code" type="string" variable="$lang">
             <type by_reference="false">string</type>
           </tag>
@@ -2774,7 +2889,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="77">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2783,7 +2898,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
   <file path="modules/locale/MissingPhraseException.php" hash="d9efda71cc971d571638d91d3d0a435e" package="Default">
     <docblock line="2">
       <description>An attempt to access a missing phrase</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2793,7 +2908,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
       <full_name>\MissingPhraseException</full_name>
       <docblock line="9">
         <description>Exception thrown when a phrase is missing</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="locale"/>
       </docblock>
     </class>
@@ -2801,7 +2916,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
   <file path="modules/locale/MissingPhraseMapException.php" hash="1d98535c661ed19318e775639918c7f3" package="Default">
     <docblock line="2">
       <description>Phrase map file is missing</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2811,7 +2926,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
       <full_name>\MissingPhraseMapException</full_name>
       <docblock line="9">
         <description>Exception thrown when a phrase map is missing</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="locale"/>
       </docblock>
     </class>
@@ -2819,7 +2934,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
   <file path="modules/locale/PhraseMap.php" hash="4739b87abc0c958a6e7f23c0b2dc516f" package="Default">
     <docblock line="2">
       <description>A map of phrases identified by an ID and parsed from a file</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2"/>
     </docblock>
@@ -2829,7 +2944,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
       <full_name>\PhraseMap</full_name>
       <docblock line="13">
         <description>A map of phrases loaded from a given file</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="locale"/>
       </docblock>
       <constant namespace="global" line="30" package="locale">
@@ -2838,15 +2953,15 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <value>''</value>
         <docblock line="27">
           <description>Default phrase index</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$curLang</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>The current language</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -2854,7 +2969,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <default>array()</default>
         <docblock line="23">
           <description>The store of phrases for this map</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="locale">
@@ -2862,7 +2977,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>__construct</full_name>
         <docblock line="32">
           <description>Create a phrase map from the given file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="32" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
             <type by_reference="false">\MissingPhraseMapException</type>
           </tag>
@@ -2875,12 +2990,12 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="39">
           <name>$file</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="39">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type>\Language</type>
         </argument>
       </method>
@@ -2890,7 +3005,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <docblock line="48">
           <description>Return a phrase based on the current language or given alternate
 language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="48" name="param" description="Text element ID" type="String" variable="$phraseID">
             <type by_reference="false">String</type>
           </tag>
@@ -2903,7 +3018,7 @@ language</description>
         </docblock>
         <argument line="57">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="57">
@@ -2917,7 +3032,7 @@ language</description>
         <full_name>getLanguage</full_name>
         <docblock line="77">
           <description>Get the current language code</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="77" name="return" description="language for this phrase map" type="\The">
             <type by_reference="false">\The</type>
           </tag>
@@ -2928,14 +3043,14 @@ language</description>
         <full_name>setLanguage</full_name>
         <docblock line="90">
           <description>Set the current language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="90" name="param" description="Current language" type="\Language" variable="$lang">
             <type by_reference="false">\Language</type>
           </tag>
         </docblock>
         <argument line="95">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type>\Language</type>
         </argument>
       </method>
@@ -2944,7 +3059,7 @@ language</description>
         <full_name>phraseExists</full_name>
         <docblock line="103">
           <description>Checks if an phrase exists</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="103" name="param" description="Phrase name" type="String" variable="$phraseID">
             <type by_reference="false">String</type>
           </tag>
@@ -2954,7 +3069,7 @@ language</description>
         </docblock>
         <argument line="109">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2963,7 +3078,7 @@ language</description>
         <full_name>loadFile</full_name>
         <docblock line="117">
           <description>Loads file into the language memory for the current language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="117" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
             <type by_reference="false">\MissingPhraseMapException</type>
           </tag>
@@ -2976,7 +3091,7 @@ language</description>
         </docblock>
         <argument line="124">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2985,7 +3100,7 @@ language</description>
         <full_name>parseLocaleElement</full_name>
         <docblock line="151">
           <description>Parse the phrases into the phrases list</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="151" name="param" description="The element to parse" type="\SimpleXMLElement" variable="$elem">
             <type by_reference="false">\SimpleXMLElement</type>
           </tag>
@@ -2995,12 +3110,12 @@ language</description>
         </docblock>
         <argument line="157">
           <name>$elem</name>
-          <default></default>
+          <default/>
           <type>\SimpleXMLElement</type>
         </argument>
         <argument line="157">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3019,7 +3134,7 @@ language</description>
       <full_name>\Logger</full_name>
       <docblock line="9">
         <description>A logger for creating logs</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="logging"/>
       </docblock>
       <constant namespace="global" line="52" package="logging">
@@ -3028,55 +3143,55 @@ language</description>
         <value>5000</value>
         <docblock line="49">
           <description>Maximum log size in kB</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="false" visibility="protected" line="18" namespace="global" package="Default">
         <name>$logName</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>Name of the log, will be used in the file name</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="22" namespace="global" package="Default">
         <name>$logDir</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>Directory to store this log</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="26" namespace="global" package="Default">
         <name>$logLoc</name>
-        <default></default>
+        <default/>
         <docblock line="23">
           <description>Log location, depends on the logName and logDir</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="30" namespace="global" package="Default">
         <name>$rotateMax</name>
-        <default></default>
+        <default/>
         <docblock line="27">
           <description>Maximum number of times to rotate the log file</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="34" namespace="global" package="Default">
         <name>$maxLogSize</name>
-        <default></default>
+        <default/>
         <docblock line="31">
           <description>Maximum filesize of the log in kB</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="38" namespace="global" package="Default">
         <name>$log</name>
-        <default></default>
+        <default/>
         <docblock line="35">
           <description>Current log text</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="protected" line="43" namespace="global" package="Default">
@@ -3084,7 +3199,7 @@ language</description>
         <default>2048</default>
         <docblock line="40">
           <description>Default max log size in bytes</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="protected" line="47" namespace="global" package="Default">
@@ -3092,7 +3207,7 @@ language</description>
         <default>5</default>
         <docblock line="44">
           <description>Default number of rotations before overwriting</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="60" package="logging">
@@ -3100,7 +3215,7 @@ language</description>
         <full_name>__construct</full_name>
         <docblock line="54">
           <description>Creates a logger for logName</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="54" name="param" description="Logname" type="String" variable="$logName">
             <type by_reference="false">String</type>
           </tag>
@@ -3110,7 +3225,7 @@ language</description>
         </docblock>
         <argument line="60">
           <name>$logName</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="60">
@@ -3124,14 +3239,14 @@ language</description>
         <full_name>setRotationLength</full_name>
         <docblock line="72">
           <description>Change the current rotation size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="72" name="param" description="New rotation max size" type="String" variable="$length">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="77">
           <name>$length</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3140,14 +3255,14 @@ language</description>
         <full_name>setMaxLogSize</full_name>
         <docblock line="81">
           <description>Change the current max log size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="81" name="param" description="New maximum log file size" type="String" variable="$max">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="86">
           <name>$max</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3156,14 +3271,14 @@ language</description>
         <full_name>setDefaultRotationLength</full_name>
         <docblock line="90">
           <description>Change the default max size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="90" name="param" description="Default max size" type="String" variable="$length">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="95">
           <name>$length</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3172,14 +3287,14 @@ language</description>
         <full_name>setDefaultMaxLogSize</full_name>
         <docblock line="99">
           <description>Change the default max log size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="99" name="param" description="Default max log size" type="String" variable="$max">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="104">
           <name>$max</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3188,7 +3303,7 @@ language</description>
         <full_name>log</full_name>
         <docblock line="112">
           <description>Log data to EOF</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="112" name="param" description="text&#9;&#9;Level of severity" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
@@ -3201,7 +3316,7 @@ language</description>
         </docblock>
         <argument line="119">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="119">
@@ -3215,7 +3330,7 @@ language</description>
         <full_name>read</full_name>
         <docblock line="130">
           <description>Reads log file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="130" name="return" description="text" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -3226,7 +3341,7 @@ language</description>
         <full_name>append</full_name>
         <docblock line="147">
           <description>Append to current log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="147" name="param" description="" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
@@ -3236,7 +3351,7 @@ language</description>
         </docblock>
         <argument line="153">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3245,7 +3360,7 @@ language</description>
         <full_name>delete</full_name>
         <docblock line="165">
           <description>Deletes current log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="165" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -3256,7 +3371,7 @@ language</description>
         <full_name>create</full_name>
         <docblock line="176">
           <description>Creates log for current log name</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="176" name="param" description="Text to start with [default=Empty string]" type="String" variable="$text">
             <type by_reference="false">String</type>
           </tag>
@@ -3275,7 +3390,7 @@ language</description>
         <full_name>rotate</full_name>
         <docblock line="191">
           <description>Rotates log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="191" name="param" description="Text for new log&#9;[" type="String" variable="$text">
             <type by_reference="false">String</type>
           </tag>
@@ -3285,7 +3400,7 @@ language</description>
         </docblock>
         <argument line="197">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
