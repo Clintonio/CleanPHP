@@ -25,7 +25,7 @@ class FileNotFoundException extends IOException {
 			$message = 'Could not load file: ' . $file . '. ' . $message;
 		}
 		
-		parent::__construct($message, 0);
+		parent::__construct($message);
 	}
 }
 
