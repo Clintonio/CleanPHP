@@ -39,6 +39,10 @@ class FileUpload {
 		return (isset($_FILES[$this->name]));
 	}
 	
+	//==================
+	// Error checking
+	//==================
+	
 	/**
 	* Check if this file upload completed successfully
 	*
@@ -49,6 +53,50 @@ class FileUpload {
 	}
 	
 	/**
+	* Check if the file uploaded was too large
+	*
+	* @return	bool	True if the file uploaded failed and was too large
+	*/
+	public function errorFileTooLarge() {
+		$error = $_FILES[$this->name]['error'];
+		return (($error === UPLOAD_ERR_INI_SIZE) || ($error === UPLOAD_ERR_FORM_SIZE));
+	}
+	
+	/**
+	* Check if the file was uploaded fully
+	*
+	* @return	bool	True if a file was uploaded
+	*/
+	public function fileExists() {
+		$error = $_FILES[$this->name]['error'];
+		return (($error !== UPLOAD_ERR_PARTIAL) && ($error !== UPLOAD_ERR_NO_FILE));
+	}
+	
+	/**
+	* Check if the file failed due to not being able to write or the directory
+	* not existing
+	*
+	* @return	bool	True if the file couldn't be written
+	*/
+	public function errorDiskWrite() {
+		$error = $_FILES[$this->name]['error'];
+		return (($error !== UPLOAD_ERR_CANT_WRITE) && ($error !== UPLOAD_ERR_NO_TMP_DIR));
+	}
+	
+	//==================
+	// Getters
+	//==================
+	
+	/**
+	* Get the file upload failure code
+	*
+	* @return int	The file upload error code
+	*/
+	public function getErrorCode() {
+		return $_FILES[$this->name]['error'];
+	}
+	
+	/**
 	* Get the MIME type of the file
 	*
 	* @return	string		MIME type of the image
@@ -56,6 +104,10 @@ class FileUpload {
 	public function getType() {
 		return ($this->exists() ? $_FILES[$this->name]['type'] : '');
 	}
+	
+	//==================
+	// Utilities
+	//==================
 	
 	/**
 	* Move this file to a new location, it will
