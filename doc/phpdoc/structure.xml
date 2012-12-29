@@ -2388,7 +2388,7 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/File.php" hash="c66b0a08d33a98b6da8a9acf0c1634a3" package="Default">
+  <file path="modules/io/File.php" hash="7b1ea3dfdde05c3f9b8f7ff4617ea8c9" package="Default">
     <docblock line="2">
       <description>Representation of a file in PHP</description>
       <long-description></long-description>
@@ -2429,69 +2429,80 @@ be deleted after this script is executed otherwise.</description>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="io">
-        <name>exists</name>
-        <full_name>exists</full_name>
+        <name>getName</name>
+        <full_name>getName</full_name>
         <docblock line="32">
-          <description>Check if this file exists</description>
+          <description>Get the name of this file</description>
           <long-description></long-description>
-          <tag line="32" name="return" description="True if this file exists (and is not a folder)" type="bool">
-            <type by_reference="false">bool</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="io">
-        <name>__toString</name>
-        <full_name>__toString</full_name>
-        <docblock line="41">
-          <description>Tostring returns the current path value</description>
-          <long-description></long-description>
-          <tag line="41" name="return" description="Path" type="string">
+          <tag line="32" name="return" description="The file's name" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="io">
-        <name>write</name>
-        <full_name>write</full_name>
-        <docblock line="50">
-          <description>Write data to this file, overwritting any existing file, unless
-the append flag is true</description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="io">
+        <name>exists</name>
+        <full_name>exists</full_name>
+        <docblock line="41">
+          <description>Check if this file exists</description>
           <long-description></long-description>
-          <tag line="50" name="throws" description="When the file could not be written to" type="\IOException">
-            <type by_reference="false">\IOException</type>
-          </tag>
-          <tag line="50" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
-            <type by_reference="false">mixed</type>
-          </tag>
-          <tag line="50" name="param" description="append&#9;&#9;True if in append mode" type="bool" variable="$append">
+          <tag line="41" name="return" description="True if this file exists (and is not a folder)" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="58">
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="55" package="io">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="50">
+          <description>Tostring returns the current path value</description>
+          <long-description></long-description>
+          <tag line="50" name="return" description="Path" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="io">
+        <name>write</name>
+        <full_name>write</full_name>
+        <docblock line="59">
+          <description>Write data to this file, overwritting any existing file, unless
+the append flag is true</description>
+          <long-description></long-description>
+          <tag line="59" name="throws" description="When the file could not be written to" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="59" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="59" name="param" description="append&#9;&#9;True if in append mode" type="bool" variable="$append">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="67">
           <name>$data</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="58">
+        <argument line="67">
           <name>$append</name>
           <default>false</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="80" package="io">
         <name>append</name>
         <full_name>append</full_name>
-        <docblock line="65">
+        <docblock line="74">
           <description>Append data to this file</description>
           <long-description></long-description>
-          <tag line="65" name="throws" description="When the file could not be written to" type="\IOException">
+          <tag line="74" name="throws" description="When the file could not be written to" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
-          <tag line="65" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+          <tag line="74" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
             <type by_reference="false">mixed</type>
           </tag>
         </docblock>
-        <argument line="71">
+        <argument line="80">
           <name>$data</name>
           <default></default>
           <type/>
@@ -2544,7 +2555,7 @@ the append flag is true</description>
   <file path="modules/io/Folder.php" hash="a0d60fa0fb4f109689d716aebc356f36" package="Default">
     <docblock line="2">
       <description>A representation of a folder as an extention of a file</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2554,7 +2565,7 @@ the append flag is true</description>
       <full_name>\Folder</full_name>
       <docblock line="13">
         <description>Representation of a folder</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="io"/>
       </docblock>
       <constant namespace="global" line="22" package="io">
@@ -2563,7 +2574,7 @@ the append flag is true</description>
         <value>1</value>
         <docblock line="19">
           <description>Folder mask</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <constant namespace="global" line="26" package="io">
@@ -2572,7 +2583,7 @@ the append flag is true</description>
         <value>2</value>
         <docblock line="23">
           <description>File mask</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <constant namespace="global" line="30" package="io">
@@ -2589,14 +2600,14 @@ the append flag is true</description>
         <full_name>__construct</full_name>
         <docblock line="32">
           <description>Create this representation of a folder</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="32" name="param" description="folder&#9;&#9;Folder path" type="string" variable="$folder">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="37">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2605,7 +2616,7 @@ the append flag is true</description>
         <full_name>getFile</full_name>
         <docblock line="46">
           <description>Get a file from within this folder</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="46" name="param" description="filename&#9;File name" type="string" variable="$filename">
             <type by_reference="false">string</type>
           </tag>
@@ -2615,7 +2626,7 @@ the append flag is true</description>
         </docblock>
         <argument line="52">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2624,7 +2635,7 @@ the append flag is true</description>
         <full_name>getFolder</full_name>
         <docblock line="56">
           <description>Get a folder from within this folder</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="56" name="param" description="folderName&#9;Folder name" type="string" variable="$folderName">
             <type by_reference="false">string</type>
           </tag>
@@ -2634,7 +2645,7 @@ the append flag is true</description>
         </docblock>
         <argument line="62">
           <name>$folderName</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2643,7 +2654,7 @@ the append flag is true</description>
         <full_name>getFolderList</full_name>
         <docblock line="66">
           <description>Get the listing of all folders in this directory</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="66" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2660,7 +2671,7 @@ the append flag is true</description>
         <full_name>getFileList</full_name>
         <docblock line="77">
           <description>Get the listing of all files in this directory</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="77" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2677,7 +2688,7 @@ the append flag is true</description>
         <full_name>getListing</full_name>
         <docblock line="88">
           <description>Get the listing of objects in this folder based on a mask</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="88" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2712,7 +2723,7 @@ Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
         <full_name>exists</full_name>
         <docblock line="137">
           <description>Check if this folder exists</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="137" name="return" description="True if exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2724,7 +2735,7 @@ Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
         <docblock line="146">
           <description>Create the directory and any other directories that may be required to
 create it</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="146" name="throws" description="If the directory could not be created" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
@@ -2736,7 +2747,7 @@ create it</description>
         <docblock line="158">
           <description>Create the directory and any other directories that may be required to
 create it</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="158" name="throws" description="If the directory could not be created" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>

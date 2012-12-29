@@ -30,6 +30,15 @@ class File {
 	}
 	
 	/**
+	* Get the name of this file
+	*
+	* @return	string		The file's name
+	*/
+	public function getName() {
+		return basename($this->path);
+	}
+	
+	/**
 	* Check if this file exists
 	*
 	* @return	bool	True if this file exists (and is not a folder)
