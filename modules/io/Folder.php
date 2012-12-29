@@ -144,16 +144,24 @@ class Folder extends File {
 	}
 	
 	/**
-	* Create the directory
+	* Create the directory and any other directories that may be required to
+	* create it
+	*
+	* @throws	IOException		If the directory could not be created
 	*/
 	public function mkdir() {
-		mkdir((string) $this->path);	
+		if(!mkdir((string) $this->path, '0777', true)) {
+			throw new IOException('Could not create directory at ' . $this->path);
+		}
 	}
 	
 	/**
-	* Create the directory
+	* Create the directory and any other directories that may be required to
+	* create it
+	*
+	* @throws	IOException		If the directory could not be created
 	*/
 	public function create() {
-		mkdir((string) $this->path);	
+		$this->mkdir();	
 	}
 }
