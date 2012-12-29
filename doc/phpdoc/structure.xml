@@ -2094,11 +2094,11 @@ This overwrites any current exception handler</description>
       </method>
     </class>
   </file>
-  <file path="modules/input/FileUpload.php" hash="6e17366c3ac849463849cdf6b18f540a" package="Default">
+  <file path="modules/input/FileUpload.php" hash="1f03b77e62ff1eee8397a6ff9efbdf7f" package="Default">
     <docblock line="2">
       <description>An abstract representation of a temporarily uploaded
 file uploaded via the POST file upload mechanism</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2108,15 +2108,15 @@ file uploaded via the POST file upload mechanism</description>
       <full_name>\FileUpload</full_name>
       <docblock line="13">
         <description>File upload representation</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="input"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$name</name>
-        <default/>
+        <default></default>
         <docblock line="19">
           <description>Name of the file upload in the $_FILES array</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="input">
@@ -2124,14 +2124,14 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>__construct</full_name>
         <docblock line="24">
           <description>Create a new file upload object</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="24" name="param" description="Name of file upload in POST form" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="29">
           <name>$name</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2140,60 +2140,119 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>exists</full_name>
         <docblock line="33">
           <description>Check if this is a valid file upload</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="33" name="return" description="True if the file exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="47" package="input">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="51" package="input">
         <name>complete</name>
         <full_name>complete</full_name>
-        <docblock line="42">
+        <docblock line="46">
           <description>Check if this file upload completed successfully</description>
-          <long-description/>
-          <tag line="42" name="return" description="True if the file was successful" type="bool">
+          <long-description></long-description>
+          <tag line="46" name="return" description="True if the file was successful" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="input">
-        <name>getType</name>
-        <full_name>getType</full_name>
-        <docblock line="51">
-          <description>Get the MIME type of the file</description>
-          <long-description/>
-          <tag line="51" name="return" description="MIME type of the image" type="string">
-            <type by_reference="false">string</type>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="60" package="input">
+        <name>errorFileTooLarge</name>
+        <full_name>errorFileTooLarge</full_name>
+        <docblock line="55">
+          <description>Check if the file uploaded was too large</description>
+          <long-description></long-description>
+          <tag line="55" name="return" description="True if the file uploaded failed and was too large" type="bool">
+            <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="70" package="input">
-        <name>move</name>
-        <full_name>move</full_name>
-        <docblock line="60">
-          <description>Move this file to a new location, it will
-be deleted after this script is executed otherwise.</description>
-          <long-description>&lt;p&gt;Will overwrite existing files.&lt;/p&gt;</long-description>
-          <tag line="60" name="throws" description="Thrown when file cannot be found" type="\FileNotFoundException">
-            <type by_reference="false">\FileNotFoundException</type>
+        <name>fileExists</name>
+        <full_name>fileExists</full_name>
+        <docblock line="65">
+          <description>Check if the file was uploaded fully</description>
+          <long-description></long-description>
+          <tag line="65" name="return" description="True if a file was uploaded" type="bool">
+            <type by_reference="false">bool</type>
           </tag>
-          <tag line="60" name="throws" description="When the file cannot be moved" type="\IOException">
-            <type by_reference="false">\IOException</type>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="81" package="input">
+        <name>errorDiskWrite</name>
+        <full_name>errorDiskWrite</full_name>
+        <docblock line="75">
+          <description>Check if the file failed due to not being able to write or the directory
+not existing</description>
+          <long-description></long-description>
+          <tag line="75" name="return" description="True if the file couldn't be written" type="bool">
+            <type by_reference="false">bool</type>
           </tag>
-          <tag line="60" name="param" description="folder&#9;&#9;Folder to move file to" type="\Folder" variable="$folder">
-            <type by_reference="false">\Folder</type>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="95" package="input">
+        <name>getErrorCode</name>
+        <full_name>getErrorCode</full_name>
+        <docblock line="90">
+          <description>Get the file upload failure code</description>
+          <long-description></long-description>
+          <tag line="90" name="return" description="The file upload error code" type="int">
+            <type by_reference="false">int</type>
           </tag>
-          <tag line="60" name="param" description="name&#9;&#9;(Optional) Alternative file name" type="string" variable="$name">
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="104" package="input">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="99">
+          <description>Get the MIME type of the file</description>
+          <long-description></long-description>
+          <tag line="99" name="return" description="MIME type of the image" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="70">
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="113" package="input">
+        <name>getTempFile</name>
+        <full_name>getTempFile</full_name>
+        <docblock line="108">
+          <description>Get the temporary file location</description>
+          <long-description></long-description>
+          <tag line="108" name="return" description="The temporary file location" type="\File">
+            <type by_reference="false">\File</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="132" package="input">
+        <name>move</name>
+        <full_name>move</full_name>
+        <docblock line="121">
+          <description>Move this file to a new location, it will
+be deleted after this script is executed otherwise.</description>
+          <long-description>&lt;p&gt;Will overwrite existing files.&lt;/p&gt;</long-description>
+          <tag line="121" name="throws" description="Thrown when file cannot be found" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="121" name="throws" description="When the file cannot be moved" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="121" name="param" description="folder&#9;&#9;Folder to move file to" type="\Folder" variable="$folder">
+            <type by_reference="false">\Folder</type>
+          </tag>
+          <tag line="121" name="param" description="name&#9;&#9;(Optional) Alternative file name" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="121" name="return" description="The file object that resulted from this move" type="\File">
+            <type by_reference="false">\File</type>
+          </tag>
+        </docblock>
+        <argument line="132">
           <name>$folder</name>
-          <default/>
+          <default></default>
           <type>\Folder</type>
         </argument>
-        <argument line="70">
+        <argument line="132">
           <name>$name</name>
           <default>NULL</default>
           <type/>
@@ -2393,10 +2452,10 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/FileNotFoundException.php" hash="23dd536874f47e2510c8ce885762b1e8" package="Default">
+  <file path="modules/io/FileNotFoundException.php" hash="6898c27f0cc0480235a48e9b6f097d56" package="Default">
     <docblock line="2">
       <description>File not found exception</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2406,7 +2465,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\FileNotFoundException</full_name>
       <docblock line="11">
         <description>Exception to throw when a file isn't found</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="11" name="package" description="io"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="io">
@@ -2414,7 +2473,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="17">
           <description>Create a new class not found exception for the given class and message</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="17" name="param" description="message&#9;&#9;Message for developer" type="string" variable="$message">
             <type by_reference="false">string</type>
           </tag>
@@ -2424,7 +2483,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="23">
           <name>$message</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="23">

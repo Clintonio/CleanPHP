@@ -105,6 +105,15 @@ class FileUpload {
 		return ($this->exists() ? $_FILES[$this->name]['type'] : '');
 	}
 	
+	/**
+	* Get the temporary file location
+	*
+	* @return	File	The temporary file location
+	*/
+	public function getTempFile() {
+		return new File($_FILES[$this->name]['tmp_name']);
+	}
+	
 	//==================
 	// Utilities
 	//==================
@@ -118,6 +127,7 @@ class FileUpload {
 	* @throws	IOException				When the file cannot be moved
 	* @param	\Folder		folder		Folder to move file to
 	* @param	string		name		(Optional) Alternative file name
+	* @return	File		The file object that resulted from this move
 	*/
 	public function move(Folder $folder, $name = NULL) {
 		if($name !== NULL) {
@@ -137,6 +147,8 @@ class FileUpload {
 		}
 		
 		ErrorHandler::reset();
+		
+		return $file;
 	}
 }
 

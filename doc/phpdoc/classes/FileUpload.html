@@ -70,7 +70,14 @@
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct :: Create a new file upload object"><span class="description">Create a new file upload object</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_complete" title="complete :: Check if this file upload completed successfully"><span class="description">Check if this file upload completed successfully</span><pre>complete()</pre></a></li>
+<li class="method public "><a href="#method_errorDiskWrite" title="errorDiskWrite :: Check if the file failed due to not being able to write or the directory
+not existing"><span class="description">Check if the file failed due to not being able to write or the directory
+not existing</span><pre>errorDiskWrite()</pre></a></li>
+<li class="method public "><a href="#method_errorFileTooLarge" title="errorFileTooLarge :: Check if the file uploaded was too large"><span class="description">Check if the file uploaded was too large</span><pre>errorFileTooLarge()</pre></a></li>
 <li class="method public "><a href="#method_exists" title="exists :: Check if this is a valid file upload"><span class="description">Check if this is a valid file upload</span><pre>exists()</pre></a></li>
+<li class="method public "><a href="#method_fileExists" title="fileExists :: Check if the file was uploaded fully"><span class="description">Check if the file was uploaded fully</span><pre>fileExists()</pre></a></li>
+<li class="method public "><a href="#method_getErrorCode" title="getErrorCode :: Get the file upload failure code"><span class="description">Get the file upload failure code</span><pre>getErrorCode()</pre></a></li>
+<li class="method public "><a href="#method_getTempFile" title="getTempFile :: Get the temporary file location"><span class="description">Get the temporary file location</span><pre>getTempFile()</pre></a></li>
 <li class="method public "><a href="#method_getType" title="getType :: Get the MIME type of the file"><span class="description">Get the MIME type of the file</span><pre>getType()</pre></a></li>
 <li class="method public "><a href="#method_move" title="move :: Move this file to a new location, it will
 be deleted after this script is executed otherwise."><span class="description">Move this file to a new location, it will
@@ -129,6 +136,29 @@ be deleted after this script is executed otherwise.</span><pre>move()</pre></a><
 <code>bool</code>True if the file was successful</div>
 </div></div>
 </div>
+<a id="method_errorDiskWrite"></a><div class="element clickable method public method_errorDiskWrite" data-toggle="collapse" data-target=".method_errorDiskWrite .collapse">
+<h2>Check if the file failed due to not being able to write or the directory
+not existing</h2>
+<pre>errorDiskWrite() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the file couldn't be written</div>
+</div></div>
+</div>
+<a id="method_errorFileTooLarge"></a><div class="element clickable method public method_errorFileTooLarge" data-toggle="collapse" data-target=".method_errorFileTooLarge .collapse">
+<h2>Check if the file uploaded was too large</h2>
+<pre>errorFileTooLarge() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the file uploaded failed and was too large</div>
+</div></div>
+</div>
 <a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
 <h2>Check if this is a valid file upload</h2>
 <pre>exists() : bool</pre>
@@ -138,6 +168,39 @@ be deleted after this script is executed otherwise.</span><pre>move()</pre></a><
 <h3>Returns</h3>
 <div class="subelement response">
 <code>bool</code>True if the file exists</div>
+</div></div>
+</div>
+<a id="method_fileExists"></a><div class="element clickable method public method_fileExists" data-toggle="collapse" data-target=".method_fileExists .collapse">
+<h2>Check if the file was uploaded fully</h2>
+<pre>fileExists() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if a file was uploaded</div>
+</div></div>
+</div>
+<a id="method_getErrorCode"></a><div class="element clickable method public method_getErrorCode" data-toggle="collapse" data-target=".method_getErrorCode .collapse">
+<h2>Get the file upload failure code</h2>
+<pre>getErrorCode() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The file upload error code</div>
+</div></div>
+</div>
+<a id="method_getTempFile"></a><div class="element clickable method public method_getTempFile" data-toggle="collapse" data-target=".method_getTempFile .collapse">
+<h2>Get the temporary file location</h2>
+<pre>getTempFile() : <a href="../classes/File.html">\File</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/File.html">\File</a></code>The temporary file location</div>
 </div></div>
 </div>
 <a id="method_getType"></a><div class="element clickable method public method_getType" data-toggle="collapse" data-target=".method_getType .collapse">
@@ -154,7 +217,7 @@ be deleted after this script is executed otherwise.</span><pre>move()</pre></a><
 <a id="method_move"></a><div class="element clickable method public method_move" data-toggle="collapse" data-target=".method_move .collapse">
 <h2>Move this file to a new location, it will
 be deleted after this script is executed otherwise.</h2>
-<pre>move(\Folder $folder, string $name) </pre>
+<pre>move(\Folder $folder, string $name) : <a href="../classes/File.html">\File</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Will overwrite existing files.</p></div>
@@ -177,6 +240,9 @@ be deleted after this script is executed otherwise.</h2>
 <td>When the file cannot be moved</td>
 </tr>
 </table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/File.html">\File</a></code>The file object that resulted from this move</div>
 </div></div>
 </div>
 <h3>
