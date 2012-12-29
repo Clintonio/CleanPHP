@@ -70,7 +70,10 @@
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct :: Create this representation of a folder"><span class="description">Create this representation of a folder</span><pre>__construct()</pre></a></li>
 <li class="method public inherited"><a href="#method___toString" title="__toString :: Tostring returns the current path value"><span class="description">Tostring returns the current path value</span><pre>__toString()</pre></a></li>
-<li class="method public "><a href="#method_create" title="create :: Create the directory"><span class="description">Create the directory</span><pre>create()</pre></a></li>
+<li class="method public inherited"><a href="#method_append" title="append :: Append data to this file"><span class="description">Append data to this file</span><pre>append()</pre></a></li>
+<li class="method public "><a href="#method_create" title="create :: Create the directory and any other directories that may be required to
+create it"><span class="description">Create the directory and any other directories that may be required to
+create it</span><pre>create()</pre></a></li>
 <li class="method public "><a href="#method_exists" title="exists :: Check if this folder exists"><span class="description">Check if this folder exists</span><pre>exists()</pre></a></li>
 <li class="method public "><a href="#method_getFile" title="getFile :: Get a file from within this folder"><span class="description">Get a file from within this folder</span><pre>getFile()</pre></a></li>
 <li class="method public "><a href="#method_getFileList" title="getFileList :: Get the listing of all files in this directory"><span class="description">Get the listing of all files in this directory</span><pre>getFileList()</pre></a></li>
@@ -78,7 +81,12 @@
 <li class="method public "><a href="#method_getFolderList" title="getFolderList :: Get the listing of all folders in this directory"><span class="description">Get the listing of all folders in this directory</span><pre>getFolderList()</pre></a></li>
 <li class="method public "><a href="#method_getListing" title="getListing :: Get the listing of objects in this folder based on a mask"><span class="description">Get the listing of objects in this folder based on a mask</span><pre>getListing()</pre></a></li>
 <li class="method public "><a href="#method_isDotFolder" title="isDotFolder :: Check if the given folder is a dot folder, ."><span class="description">Check if the given folder is a dot folder, .</span><pre>isDotFolder()</pre></a></li>
-<li class="method public "><a href="#method_mkdir" title="mkdir :: Create the directory"><span class="description">Create the directory</span><pre>mkdir()</pre></a></li>
+<li class="method public "><a href="#method_mkdir" title="mkdir :: Create the directory and any other directories that may be required to
+create it"><span class="description">Create the directory and any other directories that may be required to
+create it</span><pre>mkdir()</pre></a></li>
+<li class="method public inherited"><a href="#method_write" title="write :: Write data to this file, overwritting any existing file, unless
+the append flag is true"><span class="description">Write data to this file, overwritting any existing file, unless
+the append flag is true</span><pre>write()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -145,11 +153,40 @@
 <code>string</code>Path</div>
 </div></div>
 </div>
+<a id="method_append"></a><div class="element clickable method public method_append" data-toggle="collapse" data-target=".method_append .collapse">
+<h2>Append data to this file</h2>
+<pre>append(mixed $data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\File::append()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code><p>data		The data to write</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>When the file could not be written to</td>
+</tr></table>
+</div></div>
+</div>
 <a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
-<h2>Create the directory</h2>
+<h2>Create the directory and any other directories that may be required to
+create it</h2>
 <pre>create() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>If the directory could not be created</td>
+</tr></table>
+</div></div>
 </div>
 <a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
 <h2>Check if this folder exists</h2>
@@ -274,10 +311,43 @@ Unix hidden folders (.foldername)</p></div>
 </div></div>
 </div>
 <a id="method_mkdir"></a><div class="element clickable method public method_mkdir" data-toggle="collapse" data-target=".method_mkdir .collapse">
-<h2>Create the directory</h2>
+<h2>Create the directory and any other directories that may be required to
+create it</h2>
 <pre>mkdir() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>If the directory could not be created</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_write"></a><div class="element clickable method public method_write" data-toggle="collapse" data-target=".method_write .collapse">
+<h2>Write data to this file, overwritting any existing file, unless
+the append flag is true</h2>
+<pre>write(mixed $data, bool $append) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\File::write()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code><p>data		The data to write</p></div>
+<div class="subelement argument">
+<h4>$append</h4>
+<code>bool</code><p>append		True if in append mode</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>When the file could not be written to</td>
+</tr></table>
+</div></div>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>

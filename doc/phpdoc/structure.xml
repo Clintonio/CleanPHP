@@ -2098,7 +2098,7 @@ This overwrites any current exception handler</description>
     <docblock line="2">
       <description>An abstract representation of a temporarily uploaded
 file uploaded via the POST file upload mechanism</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2108,15 +2108,15 @@ file uploaded via the POST file upload mechanism</description>
       <full_name>\FileUpload</full_name>
       <docblock line="13">
         <description>File upload representation</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="input"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$name</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>Name of the file upload in the $_FILES array</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="input">
@@ -2124,14 +2124,14 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>__construct</full_name>
         <docblock line="24">
           <description>Create a new file upload object</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="24" name="param" description="Name of file upload in POST form" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="29">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -2140,7 +2140,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>exists</full_name>
         <docblock line="33">
           <description>Check if this is a valid file upload</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="33" name="return" description="True if the file exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2151,7 +2151,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>complete</full_name>
         <docblock line="46">
           <description>Check if this file upload completed successfully</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="46" name="return" description="True if the file was successful" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2162,7 +2162,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>errorFileTooLarge</full_name>
         <docblock line="55">
           <description>Check if the file uploaded was too large</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="55" name="return" description="True if the file uploaded failed and was too large" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2173,7 +2173,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>fileExists</full_name>
         <docblock line="65">
           <description>Check if the file was uploaded fully</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="65" name="return" description="True if a file was uploaded" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2185,7 +2185,7 @@ file uploaded via the POST file upload mechanism</description>
         <docblock line="75">
           <description>Check if the file failed due to not being able to write or the directory
 not existing</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="75" name="return" description="True if the file couldn't be written" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2196,7 +2196,7 @@ not existing</description>
         <full_name>getErrorCode</full_name>
         <docblock line="90">
           <description>Get the file upload failure code</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="90" name="return" description="The file upload error code" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -2207,7 +2207,7 @@ not existing</description>
         <full_name>getType</full_name>
         <docblock line="99">
           <description>Get the MIME type of the file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="99" name="return" description="MIME type of the image" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -2218,7 +2218,7 @@ not existing</description>
         <full_name>getTempFile</full_name>
         <docblock line="108">
           <description>Get the temporary file location</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="108" name="return" description="The temporary file location" type="\File">
             <type by_reference="false">\File</type>
           </tag>
@@ -2249,7 +2249,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="132">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type>\Folder</type>
         </argument>
         <argument line="132">
@@ -2388,10 +2388,10 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/File.php" hash="bde287faf20a6ed099e3ed2e7724cfa0" package="Default">
+  <file path="modules/io/File.php" hash="c66b0a08d33a98b6da8a9acf0c1634a3" package="Default">
     <docblock line="2">
       <description>Representation of a file in PHP</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2401,15 +2401,15 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\File</full_name>
       <docblock line="12">
         <description>File representation</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="12" name="package" description="io"/>
       </docblock>
       <property final="false" static="false" visibility="protected" line="21" namespace="global" package="Default">
         <name>$path</name>
-        <default/>
+        <default></default>
         <docblock line="18">
           <description>Path of the file</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="io">
@@ -2417,14 +2417,14 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="23">
           <description>Create a new file at a given path</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="23" name="param" description="path&#9;Path of the file we are representing" type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="28">
           <name>$path</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2433,7 +2433,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>exists</full_name>
         <docblock line="32">
           <description>Check if this file exists</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="32" name="return" description="True if this file exists (and is not a folder)" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2444,18 +2444,65 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__toString</full_name>
         <docblock line="41">
           <description>Tostring returns the current path value</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="41" name="return" description="Path" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="io">
+        <name>write</name>
+        <full_name>write</full_name>
+        <docblock line="50">
+          <description>Write data to this file, overwritting any existing file, unless
+the append flag is true</description>
+          <long-description></long-description>
+          <tag line="50" name="throws" description="When the file could not be written to" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="50" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="50" name="param" description="append&#9;&#9;True if in append mode" type="bool" variable="$append">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="58">
+          <name>$append</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="io">
+        <name>append</name>
+        <full_name>append</full_name>
+        <docblock line="65">
+          <description>Append data to this file</description>
+          <long-description></long-description>
+          <tag line="65" name="throws" description="When the file could not be written to" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+          <tag line="65" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="71">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
       </method>
     </class>
   </file>
   <file path="modules/io/FileNotFoundException.php" hash="6898c27f0cc0480235a48e9b6f097d56" package="Default">
     <docblock line="2">
       <description>File not found exception</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2465,7 +2512,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\FileNotFoundException</full_name>
       <docblock line="11">
         <description>Exception to throw when a file isn't found</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="11" name="package" description="io"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="io">
@@ -2473,7 +2520,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="17">
           <description>Create a new class not found exception for the given class and message</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="17" name="param" description="message&#9;&#9;Message for developer" type="string" variable="$message">
             <type by_reference="false">string</type>
           </tag>
@@ -2483,7 +2530,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="23">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="23">
@@ -2494,10 +2541,10 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/Folder.php" hash="f983ae25635880fe7824a570cdbc8522" package="Default">
+  <file path="modules/io/Folder.php" hash="a0d60fa0fb4f109689d716aebc356f36" package="Default">
     <docblock line="2">
       <description>A representation of a folder as an extention of a file</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2507,7 +2554,7 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Folder</full_name>
       <docblock line="13">
         <description>Representation of a folder</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="io"/>
       </docblock>
       <constant namespace="global" line="22" package="io">
@@ -2516,7 +2563,7 @@ be deleted after this script is executed otherwise.</description>
         <value>1</value>
         <docblock line="19">
           <description>Folder mask</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </constant>
       <constant namespace="global" line="26" package="io">
@@ -2525,7 +2572,7 @@ be deleted after this script is executed otherwise.</description>
         <value>2</value>
         <docblock line="23">
           <description>File mask</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </constant>
       <constant namespace="global" line="30" package="io">
@@ -2542,14 +2589,14 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="32">
           <description>Create this representation of a folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="32" name="param" description="folder&#9;&#9;Folder path" type="string" variable="$folder">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="37">
           <name>$folder</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2558,7 +2605,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getFile</full_name>
         <docblock line="46">
           <description>Get a file from within this folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="46" name="param" description="filename&#9;File name" type="string" variable="$filename">
             <type by_reference="false">string</type>
           </tag>
@@ -2568,7 +2615,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="52">
           <name>$filename</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2577,7 +2624,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getFolder</full_name>
         <docblock line="56">
           <description>Get a folder from within this folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="56" name="param" description="folderName&#9;Folder name" type="string" variable="$folderName">
             <type by_reference="false">string</type>
           </tag>
@@ -2587,7 +2634,7 @@ be deleted after this script is executed otherwise.</description>
         </docblock>
         <argument line="62">
           <name>$folderName</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2596,7 +2643,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getFolderList</full_name>
         <docblock line="66">
           <description>Get the listing of all folders in this directory</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="66" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2613,7 +2660,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getFileList</full_name>
         <docblock line="77">
           <description>Get the listing of all files in this directory</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="77" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2630,7 +2677,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getListing</full_name>
         <docblock line="88">
           <description>Get the listing of objects in this folder based on a mask</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="88" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2665,26 +2712,34 @@ Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
         <full_name>exists</full_name>
         <docblock line="137">
           <description>Check if this folder exists</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="137" name="return" description="True if exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="149" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="152" package="io">
         <name>mkdir</name>
         <full_name>mkdir</full_name>
         <docblock line="146">
-          <description>Create the directory</description>
-          <long-description/>
+          <description>Create the directory and any other directories that may be required to
+create it</description>
+          <long-description></long-description>
+          <tag line="146" name="throws" description="If the directory could not be created" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="156" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="164" package="io">
         <name>create</name>
         <full_name>create</full_name>
-        <docblock line="153">
-          <description>Create the directory</description>
-          <long-description/>
+        <docblock line="158">
+          <description>Create the directory and any other directories that may be required to
+create it</description>
+          <long-description></long-description>
+          <tag line="158" name="throws" description="If the directory could not be created" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
         </docblock>
       </method>
     </class>

@@ -46,6 +46,31 @@ class File {
 	public function __toString() {
 		return (string) $this->path;	
 	}
+	
+	/**
+	* Write data to this file, overwritting any existing file, unless
+	* the append flag is true
+	*
+	* @throws	IOException		When the file could not be written to
+	* @param	mixed	data		The data to write
+	* @param	bool	append		True if in append mode
+	*/
+	public function write($data, $append = false) {
+		$flags = ($append ? FILE_APPEND : 0);
+		if(!file_put_contents($this->path, $data, $flags)) {
+			throw new IOException('Could not write to the file');
+		}
+	}
+	
+	/**
+	* Append data to this file
+	*
+	* @throws	IOException		When the file could not be written to
+	* @param	mixed	data		The data to write
+	*/
+	public function append($data) {
+		$this->write($data, true);
+	}
 }
 
 ?>
