@@ -43,6 +43,10 @@ class CleanPHP {
 	* Loaded module list
 	*/
 	private static $loadedModules = array();
+	/**
+	* Modules that are currently loading
+	*/
+	private static $loadingModules = array();
 	
 	/**
 	* Module separator
@@ -67,7 +71,10 @@ class CleanPHP {
 	* @return	void
 	*/
 	public static function import($class) {
-		if(!in_array($class, self::$loadedModules, true)) {
+		if(!in_array($class, self::$loadedModules, true) 
+			&& !in_array($class, self::$loadingModules, true)) {
+			self::$loadingModules[] = $class;
+			
 			$fileName  = preg_replace("/\\" . self::$moduleSeparator . "/", "/", $class) . ".php";
 			// Get class name so we can check import status after inclusion
 			$className = explode(self::$moduleSeparator, $class);
@@ -92,6 +99,11 @@ class CleanPHP {
 					}
 					$x++;
 				}
+			}
+			
+			// Remove the module from the currently loading modules
+			if(($key = array_search($class, self::$loadingModules)) !== false) {
+				unset(self::$loadingModules[$key]);
 			}
 			
 			if(!$imported) {
