@@ -164,4 +164,29 @@ class Folder extends File {
 	public function create() {
 		$this->mkdir();	
 	}
+	
+	/**
+	* Delete this directory and all subfiles
+	*
+	* @throws	IOException		If the directory could not be removed or is not a directory
+	*/
+	public function delete() {
+		if(is_dir($this->path)) {
+			$fileList = $this->getFileList();
+			foreach($fileList as $file) {
+				$file->delete();
+			}
+			
+			$folderList = $this->getFolderList();
+			foreach($folderList as $folder) {
+				$folder->delete();
+			}
+			
+			if(!rmdir((string) $this->path)) {
+				throw new IOException('Could not delete folder at ' . $this->path);
+			}
+		} else if(is_file($this->path)) {
+			throw new IOException('Target folder ' . $this->path . ' for deletion is not a folder');
+		}
+	}
 }

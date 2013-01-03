@@ -48,6 +48,19 @@ class File {
 	}
 	
 	/**
+	* Delete this file if it exists and is a file
+	* 
+	* @throws	IOException		If the file cannot be erased or is a directory
+	*/
+	public function delete() {
+		if(is_dir($this->path)) {
+			throw new IOException('Target ' . $this->path . ' is a folder');
+		} else if(!unlink($this->path)) {
+			throw new IOException('File ' . $this->path . ' could not be deleted');
+		}
+	}
+	
+	/**
 	* Tostring returns the current path value
 	*
 	* @return	string		Path
