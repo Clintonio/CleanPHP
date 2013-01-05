@@ -150,7 +150,7 @@ class Folder extends File {
 	* @throws	IOException		If the directory could not be created
 	*/
 	public function mkdir() {
-		if(!mkdir((string) $this->path, '0777', true)) {
+		if(!mkdir((string) $this->path, 0777, true)) {
 			throw new IOException('Could not create directory at ' . $this->path);
 		}
 	}
