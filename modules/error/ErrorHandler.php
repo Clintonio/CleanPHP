@@ -1,9 +1,10 @@
 <?php
 /**
-* Class designated for handling PHP errors
+* Class designated for handling PHP errors. Either a custom error handler
+* can be given to an instance of this class, or the class can statically handle 
+* errors and throw ErrorExceptions upon each PHP error.
 * 
 * @author	Clinton Alexander
-* @version	1
 */
 
 /**
@@ -22,7 +23,8 @@ class ErrorHandler {
 	private $level		= NULL;
 	
 	/**
-	* Create this error handler
+	* Create this error handler with a custom callback to call when errors
+	* are generated at the given level
 	*
 	* @param	callback	callback	Error handler callback
 	* @param	int			level		Level to handle for (uses E_ALL | E_STRICT by default)
@@ -41,13 +43,14 @@ class ErrorHandler {
 	}
 	
 	/**
-	* Set the error handler to this current one
+	* Start using the callback given at construction to handle errors at the
+	* level given at construction
 	*/
 	public function handleErrors() {
 		if($level === NULL) {
 			$level = E_ALL | E_STRICT;	
 		}
-		set_error_handler($handler, $level);
+		set_error_handler($this->callback, $level);
 	}
 	
 	//=============
