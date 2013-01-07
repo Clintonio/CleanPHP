@@ -18,11 +18,17 @@ class Get {
 	* @param	String		Name of post field
 	* @param	Mixed		Default value
 	* @return	Mixed		Default value or get field (if exists). 
-	*						String types are converted to String objects
+	*						A single string will be converted to a string object
+	*						arrays will be returned as expected
 	*/
 	public static function value($index, $default = false) {
 		if(isset($_GET[$index])) {
-			return new String($_GET[$index]);
+			$value = $_GET[$index];
+			if(is_array($value)) {
+				return new String($value);
+			} else {
+				return $value;
+			}
 		} else {
 			// Not in either, return default
 			if(is_string($default)) {
