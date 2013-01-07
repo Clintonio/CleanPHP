@@ -86,6 +86,14 @@ class FileUpload {
 	//==================
 	// Getters
 	//==================
+	/**
+	* Get the original name of the file
+	*
+	* @return	string	Original name of file before upload
+	*/
+	public function getOriginalName() {
+		return $_FILES[$this->name]['name'];
+	}
 	
 	/**
 	* Get the file upload failure code
