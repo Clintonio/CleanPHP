@@ -25,9 +25,9 @@ class Get {
 		if(isset($_GET[$index])) {
 			$value = $_GET[$index];
 			if(is_array($value)) {
-				return new String($value);
-			} else {
 				return $value;
+			} else {
+				return new String($value);
 			}
 		} else {
 			// Not in either, return default

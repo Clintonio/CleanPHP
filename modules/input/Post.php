@@ -25,9 +25,9 @@ class Post {
 		if(isset($_POST[$index])) {
 			$value = $_POST[$index];
 			if(is_array($value)) {
-				return new String($value);
-			} else {
 				return $value;
+			} else {
+				return new String($value);
 			}
 		} else {
 			// Not in either, return default
