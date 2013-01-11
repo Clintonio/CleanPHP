@@ -3,7 +3,7 @@
   <file path="CleanPHP.php" hash="6fd8df9f237cfba63a7330d3942583f8" package="Default">
     <docblock line="2">
       <description>CleanPHP Core API</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2.0"/>
     </docblock>
@@ -21,7 +21,7 @@
         <description>Contains the most important functions and
 functionality for the framework to load and
 work</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="24" name="package" description="CleanPHP"/>
       </docblock>
       <constant namespace="global" line="59" package="CleanPHP">
@@ -30,7 +30,7 @@ work</description>
         <value>"onLoad"</value>
         <docblock line="56">
           <description>The name of the onload method for classes</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="true" visibility="private" line="36" namespace="global" package="Default">
@@ -38,7 +38,7 @@ work</description>
         <default>"/modules/"</default>
         <docblock line="33">
           <description>Location of CleanAPI main modules</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="40" namespace="global" package="Default">
@@ -46,7 +46,7 @@ work</description>
         <default>array()</default>
         <docblock line="37">
           <description>User defined module folders</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="45" namespace="global" package="Default">
@@ -54,7 +54,7 @@ work</description>
         <default>array()</default>
         <docblock line="42">
           <description>Loaded module list</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="49" namespace="global" package="Default">
@@ -62,7 +62,7 @@ work</description>
         <default>array()</default>
         <docblock line="46">
           <description>Modules that are currently loading</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="54" namespace="global" package="Default">
@@ -70,7 +70,7 @@ work</description>
         <default>"."</default>
         <docblock line="51">
           <description>Module separator</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="73" package="CleanPHP">
@@ -92,7 +92,7 @@ it will be automatically executed&lt;/p&gt;</long-description>
         </docblock>
         <argument line="73">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -102,7 +102,7 @@ it will be automatically executed&lt;/p&gt;</long-description>
         <docblock line="132">
           <description>Check if a given class exists on the module path with the given module
 name, following the standard module name rules</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="132" name="param" description="The class module being loaded" type="\class" variable="$class">
             <type by_reference="false">\class</type>
           </tag>
@@ -112,7 +112,7 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="139">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -121,7 +121,7 @@ name, following the standard module name rules</description>
         <full_name>addModulePath</full_name>
         <docblock line="172">
           <description>Add a new module folder</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="172" name="throws" description="" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -131,7 +131,7 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="178">
           <name>$folder</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -142,7 +142,7 @@ name, following the standard module name rules</description>
       <full_name>\ClassNotFoundException</full_name>
       <docblock line="192">
         <description>Exception to be thrown when a class could not be found</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="192" name="author" description="Clinton Alexander"/>
         <tag line="192" name="package" description="CleanPHP"/>
         <tag line="192" name="since" description="2"/>
@@ -153,7 +153,7 @@ name, following the standard module name rules</description>
         <full_name>__construct</full_name>
         <docblock line="201">
           <description>Create a new class not found exception for the given class and message</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="201" name="param" description="Name of class not found" type="String" variable="$class">
             <type by_reference="false">String</type>
           </tag>
@@ -163,12 +163,12 @@ name, following the standard module name rules</description>
         </docblock>
         <argument line="207">
           <name>$class</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="207">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -181,7 +181,7 @@ name, following the standard module name rules</description>
         <description>Exception to be thrown when an something that
 should exist does not.Primarily items in the DB
 Or objects</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="213" name="author" description="Clinton Alexander"/>
         <tag line="213" name="package" description="CleanPHP"/>
         <tag line="213" name="since" description="2"/>
@@ -209,7 +209,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\ResourceUpdateException</full_name>
       <docblock line="237">
         <description>Resource update failure</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="237" name="author" description="Clinton Alexander"/>
         <tag line="237" name="package" description="CleanPHP"/>
         <tag line="237" name="since" description="2"/>
@@ -222,7 +222,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\PermissionsException</full_name>
       <docblock line="247">
         <description>Permissions failure</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="247" name="author" description="Clinton Alexander"/>
         <tag line="247" name="package" description="CleanPHP"/>
         <tag line="247" name="since" description="2"/>
@@ -235,7 +235,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\FormValidatorException</full_name>
       <docblock line="257">
         <description>Form validation exception</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="257" name="author" description="Clinton Alexander"/>
         <tag line="257" name="package" description="CleanPHP"/>
         <tag line="257" name="since" description="2"/>
@@ -248,7 +248,7 @@ in associative arrays&lt;/p&gt;</long-description>
       <full_name>\UnexpectedFieldException</full_name>
       <docblock line="267">
         <description>Unexpected field exception</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="267" name="author" description="Clinton Alexander"/>
         <tag line="267" name="package" description="CleanPHP"/>
         <tag line="267" name="since" description="2"/>
@@ -1960,153 +1960,156 @@ A leaf taken from JS</description>
       </method>
     </class>
   </file>
-  <file path="modules/error/ErrorHandler.php" hash="04d3f02f2f7e8f134e8474ae043e4632" package="Default">
+  <file path="modules/error/ErrorHandler.php" hash="900dd8e3058fb6c1d48f725155232cda" package="Default">
     <docblock line="2">
-      <description>Class designated for handling PHP errors</description>
-      <long-description/>
+      <description>Class designated for handling PHP errors.</description>
+      <long-description>&lt;p&gt;Either a custom error handler
+can be given to an instance of this class, or the class can statically handle
+errors and throw ErrorExceptions upon each PHP error.&lt;/p&gt;</long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
-      <tag line="2" name="version" description="1"/>
     </docblock>
-    <class final="false" abstract="false" namespace="global" line="14" package="error">
+    <class final="false" abstract="false" namespace="global" line="15" package="error">
       <extends/>
       <name>ErrorHandler</name>
       <full_name>\ErrorHandler</full_name>
-      <docblock line="9">
+      <docblock line="10">
         <description>An error handler class for handling both PHP exceptions and custom ones</description>
-        <long-description/>
-        <tag line="9" name="package" description="error"/>
+        <long-description></long-description>
+        <tag line="10" name="package" description="error"/>
       </docblock>
-      <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
+      <property final="false" static="false" visibility="private" line="19" namespace="global" package="Default">
         <name>$callback</name>
-        <default/>
-        <docblock line="15">
+        <default></default>
+        <docblock line="16">
           <description>The callback that is called upon errors</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
+      <property final="false" static="false" visibility="private" line="23" namespace="global" package="Default">
         <name>$level</name>
         <default>NULL</default>
-        <docblock line="19">
+        <docblock line="20">
           <description>The level of errors that this handler handles</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="error">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="32" package="error">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="24">
-          <description>Create this error handler</description>
-          <long-description/>
-          <tag line="24" name="param" description="callback&#9;Error handler callback" type="callback" variable="$callback">
+        <docblock line="25">
+          <description>Create this error handler with a custom callback to call when errors
+are generated at the given level</description>
+          <long-description></long-description>
+          <tag line="25" name="param" description="callback&#9;Error handler callback" type="callback" variable="$callback">
             <type by_reference="false">callback</type>
           </tag>
-          <tag line="24" name="param" description="level&#9;&#9;Level to handle for (uses E_ALL | E_STRICT by default)" type="int" variable="$level">
+          <tag line="25" name="param" description="level&#9;&#9;Level to handle for (uses E_ALL | E_STRICT by default)" type="int" variable="$level">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
-        <argument line="30">
+        <argument line="32">
           <name>$callback</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="30">
+        <argument line="32">
           <name>$level</name>
           <default>NULL</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="error">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="error">
         <name>setLevel</name>
         <full_name>setLevel</full_name>
-        <docblock line="34">
+        <docblock line="36">
           <description>Set level to use</description>
-          <long-description/>
-          <tag line="34" name="param" description="level&#9;Level to handle for" type="int" variable="$level">
+          <long-description></long-description>
+          <tag line="36" name="param" description="level&#9;Level to handle for" type="int" variable="$level">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
-        <argument line="39">
+        <argument line="41">
           <name>$level</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="error">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="error">
         <name>handleErrors</name>
         <full_name>handleErrors</full_name>
-        <docblock line="43">
-          <description>Set the error handler to this current one</description>
-          <long-description/>
+        <docblock line="45">
+          <description>Start using the callback given at construction to handle errors at the
+level given at construction</description>
+          <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="66" package="error">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="69" package="error">
         <name>handleException</name>
         <full_name>handleException</full_name>
-        <docblock line="57">
+        <docblock line="60">
           <description>Default error exception handler</description>
-          <long-description/>
-          <tag line="57" name="param" description="errno&#9;The serverity of the error" type="int" variable="$errno">
+          <long-description></long-description>
+          <tag line="60" name="param" description="errno&#9;The serverity of the error" type="int" variable="$errno">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="57" name="param" description="errstr&#9;The error string to log or display" type="string" variable="$errstr">
+          <tag line="60" name="param" description="errstr&#9;The error string to log or display" type="string" variable="$errstr">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="57" name="param" description="errfile&#9;The file in which the error occurred" type="string" variable="$errfile">
+          <tag line="60" name="param" description="errfile&#9;The file in which the error occurred" type="string" variable="$errfile">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="57" name="param" description="errline&#9;The line on which the error occurred" type="int" variable="$errline">
+          <tag line="60" name="param" description="errline&#9;The line on which the error occurred" type="int" variable="$errline">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="57" name="throws" description="Always throws error exception" type="\ErrorException">
+          <tag line="60" name="throws" description="Always throws error exception" type="\ErrorException">
             <type by_reference="false">\ErrorException</type>
           </tag>
         </docblock>
-        <argument line="66">
+        <argument line="69">
           <name>$errno</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="66">
+        <argument line="69">
           <name>$errstr</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="66">
+        <argument line="69">
           <name>$errfile</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="66">
+        <argument line="69">
           <name>$errline</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="74" package="error">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="77" package="error">
         <name>throwExceptions</name>
         <full_name>throwExceptions</full_name>
-        <docblock line="70">
+        <docblock line="73">
           <description>Emit inbuild ErrorExceptions upon all exceptions
 This overwrites any current exception handler</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="81" package="error">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="84" package="error">
         <name>reset</name>
         <full_name>reset</full_name>
-        <docblock line="78">
+        <docblock line="81">
           <description>Restore default PHP behaviour</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="modules/input/FileUpload.php" hash="1f03b77e62ff1eee8397a6ff9efbdf7f" package="Default">
+  <file path="modules/input/FileUpload.php" hash="2b8a549727ed77f444cb92a29640ad50" package="Default">
     <docblock line="2">
       <description>An abstract representation of a temporarily uploaded
 file uploaded via the POST file upload mechanism</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2116,15 +2119,15 @@ file uploaded via the POST file upload mechanism</description>
       <full_name>\FileUpload</full_name>
       <docblock line="13">
         <description>File upload representation</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="input"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$name</name>
-        <default/>
+        <default></default>
         <docblock line="19">
           <description>Name of the file upload in the $_FILES array</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="input">
@@ -2132,14 +2135,14 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>__construct</full_name>
         <docblock line="24">
           <description>Create a new file upload object</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="24" name="param" description="Name of file upload in POST form" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="29">
           <name>$name</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2148,7 +2151,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>exists</full_name>
         <docblock line="33">
           <description>Check if this is a valid file upload</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="33" name="return" description="True if the file exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2159,7 +2162,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>complete</full_name>
         <docblock line="46">
           <description>Check if this file upload completed successfully</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="46" name="return" description="True if the file was successful" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2170,7 +2173,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>errorFileTooLarge</full_name>
         <docblock line="55">
           <description>Check if the file uploaded was too large</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="55" name="return" description="True if the file uploaded failed and was too large" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2181,7 +2184,7 @@ file uploaded via the POST file upload mechanism</description>
         <full_name>fileExists</full_name>
         <docblock line="65">
           <description>Check if the file was uploaded fully</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="65" name="return" description="True if a file was uploaded" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2193,74 +2196,85 @@ file uploaded via the POST file upload mechanism</description>
         <docblock line="75">
           <description>Check if the file failed due to not being able to write or the directory
 not existing</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="75" name="return" description="True if the file couldn't be written" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="95" package="input">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="94" package="input">
+        <name>getOriginalName</name>
+        <full_name>getOriginalName</full_name>
+        <docblock line="89">
+          <description>Get the original name of the file</description>
+          <long-description></long-description>
+          <tag line="89" name="return" description="Original name of file before upload" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="103" package="input">
         <name>getErrorCode</name>
         <full_name>getErrorCode</full_name>
-        <docblock line="90">
+        <docblock line="98">
           <description>Get the file upload failure code</description>
-          <long-description/>
-          <tag line="90" name="return" description="The file upload error code" type="int">
+          <long-description></long-description>
+          <tag line="98" name="return" description="The file upload error code" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="104" package="input">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="112" package="input">
         <name>getType</name>
         <full_name>getType</full_name>
-        <docblock line="99">
+        <docblock line="107">
           <description>Get the MIME type of the file</description>
-          <long-description/>
-          <tag line="99" name="return" description="MIME type of the image" type="string">
+          <long-description></long-description>
+          <tag line="107" name="return" description="MIME type of the image" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="113" package="input">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="121" package="input">
         <name>getTempFile</name>
         <full_name>getTempFile</full_name>
-        <docblock line="108">
+        <docblock line="116">
           <description>Get the temporary file location</description>
-          <long-description/>
-          <tag line="108" name="return" description="The temporary file location" type="\File">
+          <long-description></long-description>
+          <tag line="116" name="return" description="The temporary file location" type="\File">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="132" package="input">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="140" package="input">
         <name>move</name>
         <full_name>move</full_name>
-        <docblock line="121">
+        <docblock line="129">
           <description>Move this file to a new location, it will
 be deleted after this script is executed otherwise.</description>
           <long-description>&lt;p&gt;Will overwrite existing files.&lt;/p&gt;</long-description>
-          <tag line="121" name="throws" description="Thrown when file cannot be found" type="\FileNotFoundException">
+          <tag line="129" name="throws" description="Thrown when file cannot be found" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
-          <tag line="121" name="throws" description="When the file cannot be moved" type="\IOException">
+          <tag line="129" name="throws" description="When the file cannot be moved" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
-          <tag line="121" name="param" description="folder&#9;&#9;Folder to move file to" type="\Folder" variable="$folder">
+          <tag line="129" name="param" description="folder&#9;&#9;Folder to move file to" type="\Folder" variable="$folder">
             <type by_reference="false">\Folder</type>
           </tag>
-          <tag line="121" name="param" description="name&#9;&#9;(Optional) Alternative file name" type="string" variable="$name">
+          <tag line="129" name="param" description="name&#9;&#9;(Optional) Alternative file name" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="121" name="return" description="The file object that resulted from this move" type="\File">
+          <tag line="129" name="return" description="The file object that resulted from this move" type="\File">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
-        <argument line="132">
+        <argument line="140">
           <name>$folder</name>
-          <default/>
+          <default></default>
           <type>\Folder</type>
         </argument>
-        <argument line="132">
+        <argument line="140">
           <name>$name</name>
           <default>NULL</default>
           <type/>
@@ -2268,10 +2282,10 @@ be deleted after this script is executed otherwise.</description>
       </method>
     </class>
   </file>
-  <file path="modules/input/Get.php" hash="b3e3d0f5d792924744a2f261c79cab69" package="Default">
+  <file path="modules/input/Get.php" hash="16bbb2a24e1f5f6092e6ba21ee346edf" package="Default">
     <docblock line="2">
       <description>A class to abstract out some pains in using get values</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2281,61 +2295,61 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Get</full_name>
       <docblock line="9">
         <description>Get representation and interface</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="9" name="package" description="input"/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="23" package="input">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="24" package="input">
         <name>value</name>
         <full_name>value</full_name>
         <docblock line="15">
           <description>Get a get value with an optional default</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="15" name="param" description="Name of post field" type="String" variable="$index">
             <type by_reference="false">String</type>
           </tag>
           <tag line="15" name="param" description="Default value" type="Mixed" variable="$default">
             <type by_reference="false">Mixed</type>
           </tag>
-          <tag line="15" name="return" description="Default value or get field (if exists).&#10;&#9;&#9;&#9;&#9;&#9;String types are converted to String objects" type="Mixed">
+          <tag line="15" name="return" description="Default value or get field (if exists).&#10;&#9;&#9;&#9;&#9;&#9;A single string will be converted to a string object&#10;&#9;&#9;&#9;&#9;&#9;arrays will be returned as expected" type="Mixed">
             <type by_reference="false">Mixed</type>
           </tag>
         </docblock>
-        <argument line="23">
+        <argument line="24">
           <name>$index</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="23">
+        <argument line="24">
           <name>$default</name>
           <default>false</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="42" package="input">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="48" package="input">
         <name>contains</name>
         <full_name>contains</full_name>
-        <docblock line="36">
+        <docblock line="42">
           <description>Check if the get contains the given value</description>
-          <long-description/>
-          <tag line="36" name="param" description="Name of get field" type="string" variable="$index">
+          <long-description></long-description>
+          <tag line="42" name="param" description="Name of get field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="36" name="return" description="True if value is contained" type="bool">
+          <tag line="42" name="return" description="True if value is contained" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="42">
+        <argument line="48">
           <name>$index</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="modules/input/Post.php" hash="ad1a733580523ec47aa724cc4eacac88" package="Default">
+  <file path="modules/input/Post.php" hash="3e21e46c3004547e3241d90d96e3688e" package="Default">
     <docblock line="2">
       <description>A class to abstract out some pains in using post values</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2345,61 +2359,61 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\Post</full_name>
       <docblock line="9">
         <description>Post representation and interface</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="9" name="package" description="input"/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="23" package="input">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="24" package="input">
         <name>value</name>
         <full_name>value</full_name>
         <docblock line="15">
           <description>Get a post value with an optional default</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="15" name="param" description="Name of post field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
           <tag line="15" name="param" description="Default value" type="Mixed" variable="$default">
             <type by_reference="false">Mixed</type>
           </tag>
-          <tag line="15" name="return" description="Default value or post field (if exists).&#10;&#9;&#9;&#9;&#9;&#9;String types are converted to String objects" type="Mixed">
+          <tag line="15" name="return" description="Default value or post field (if exists).&#10;&#9;&#9;&#9;&#9;&#9;A single string will be converted to a string object&#10;&#9;&#9;&#9;&#9;&#9;arrays will be returned as expected" type="Mixed">
             <type by_reference="false">Mixed</type>
           </tag>
         </docblock>
-        <argument line="23">
+        <argument line="24">
           <name>$index</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="23">
+        <argument line="24">
           <name>$default</name>
           <default>false</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="42" package="input">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="48" package="input">
         <name>contains</name>
         <full_name>contains</full_name>
-        <docblock line="36">
+        <docblock line="42">
           <description>Check if the post contains the given value</description>
-          <long-description/>
-          <tag line="36" name="param" description="Name of post field" type="string" variable="$index">
+          <long-description></long-description>
+          <tag line="42" name="param" description="Name of post field" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="36" name="return" description="True if value is contained" type="bool">
+          <tag line="42" name="return" description="True if value is contained" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="42">
+        <argument line="48">
           <name>$index</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="modules/io/File.php" hash="7b1ea3dfdde05c3f9b8f7ff4617ea8c9" package="Default">
+  <file path="modules/io/File.php" hash="bf1299b30d1e2308c55c25b008dc385b" package="Default">
     <docblock line="2">
       <description>Representation of a file in PHP</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2409,15 +2423,15 @@ be deleted after this script is executed otherwise.</description>
       <full_name>\File</full_name>
       <docblock line="12">
         <description>File representation</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="12" name="package" description="io"/>
       </docblock>
       <property final="false" static="false" visibility="protected" line="21" namespace="global" package="Default">
         <name>$path</name>
-        <default/>
+        <default></default>
         <docblock line="18">
           <description>Path of the file</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="io">
@@ -2425,14 +2439,14 @@ be deleted after this script is executed otherwise.</description>
         <full_name>__construct</full_name>
         <docblock line="23">
           <description>Create a new file at a given path</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="23" name="param" description="path&#9;Path of the file we are representing" type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="28">
           <name>$path</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2441,7 +2455,7 @@ be deleted after this script is executed otherwise.</description>
         <full_name>getName</full_name>
         <docblock line="32">
           <description>Get the name of this file</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="32" name="return" description="The file's name" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -2452,67 +2466,78 @@ be deleted after this script is executed otherwise.</description>
         <full_name>exists</full_name>
         <docblock line="41">
           <description>Check if this file exists</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="41" name="return" description="True if this file exists (and is not a folder)" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="55" package="io">
+        <name>delete</name>
+        <full_name>delete</full_name>
+        <docblock line="50">
+          <description>Delete this file if it exists and is a file</description>
+          <long-description></long-description>
+          <tag line="50" name="throws" description="If the file cannot be erased or is a directory" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="io">
         <name>__toString</name>
         <full_name>__toString</full_name>
-        <docblock line="50">
+        <docblock line="63">
           <description>Tostring returns the current path value</description>
-          <long-description/>
-          <tag line="50" name="return" description="Path" type="string">
+          <long-description></long-description>
+          <tag line="63" name="return" description="Path" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="80" package="io">
         <name>write</name>
         <full_name>write</full_name>
-        <docblock line="59">
+        <docblock line="72">
           <description>Write data to this file, overwritting any existing file, unless
 the append flag is true</description>
-          <long-description/>
-          <tag line="59" name="throws" description="When the file could not be written to" type="\IOException">
+          <long-description></long-description>
+          <tag line="72" name="throws" description="When the file could not be written to" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
-          <tag line="59" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+          <tag line="72" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="59" name="param" description="append&#9;&#9;True if in append mode" type="bool" variable="$append">
+          <tag line="72" name="param" description="append&#9;&#9;True if in append mode" type="bool" variable="$append">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="67">
+        <argument line="80">
           <name>$data</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="67">
+        <argument line="80">
           <name>$append</name>
           <default>false</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="80" package="io">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="93" package="io">
         <name>append</name>
         <full_name>append</full_name>
-        <docblock line="74">
+        <docblock line="87">
           <description>Append data to this file</description>
-          <long-description/>
-          <tag line="74" name="throws" description="When the file could not be written to" type="\IOException">
+          <long-description></long-description>
+          <tag line="87" name="throws" description="When the file could not be written to" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
-          <tag line="74" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
+          <tag line="87" name="param" description="data&#9;&#9;The data to write" type="mixed" variable="$data">
             <type by_reference="false">mixed</type>
           </tag>
         </docblock>
-        <argument line="80">
+        <argument line="93">
           <name>$data</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2560,10 +2585,10 @@ the append flag is true</description>
       </method>
     </class>
   </file>
-  <file path="modules/io/Folder.php" hash="a0d60fa0fb4f109689d716aebc356f36" package="Default">
+  <file path="modules/io/Folder.php" hash="0d2accb9c038dda12cfb9c855edee7dd" package="Default">
     <docblock line="2">
       <description>A representation of a folder as an extention of a file</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -2573,7 +2598,7 @@ the append flag is true</description>
       <full_name>\Folder</full_name>
       <docblock line="13">
         <description>Representation of a folder</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="io"/>
       </docblock>
       <constant namespace="global" line="22" package="io">
@@ -2582,7 +2607,7 @@ the append flag is true</description>
         <value>1</value>
         <docblock line="19">
           <description>Folder mask</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </constant>
       <constant namespace="global" line="26" package="io">
@@ -2591,7 +2616,7 @@ the append flag is true</description>
         <value>2</value>
         <docblock line="23">
           <description>File mask</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </constant>
       <constant namespace="global" line="30" package="io">
@@ -2608,14 +2633,14 @@ the append flag is true</description>
         <full_name>__construct</full_name>
         <docblock line="32">
           <description>Create this representation of a folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="32" name="param" description="folder&#9;&#9;Folder path" type="string" variable="$folder">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="37">
           <name>$folder</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2624,7 +2649,7 @@ the append flag is true</description>
         <full_name>getFile</full_name>
         <docblock line="46">
           <description>Get a file from within this folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="46" name="param" description="filename&#9;File name" type="string" variable="$filename">
             <type by_reference="false">string</type>
           </tag>
@@ -2634,7 +2659,7 @@ the append flag is true</description>
         </docblock>
         <argument line="52">
           <name>$filename</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2643,7 +2668,7 @@ the append flag is true</description>
         <full_name>getFolder</full_name>
         <docblock line="56">
           <description>Get a folder from within this folder</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="56" name="param" description="folderName&#9;Folder name" type="string" variable="$folderName">
             <type by_reference="false">string</type>
           </tag>
@@ -2653,7 +2678,7 @@ the append flag is true</description>
         </docblock>
         <argument line="62">
           <name>$folderName</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -2662,7 +2687,7 @@ the append flag is true</description>
         <full_name>getFolderList</full_name>
         <docblock line="66">
           <description>Get the listing of all folders in this directory</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="66" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2679,7 +2704,7 @@ the append flag is true</description>
         <full_name>getFileList</full_name>
         <docblock line="77">
           <description>Get the listing of all files in this directory</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="77" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2696,7 +2721,7 @@ the append flag is true</description>
         <full_name>getListing</full_name>
         <docblock line="88">
           <description>Get the listing of objects in this folder based on a mask</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="88" name="throws" description="When the directory doesn't exist" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -2731,7 +2756,7 @@ Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
         <full_name>exists</full_name>
         <docblock line="137">
           <description>Check if this folder exists</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="137" name="return" description="True if exists" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -2743,7 +2768,7 @@ Unix hidden folders (.foldername)&lt;/p&gt;</long-description>
         <docblock line="146">
           <description>Create the directory and any other directories that may be required to
 create it</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="146" name="throws" description="If the directory could not be created" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
@@ -2755,8 +2780,19 @@ create it</description>
         <docblock line="158">
           <description>Create the directory and any other directories that may be required to
 create it</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="158" name="throws" description="If the directory could not be created" type="\IOException">
+            <type by_reference="false">\IOException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="173" package="io">
+        <name>delete</name>
+        <full_name>delete</full_name>
+        <docblock line="168">
+          <description>Delete this directory and all subfiles</description>
+          <long-description></long-description>
+          <tag line="168" name="throws" description="If the directory could not be removed or is not a directory" type="\IOException">
             <type by_reference="false">\IOException</type>
           </tag>
         </docblock>
@@ -2907,6 +2943,97 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
         </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="modules/layout/LayoutLoader.php" hash="04770741a7871db6c9feac3d67749181" package="Default">
+    <docblock line="2">
+      <description>A class for loading layout objects from a common directory with language
+based directory support.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Clinton Alexander"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="16" package="Default">
+      <extends/>
+      <name>LayoutLoader</name>
+      <full_name>\LayoutLoader</full_name>
+      <docblock line="12">
+        <description>A layoutloader which can locate layouts based on constructor variables
+abstracting the need to rewrite multiple paths if a layout directory moves</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="20" namespace="global" package="Default">
+        <name>$ext</name>
+        <default></default>
+        <docblock line="17">
+          <description>The file extention we are loading layouts from</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="24" namespace="global" package="Default">
+        <name>$layoutDir</name>
+        <default></default>
+        <docblock line="21">
+          <description>The directory to search for layous in</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="26">
+          <description>Create a new layout loader, with the given layout extention, and an optional
+layout directory (will default to current directory)</description>
+          <long-description></long-description>
+          <tag line="26" name="param" description="ext&#9;&#9;&#9;The layout extention, default &quot;php&quot;" type="string" variable="$ext">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="26" name="param" description="layoutDir&#9;The layout directory, default &quot;.&quot;" type="\Folder" variable="$layoutDir">
+            <type by_reference="false">\Folder</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$ext</name>
+          <default>'php'</default>
+          <type/>
+        </argument>
+        <argument line="33">
+          <name>$layoutDir</name>
+          <default>NULL</default>
+          <type>\Folder</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="52" package="Default">
+        <name>getLayout</name>
+        <full_name>getLayout</full_name>
+        <docblock line="42">
+          <description>Get a layout from this content with an optional language parameter
+which will match a subdirectory of the language's code, ie;
+&lt;LAYOUT_DIR&gt;/&lt;LANG_CODE&gt;/&lt;FILE&gt;.&lt;EXT&gt;</description>
+          <long-description></long-description>
+          <tag line="42" name="throws" description="" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="42" name="param" description="layoutName&#9;The name of the layout file to load" type="string" variable="$layoutName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="42" name="param" description="lang&#9;&#9;The language directory, default: none" type="\Language" variable="$lang">
+            <type by_reference="false">\Language</type>
+          </tag>
+          <tag line="42" name="return" description="A layout file corresponding to the parameters" type="\Layout">
+            <type by_reference="false">\Layout</type>
+          </tag>
+        </docblock>
+        <argument line="52">
+          <name>$layoutName</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$lang</name>
+          <default>NULL</default>
+          <type>\Language</type>
+        </argument>
       </method>
     </class>
   </file>

@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Packages</a></li>
 <li><a href="../packages/CleanPHP.html"><i class="icon-folder-open"></i> CleanPHP</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/config.html"><i class="icon-folder-open"></i> config</a></li>
 <li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
 <li><a href="../packages/database.html"><i class="icon-folder-open"></i> database</a></li>
@@ -71,6 +72,7 @@
 <li class="method public "><a href="#method___construct" title="__construct :: Create a new file at a given path"><span class="description">Create a new file at a given path</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method___toString" title="__toString :: Tostring returns the current path value"><span class="description">Tostring returns the current path value</span><pre>__toString()</pre></a></li>
 <li class="method public "><a href="#method_append" title="append :: Append data to this file"><span class="description">Append data to this file</span><pre>append()</pre></a></li>
+<li class="method public "><a href="#method_delete" title="delete :: Delete this file if it exists and is a file"><span class="description">Delete this file if it exists and is a file</span><pre>delete()</pre></a></li>
 <li class="method public "><a href="#method_exists" title="exists :: Check if this file exists"><span class="description">Check if this file exists</span><pre>exists()</pre></a></li>
 <li class="method public "><a href="#method_getName" title="getName :: Get the name of this file"><span class="description">Get the name of this file</span><pre>getName()</pre></a></li>
 <li class="method public "><a href="#method_write" title="write :: Write data to this file, overwritting any existing file, unless
@@ -144,6 +146,19 @@ the append flag is true</span><pre>write()</pre></a></li>
 <table class="table table-bordered"><tr>
 <th><code><a href="../classes/IOException.html">\IOException</a></code></th>
 <td>When the file could not be written to</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
+<h2>Delete this file if it exists and is a file</h2>
+<pre>delete() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/IOException.html">\IOException</a></code></th>
+<td>If the file cannot be erased or is a directory</td>
 </tr></table>
 </div></div>
 </div>
