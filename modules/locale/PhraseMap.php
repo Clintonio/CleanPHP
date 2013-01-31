@@ -15,7 +15,7 @@ CleanPHP::import("locale.MissingPhraseException");
 *
 * @package	locale
 */
-class PhraseMap {
+class PhraseMap implements ArrayAccess {
 	/**
 	* The current language 
 	*/
@@ -49,10 +49,10 @@ class PhraseMap {
 	* Return a phrase based on the current language or given alternate
 	* language
 	*
-	* @param	String		Text element ID
-	* @param	Language	Alternate language to get phrase for (as opposed to current language) 
-	* 						(use setLanguage instead if possible)
-	* @return	String		The formatted output or "Invalid element specified";
+	* @param	String		phraseID	Text element ID
+	* @param	Language	altLang		Alternate language to get phrase for (as opposed to current language) 
+	* 									(use setLanguage instead if possible)
+	* @return	String		The formatted output or null
 	*/
 	public function getPhrase($phraseID, Language $altLang = NULL) {
 		$phraseID = (string) $phraseID;
@@ -181,5 +181,51 @@ class PhraseMap {
 			$this->phrases[$name][self::DEFAULT_LANG_INDEX] = $phrase;
 		}	
 	}
+	
+	//============================
+	// ArrayAccess methods
+	//============================
+    
+    /**
+    * Alias for phraseExists. Called when isset() is called on one of the elements
+    * of this instance
+    *
+    * @param	string		phraseID		The ID of the phrase to check existance of
+    * @return	bool		True if the phrase exists
+    */
+    public function offsetExists($phraseID) {
+        return $this->phraseExists($phraseID)
+    }
+    
+    /**
+    * Alias for getPhrase. Is called when $instance[$phraseID] is called.
+    * Calls without optional second parameter of getPhrase.
+	*
+	* @param	string		phraseID		Text element ID
+	* @return	string		The formatted output or null;
+	*/
+    public function offsetGet($phraseID) {
+        return $this->getPhrase($phraseID);
+    }
+	
+	/**
+	* This method is required by the array access interface, but will throw an
+	* exception if accessed
+	*
+	* @throws	RuntimeException	If the user attempts to use this method
+	*/
+    public function offsetSet($offset, $value) {
+        throw new RuntimeException("Cannot set indicies in the PhraseMap");
+    }
+    
+    /**
+    * This method is required by the array acces interface, but will throw an 
+    * exception if used
+	*
+	* @throws	RuntimeException	If the user attempts to use this method
+	*/
+    public function offsetUnset($offset) {
+        throw new RuntimeException("Cannot unset indicies in the PhraseMap");
+    }
 }
 ?>
