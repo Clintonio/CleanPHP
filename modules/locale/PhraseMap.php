@@ -194,7 +194,7 @@ class PhraseMap implements ArrayAccess {
     * @return	bool		True if the phrase exists
     */
     public function offsetExists($phraseID) {
-        return $this->phraseExists($phraseID)
+        return $this->phraseExists($phraseID);
     }
     
     /**
