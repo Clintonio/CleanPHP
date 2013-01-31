@@ -191,7 +191,7 @@ class Logger {
 	/**
 	* Rotates log
 	*
-	* @param	String		Text for new log	[
+	* @param	String		Text for new log	
 	* @return	void
 	*/
 	protected function rotate($text) {
