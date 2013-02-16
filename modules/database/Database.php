@@ -41,7 +41,7 @@ interface Database {
 	* @param	param1		array of parameters or N individual parameters
 	* @return	Array of results
 	*/
-	function getPreparedQuery($query, $param1);
+	function getPreparedQuery($query, $param1 = array());
 	
 	/**
 	* Prepares, then executes, a query and returns the results as a numeric array
@@ -54,7 +54,7 @@ interface Database {
 	* @param	mixed	param1		array of parameters or N individual parameters
 	* @return	array	Array of results
 	*/
-	function getPreparedQueryNumeric($query, $param1);
+	function getPreparedQueryNumeric($query, $param1 = array());
 	
 	/**
 	* Send a query with a boolean response such as INSERT

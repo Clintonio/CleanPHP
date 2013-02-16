@@ -127,7 +127,7 @@ class MySQLiDatabase implements Database {
 	* @param	mixed	param1		array of parameters or N individual parameters
 	* @return	array	Array of results
 	*/
-	public function getPreparedQuery($query, $param1) {
+	public function getPreparedQuery($query, $param1 = array()) {
 		if(is_array($param1)) {
 			$args = $param1;
 		} else {
@@ -149,7 +149,7 @@ class MySQLiDatabase implements Database {
 	* @param	mixed	param1		array of parameters or N individual parameters
 	* @return	array	Array of results
 	*/
-	public function getPreparedQueryNumeric($query, $param1) {
+	public function getPreparedQueryNumeric($query, $param1 = array()) {
 		if(is_array($param1)) {
 			$args = $param1;
 		} else {
