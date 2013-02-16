@@ -108,11 +108,114 @@ class MySQLiDatabase implements Database {
 	* Returns a numeric array
 	*
 	* @throws	DatabaseQueryException	When a query is invalid
-	* @param	String		MySQL query to execute
+	* @param	string	query		MySQL query to execute
 	* @return	Array		Numeric array of results, or false
 	*/
 	public function getQueryNumeric($query) {
 		return $this->getQueryInternal($query, false);
+	}
+	
+	
+	/**
+	* Prepares, then executes, a query and returns the results as a numeric array
+	* of results which contain associative data fields. Arguments for the prepared statement
+	* can either be given as an array in the second parameter or as n parameters.
+	* Requires PHP 5.3 or higher and mysqlnd.
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters or N individual parameters
+	* @return	array	Array of results
+	*/
+	public function getPreparedQuery($query, $param1) {
+		if(is_array($param1)) {
+			$args = $param1;
+		} else {
+			$args = func_get_args();
+			array_shift($args);
+		}
+		
+		return $this->getPreparedQueryInternal($query, $args, true);
+	}
+	
+	/**
+	* Prepares, then executes, a query and returns the results as a numeric array
+	* of results which contain numeric data fields. Arguments for the prepared statement
+	* can either be given as an array in the second parameter or as n parameters.
+	* Requires PHP 5.3 or higher and mysqlnd.
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters or N individual parameters
+	* @return	array	Array of results
+	*/
+	public function getPreparedQueryNumeric($query, $param1) {
+		if(is_array($param1)) {
+			$args = $param1;
+		} else {
+			$args = func_get_args();
+			array_shift($args);
+		}
+		
+		return $this->getPreparedQueryInternal($query, $args, false);
+	}
+	
+	/**
+	* The internal generalise query processing
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters
+	* @param	bool	assoc		True if associative
+	* @return	Array of results
+	*/
+	private function getPreparedQueryInternal($query, $args, $assoc) {
+		$statement = $this->mySQLi->prepare($query);
+		if($statement instanceof mysqli_stmt) {
+			$size = count($args);
+			for($i = 0; $i < $size; $i++) {
+				$arg = $args[$i];
+				if(is_double($arg)) {
+					$type = "d";
+				} elseif(is_int($arg)) {
+					$type = "i";
+				} else {
+					$type = "s";
+					if(!is_object($arg)) {
+						$arg = (string) $arg;				
+					} else if(method_exists($arg, '__toString')) {
+						$arg = $arg->__toString();
+					} else {
+						throw new DatabaseQueryException('Parameter ' . $i .' cannot
+						be converted to a string, it is of type: ' . get_class($arg));
+					}
+				}
+					
+				if(!$statement->bind_param($type, $arg)) {
+					throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
+						". Error text: " . $this->mySQLi->error . " for query . " . $query);
+				}
+			}
+			
+			if($statement->execute()) {
+				if($assoc) {
+					$type = MYSQLI_ASSOC;
+				} else {
+					$type = MYSQLI_NUM;	
+				}
+				
+				// If you get an error here, you might need mysqlnd
+				$result = $statement->get_result();
+				
+				return $result->fetch_all($type);
+			} else {
+				throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->statement->errno .
+					". Error text: " . $statement->mySQLi->error . " for query . " . $query);
+			}
+		} else {
+			throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
+				". Error text: " . $this->mySQLi->error . " for query . " . $query);
+		}
 	}
 	
 	/** 

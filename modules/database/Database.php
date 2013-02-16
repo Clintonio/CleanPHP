@@ -32,6 +32,31 @@ interface Database {
 	function getQuery($query);
 	
 	/**
+	* Prepares, then executes, a query and returns the results as a numeric array
+	* of results which contain associative data fields. Arguments for the prepared statement
+	* can either be given as an array in the second parameter or as n parameters
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	String		Query to be sent
+	* @param	param1		array of parameters or N individual parameters
+	* @return	Array of results
+	*/
+	function getPreparedQuery($query, $param1);
+	
+	/**
+	* Prepares, then executes, a query and returns the results as a numeric array
+	* of results which contain numeric data fields. Arguments for the prepared statement
+	* can either be given as an array in the second parameter or as n parameters.
+	* Requires PHP 5.3 or higher and mysqlnd.
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters or N individual parameters
+	* @return	array	Array of results
+	*/
+	function getPreparedQueryNumeric($query, $param1);
+	
+	/**
 	* Send a query with a boolean response such as INSERT
 	*
 	* @throws	DatabaseQueryException	When a query fails
