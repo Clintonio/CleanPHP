@@ -1238,10 +1238,10 @@ to PHP's substring</description>
       </method>
     </class>
   </file>
-  <file path="modules/database/Database.php" hash="08caa679c33a9a19cd8aa9721ab3eadc" package="Default">
+  <file path="modules/database/Database.php" hash="7f5792fe3798ab309890a24bd14873f3" package="Default">
     <docblock line="2">
       <description>An interface for abstract database representation</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1250,7 +1250,7 @@ to PHP's substring</description>
       <full_name>\Database</full_name>
       <docblock line="9">
         <description>Abstract database representation</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="9" name="package" description="database"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="database">
@@ -1258,7 +1258,7 @@ to PHP's substring</description>
         <full_name>getQueryNumeric</full_name>
         <docblock line="16">
           <description>Gets numeric ordered query (no field names)</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="16" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1271,7 +1271,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="23">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1280,7 +1280,7 @@ to PHP's substring</description>
         <full_name>getQuery</full_name>
         <docblock line="25">
           <description>Gets an associative query</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="25" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1293,82 +1293,179 @@ to PHP's substring</description>
         </docblock>
         <argument line="32">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="database">
-        <name>sendQuery</name>
-        <full_name>sendQuery</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="database">
+        <name>getPreparedQuery</name>
+        <full_name>getPreparedQuery</full_name>
         <docblock line="34">
-          <description>Send a query with a boolean response such as INSERT</description>
-          <long-description/>
+          <description>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain associative data fields.</description>
+          <long-description>&lt;p&gt;Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters&lt;/p&gt;</long-description>
           <tag line="34" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
           <tag line="34" name="param" description="Query to be sent" type="String" variable="$query">
             <type by_reference="false">String</type>
           </tag>
-          <tag line="34" name="return" description="or false depending on result of query" type="True">
-            <type by_reference="false">True</type>
+          <tag line="34" name="param" description="array of parameters or N individual parameters" type="\param1" variable="$param1">
+            <type by_reference="false">\param1</type>
+          </tag>
+          <tag line="34" name="return" description="of results" type="Array">
+            <type by_reference="false">Array</type>
           </tag>
         </docblock>
-        <argument line="41">
+        <argument line="44">
           <name>$query</name>
-          <default/>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$param1</name>
+          <default>array()</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="48" package="database">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="database">
+        <name>getPreparedQueryNumeric</name>
+        <full_name>getPreparedQueryNumeric</full_name>
+        <docblock line="46">
+          <description>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain numeric data fields.</description>
+          <long-description>&lt;p&gt;Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters.
+Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
+          <tag line="46" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="46" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="param1&#9;&#9;array of parameters or N individual parameters" type="mixed" variable="$param1">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="46" name="return" description="Array of results" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$param1</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="66" package="database">
+        <name>sendQuery</name>
+        <full_name>sendQuery</full_name>
+        <docblock line="59">
+          <description>Send a query with a boolean response such as INSERT</description>
+          <long-description></long-description>
+          <tag line="59" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="59" name="param" description="Query to be sent" type="String" variable="$query">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="59" name="return" description="or false depending on result of query" type="True">
+            <type by_reference="false">True</type>
+          </tag>
+        </docblock>
+        <argument line="66">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="78" package="database">
+        <name>sendPreparedQuery</name>
+        <full_name>sendPreparedQuery</full_name>
+        <docblock line="68">
+          <description>Prepares, then executes, a query and returns the whether a query was successful
+Arguments for the prepared statement can either be given as an array in
+the second parameter or as n parameters.</description>
+          <long-description>&lt;p&gt;Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
+          <tag line="68" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="68" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="68" name="param" description="param1&#9;&#9;array of parameters or N individual parameters" type="mixed" variable="$param1">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="68" name="return" description="True if the query successfully executed" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="78">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="78">
+          <name>$param1</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="85" package="database">
         <name>getAffectedRows</name>
         <full_name>getAffectedRows</full_name>
-        <docblock line="43">
+        <docblock line="80">
           <description>Get the number of affected rows</description>
-          <long-description/>
-          <tag line="43" name="return" description="of affected rows" type="\Number">
+          <long-description></long-description>
+          <tag line="80" name="return" description="of affected rows" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="55" package="database">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="92" package="database">
         <name>getInsertID</name>
         <full_name>getInsertID</full_name>
-        <docblock line="50">
+        <docblock line="87">
           <description>Get the ID of the last insert</description>
-          <long-description/>
-          <tag line="50" name="return" description="insert ID" type="\Last">
+          <long-description></long-description>
+          <tag line="87" name="return" description="insert ID" type="\Last">
             <type by_reference="false">\Last</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="database">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="99" package="database">
         <name>closeConnection</name>
         <full_name>closeConnection</full_name>
-        <docblock line="57">
+        <docblock line="94">
           <description>Closes the connection</description>
-          <long-description/>
-          <tag line="57" name="return" description="" type="void">
+          <long-description></long-description>
+          <tag line="94" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="database">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="108" package="database">
         <name>clean</name>
         <full_name>clean</full_name>
-        <docblock line="64">
+        <docblock line="101">
           <description>Clean the input data value to prevent it causing
 injections</description>
-          <long-description/>
-          <tag line="64" name="param" description="Input data (Not a query statement)" type="string" variable="$string">
+          <long-description></long-description>
+          <tag line="101" name="param" description="Input data (Not a query statement)" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="64" name="return" description="Clean input data" type="String">
+          <tag line="101" name="return" description="Clean input data" type="String">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
-        <argument line="71">
+        <argument line="108">
           <name>$string</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1410,10 +1507,10 @@ injections</description>
       </docblock>
     </class>
   </file>
-  <file path="modules/database/mysqli/MySQLiDatabase.php" hash="e31b0fc9b5747572d1402015fdca7f51" package="Default">
+  <file path="modules/database/mysqli/MySQLiDatabase.php" hash="f9ddd90bf970fc0a2704a2486503de3c" package="Default">
     <docblock line="2">
       <description>MySQLi class wrapper for the Database interface</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="3.0"/>
     </docblock>
@@ -1426,7 +1523,7 @@ injections</description>
         <description>Each database instance holds onto a single connection
 and acts as a wrapper to MySQLi intending to
 abstract out the PHP mess</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="database\mysqli"/>
       </docblock>
       <property final="false" static="true" visibility="private" line="24" namespace="global" package="Default">
@@ -1434,7 +1531,7 @@ abstract out the PHP mess</description>
         <default>array()</default>
         <docblock line="21">
           <description>A store of all queries run during this session</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="28" namespace="global" package="Default">
@@ -1442,15 +1539,15 @@ abstract out the PHP mess</description>
         <default>0</default>
         <docblock line="25">
           <description>A counter of the number of queries run during this session</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="33" namespace="global" package="Default">
         <name>$mySQLi</name>
-        <default/>
+        <default></default>
         <docblock line="30">
           <description>Current MySQLi connection</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="database\mysqli">
@@ -1458,7 +1555,7 @@ abstract out the PHP mess</description>
         <full_name>__construct</full_name>
         <docblock line="35">
           <description>Create a new MySQLi database with the given connection details</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="35" name="param" description="Username for database" type="String" variable="$username">
             <type by_reference="false">String</type>
           </tag>
@@ -1474,17 +1571,17 @@ abstract out the PHP mess</description>
         </docblock>
         <argument line="43">
           <name>$username</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="43">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="43">
           <name>$dbname</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="43">
@@ -1513,173 +1610,339 @@ Intended for non-select queries.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="66">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="102" package="database\mysqli">
-        <name>getQuery</name>
-        <full_name>getQuery</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="104" package="database\mysqli">
+        <name>sendPreparedQuery</name>
+        <full_name>sendPreparedQuery</full_name>
         <docblock line="94">
-          <description>Database Query
-Returns all results as an associative array</description>
-          <long-description/>
-          <tag line="94" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
+          <description>Prepares, then executes, a query and returns the whether a query was successful
+Arguments for the prepared statement can either be given as an array in
+the second parameter or as n parameters.</description>
+          <long-description>&lt;p&gt;Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
+          <tag line="94" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
-          <tag line="94" name="param" description="query&#9;&#9;MySQL Query to execute" type="string" variable="$query">
+          <tag line="94" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="94" name="return" description="Array of results or false" type="array">
+          <tag line="94" name="param" description="param1&#9;&#9;array of parameters or N individual parameters" type="mixed" variable="$param1">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="94" name="return" description="True if the query successfully executed" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="104">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="104">
+          <name>$param1</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="136" package="database\mysqli">
+        <name>getQuery</name>
+        <full_name>getQuery</full_name>
+        <docblock line="128">
+          <description>Database Query
+Returns all results as an associative array</description>
+          <long-description></long-description>
+          <tag line="128" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="128" name="param" description="query&#9;&#9;MySQL Query to execute" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="128" name="return" description="Array of results or false" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
-        <argument line="102">
+        <argument line="136">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="114" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="148" package="database\mysqli">
         <name>getQueryNumeric</name>
         <full_name>getQueryNumeric</full_name>
-        <docblock line="106">
+        <docblock line="140">
           <description>Database query
 Returns a numeric array</description>
-          <long-description/>
-          <tag line="106" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
+          <long-description></long-description>
+          <tag line="140" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
-          <tag line="106" name="param" description="MySQL query to execute" type="String" variable="$query">
-            <type by_reference="false">String</type>
+          <tag line="140" name="param" description="query&#9;&#9;MySQL query to execute" type="string" variable="$query">
+            <type by_reference="false">string</type>
           </tag>
-          <tag line="106" name="return" description="Numeric array of results, or false" type="Array">
+          <tag line="140" name="return" description="Numeric array of results, or false" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
-        <argument line="114">
+        <argument line="148">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="127" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="164" package="database\mysqli">
+        <name>getPreparedQuery</name>
+        <full_name>getPreparedQuery</full_name>
+        <docblock line="153">
+          <description>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain associative data fields.</description>
+          <long-description>&lt;p&gt;Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters.
+Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
+          <tag line="153" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="153" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="153" name="param" description="param1&#9;&#9;array of parameters or N individual parameters" type="mixed" variable="$param1">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="153" name="return" description="Array of results" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="164">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="164">
+          <name>$param1</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="186" package="database\mysqli">
+        <name>getPreparedQueryNumeric</name>
+        <full_name>getPreparedQueryNumeric</full_name>
+        <docblock line="175">
+          <description>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain numeric data fields.</description>
+          <long-description>&lt;p&gt;Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters.
+Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
+          <tag line="175" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="175" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="175" name="param" description="param1&#9;&#9;array of parameters or N individual parameters" type="mixed" variable="$param1">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="175" name="return" description="Array of results" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="186">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="186">
+          <name>$param1</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="206" package="database\mysqli">
+        <name>getPreparedQueryInternal</name>
+        <full_name>getPreparedQueryInternal</full_name>
+        <docblock line="197">
+          <description>The internal generalise query processing</description>
+          <long-description></long-description>
+          <tag line="197" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="197" name="param" description="query&#9;&#9;Query to be sent" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="197" name="param" description="param1&#9;&#9;array of parameters" type="mixed" variable="$args">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="197" name="param" description="assoc&#9;&#9;True if associative" type="bool" variable="$assoc">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="197" name="return" description="of results" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+        <argument line="206">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="206">
+          <name>$args</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="206">
+          <name>$assoc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="236" package="database\mysqli">
+        <name>getBoundPreparedStatement</name>
+        <full_name>getBoundPreparedStatement</full_name>
+        <docblock line="229">
+          <description>Get a prepared query</description>
+          <long-description></long-description>
+          <tag line="229" name="throws" description="When a query fails" type="\DatabaseQueryException">
+            <type by_reference="false">\DatabaseQueryException</type>
+          </tag>
+          <tag line="229" name="param" description="query&#9;&#9;The SQL with which to build the prepared query" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="return" description="The prepared query" type="\mysqli_stmt">
+            <type by_reference="false">\mysqli_stmt</type>
+          </tag>
+        </docblock>
+        <argument line="236">
+          <name>$query</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="236">
+          <name>$args</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="284" package="database\mysqli">
         <name>getQueryInternal</name>
         <full_name>getQueryInternal</full_name>
-        <docblock line="118">
+        <docblock line="275">
           <description>Database Query
 Returns all results as an associative array</description>
-          <long-description/>
-          <tag line="118" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
+          <long-description></long-description>
+          <tag line="275" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
-          <tag line="118" name="param" description="MySQL Query to execute" type="String" variable="$query">
+          <tag line="275" name="param" description="MySQL Query to execute" type="String" variable="$query">
             <type by_reference="false">String</type>
           </tag>
-          <tag line="118" name="param" description="MySQL Query type" type="\Constant" variable="$assoc">
+          <tag line="275" name="param" description="MySQL Query type" type="\Constant" variable="$assoc">
             <type by_reference="false">\Constant</type>
           </tag>
-          <tag line="118" name="return" description="Array of results or false" type="Array">
+          <tag line="275" name="return" description="Array of results or false" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
-        <argument line="127">
+        <argument line="284">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="127">
+        <argument line="284">
           <name>$assoc</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="179" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="336" package="database\mysqli">
         <name>getAffectedRows</name>
         <full_name>getAffectedRows</full_name>
-        <docblock line="174">
+        <docblock line="331">
           <description>Returns the amount of affected rows of the last query</description>
-          <long-description/>
-          <tag line="174" name="return" description="Count" type="int">
+          <long-description></long-description>
+          <tag line="331" name="return" description="Count" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="193" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="350" package="database\mysqli">
         <name>getInsertID</name>
         <full_name>getInsertID</full_name>
-        <docblock line="188">
+        <docblock line="345">
           <description>Gets the last inputted ID</description>
-          <long-description/>
-          <tag line="188" name="return" description="Last ID or NULL" type="int">
+          <long-description></long-description>
+          <tag line="345" name="return" description="Last ID or NULL" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="206" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="363" package="database\mysqli">
         <name>getMySQLiObject</name>
         <full_name>getMySQLiObject</full_name>
-        <docblock line="201">
+        <docblock line="358">
           <description>Get the MySQLi object related to this database abstractor</description>
-          <long-description/>
-          <tag line="201" name="return" description="related to this abstracted database" type="Object">
+          <long-description></long-description>
+          <tag line="358" name="return" description="related to this abstracted database" type="Object">
             <type by_reference="false">Object</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="215" package="database\mysqli">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="372" package="database\mysqli">
         <name>getTotalQueryCount</name>
         <full_name>getTotalQueryCount</full_name>
-        <docblock line="210">
+        <docblock line="367">
           <description>Get the number of queries executed on MySQLi databases</description>
-          <long-description/>
-          <tag line="210" name="return" description="of queries executed on MySQLi databases" type="\Number">
+          <long-description></long-description>
+          <tag line="367" name="return" description="of queries executed on MySQLi databases" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="224" package="database\mysqli">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="381" package="database\mysqli">
         <name>getAllQueries</name>
         <full_name>getAllQueries</full_name>
-        <docblock line="219">
+        <docblock line="376">
           <description>Get the array of query strings executed on all MySQLi databases</description>
-          <long-description/>
-          <tag line="219" name="return" description="of query string executed" type="Array">
+          <long-description></long-description>
+          <tag line="376" name="return" description="of query string executed" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="238" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="395" package="database\mysqli">
         <name>clean</name>
         <full_name>clean</full_name>
-        <docblock line="232">
+        <docblock line="389">
           <description>Sanitises the given input</description>
-          <long-description/>
-          <tag line="232" name="param" description="Data to be sanitised" type="string" variable="$string">
+          <long-description></long-description>
+          <tag line="389" name="param" description="Data to be sanitised" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="232" name="return" description="Sanitised data" type="String">
+          <tag line="389" name="return" description="Sanitised data" type="String">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
-        <argument line="238">
+        <argument line="395">
           <name>$string</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="247" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="404" package="database\mysqli">
         <name>closeConnection</name>
         <full_name>closeConnection</full_name>
-        <docblock line="242">
+        <docblock line="399">
           <description>Close the connection to the database</description>
-          <long-description/>
-          <tag line="242" name="return" description="" type="void">
+          <long-description></long-description>
+          <tag line="399" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
       </method>
     </class>
+    <parse_markers>
+      <error line="229" code="50015">Argument $args is missing from the Docblock of getBoundPreparedStatement()</error>
+    </parse_markers>
   </file>
   <file path="modules/debug/Debug.php" hash="3294612ba50926639ffba317415c1fb7" package="Default">
     <docblock line="2">
@@ -3191,7 +3454,281 @@ which will match a subdirectory of the language's code, ie;
       </docblock>
     </class>
   </file>
-  <file path="modules/locale/PhraseMap.php" hash="ecf24968174d71e890ca5a5b7936f569" package="Default"/>
+  <file path="modules/locale/PhraseMap.php" hash="ddbc264c1b578ea6ab2d1722bc06c24c" package="Default">
+    <docblock line="2">
+      <description>A map of phrases identified by an ID and parsed from a file</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Clinton Alexander"/>
+      <tag line="2" name="version" description="2"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="18" package="locale">
+      <extends/>
+      <implements>\ArrayAccess</implements>
+      <name>PhraseMap</name>
+      <full_name>\PhraseMap</full_name>
+      <docblock line="13">
+        <description>A map of phrases loaded from a given file</description>
+        <long-description></long-description>
+        <tag line="13" name="package" description="locale"/>
+      </docblock>
+      <constant namespace="global" line="30" package="locale">
+        <name>DEFAULT_LANG_INDEX</name>
+        <full_name>DEFAULT_LANG_INDEX</full_name>
+        <value>''</value>
+        <docblock line="27">
+          <description>Default phrase index</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
+        <name>$curLang</name>
+        <default></default>
+        <docblock line="19">
+          <description>The current language</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
+        <name>$phrases</name>
+        <default>array()</default>
+        <docblock line="23">
+          <description>The store of phrases for this map</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="locale">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="32">
+          <description>Create a phrase map from the given file</description>
+          <long-description></long-description>
+          <tag line="32" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
+            <type by_reference="false">\MissingPhraseMapException</type>
+          </tag>
+          <tag line="32" name="param" description="File name, will be treated as XML" type="String" variable="$file">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="32" name="param" description="The language of this file" type="\Language" variable="$lang">
+            <type by_reference="false">\Language</type>
+          </tag>
+        </docblock>
+        <argument line="39">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$lang</name>
+          <default></default>
+          <type>\Language</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="locale">
+        <name>getPhrase</name>
+        <full_name>getPhrase</full_name>
+        <docblock line="48">
+          <description>Return a phrase based on the current language or given alternate
+language</description>
+          <long-description></long-description>
+          <tag line="48" name="param" description="phraseID&#9;Text element ID" type="String" variable="$phraseID">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="48" name="param" description="altLang&#9;&#9;Alternate language to get phrase for (as opposed to current language)&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;(use setLanguage instead if possible)" type="\Language" variable="$altLang">
+            <type by_reference="false">\Language</type>
+          </tag>
+          <tag line="48" name="return" description="The formatted output or null" type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$phraseID</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$altLang</name>
+          <default>NULL</default>
+          <type>\Language</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="locale">
+        <name>getLanguage</name>
+        <full_name>getLanguage</full_name>
+        <docblock line="77">
+          <description>Get the current language code</description>
+          <long-description></long-description>
+          <tag line="77" name="return" description="language for this phrase map" type="\The">
+            <type by_reference="false">\The</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="95" package="locale">
+        <name>setLanguage</name>
+        <full_name>setLanguage</full_name>
+        <docblock line="90">
+          <description>Set the current language</description>
+          <long-description></long-description>
+          <tag line="90" name="param" description="Current language" type="\Language" variable="$lang">
+            <type by_reference="false">\Language</type>
+          </tag>
+        </docblock>
+        <argument line="95">
+          <name>$lang</name>
+          <default></default>
+          <type>\Language</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="109" package="locale">
+        <name>phraseExists</name>
+        <full_name>phraseExists</full_name>
+        <docblock line="103">
+          <description>Checks if an phrase exists</description>
+          <long-description></long-description>
+          <tag line="103" name="param" description="Phrase name" type="String" variable="$phraseID">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="103" name="return" description="True if the phrase exists" type="Boolean">
+            <type by_reference="false">Boolean</type>
+          </tag>
+        </docblock>
+        <argument line="109">
+          <name>$phraseID</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="124" package="locale">
+        <name>loadFile</name>
+        <full_name>loadFile</full_name>
+        <docblock line="117">
+          <description>Loads file into the language memory for the current language</description>
+          <long-description></long-description>
+          <tag line="117" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
+            <type by_reference="false">\MissingPhraseMapException</type>
+          </tag>
+          <tag line="117" name="param" description="File name" type="String" variable="$filename">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="117" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="124">
+          <name>$filename</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="157" package="locale">
+        <name>parseLocaleElement</name>
+        <full_name>parseLocaleElement</full_name>
+        <docblock line="151">
+          <description>Parse the phrases into the phrases list</description>
+          <long-description></long-description>
+          <tag line="151" name="param" description="The element to parse" type="\SimpleXMLElement" variable="$elem">
+            <type by_reference="false">\SimpleXMLElement</type>
+          </tag>
+          <tag line="151" name="param" description="The name of this phrase" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="157">
+          <name>$elem</name>
+          <default></default>
+          <type>\SimpleXMLElement</type>
+        </argument>
+        <argument line="157">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="196" package="locale">
+        <name>offsetExists</name>
+        <full_name>offsetExists</full_name>
+        <docblock line="189">
+          <description>Alias for phraseExists.</description>
+          <long-description>&lt;p&gt;Called when isset() is called on one of the elements
+of this instance&lt;/p&gt;</long-description>
+          <tag line="189" name="param" description="phraseID&#9;&#9;The ID of the phrase to check existance of" type="string" variable="$phraseID">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="189" name="return" description="True if the phrase exists" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="196">
+          <name>$phraseID</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="207" package="locale">
+        <name>offsetGet</name>
+        <full_name>offsetGet</full_name>
+        <docblock line="200">
+          <description>Alias for getPhrase.</description>
+          <long-description>&lt;p&gt;Is called when $instance[$phraseID] is called.
+Calls without optional second parameter of getPhrase.&lt;/p&gt;</long-description>
+          <tag line="200" name="param" description="phraseID&#9;&#9;Text element ID" type="string" variable="$phraseID">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="200" name="return" description="The formatted output or null;" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="207">
+          <name>$phraseID</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="217" package="locale">
+        <name>offsetSet</name>
+        <full_name>offsetSet</full_name>
+        <docblock line="211">
+          <description>This method is required by the array access interface, but will throw an
+exception if accessed</description>
+          <long-description></long-description>
+          <tag line="211" name="throws" description="If the user attempts to use this method" type="\RuntimeException">
+            <type by_reference="false">\RuntimeException</type>
+          </tag>
+        </docblock>
+        <argument line="217">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="217">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="227" package="locale">
+        <name>offsetUnset</name>
+        <full_name>offsetUnset</full_name>
+        <docblock line="221">
+          <description>This method is required by the array acces interface, but will throw an
+exception if used</description>
+          <long-description></long-description>
+          <tag line="221" name="throws" description="If the user attempts to use this method" type="\RuntimeException">
+            <type by_reference="false">\RuntimeException</type>
+          </tag>
+        </docblock>
+        <argument line="227">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="211" code="50015">Argument $offset is missing from the Docblock of offsetSet()</error>
+      <error line="211" code="50015">Argument $value is missing from the Docblock of offsetSet()</error>
+      <error line="221" code="50015">Argument $offset is missing from the Docblock of offsetUnset()</error>
+    </parse_markers>
+  </file>
   <file path="modules/logging/Logger.php" hash="64917588b9414f8aa96e3fb9dbe61fee" package="Default">
     <docblock line="2">
       <description>Logging Class.</description>
@@ -3205,7 +3742,7 @@ which will match a subdirectory of the language's code, ie;
       <full_name>\Logger</full_name>
       <docblock line="9">
         <description>A logger for creating logs</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="logging"/>
       </docblock>
       <constant namespace="global" line="52" package="logging">
@@ -3214,55 +3751,55 @@ which will match a subdirectory of the language's code, ie;
         <value>5000</value>
         <docblock line="49">
           <description>Maximum log size in kB</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="false" visibility="protected" line="18" namespace="global" package="Default">
         <name>$logName</name>
-        <default></default>
+        <default/>
         <docblock line="15">
           <description>Name of the log, will be used in the file name</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="22" namespace="global" package="Default">
         <name>$logDir</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>Directory to store this log</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="26" namespace="global" package="Default">
         <name>$logLoc</name>
-        <default></default>
+        <default/>
         <docblock line="23">
           <description>Log location, depends on the logName and logDir</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="30" namespace="global" package="Default">
         <name>$rotateMax</name>
-        <default></default>
+        <default/>
         <docblock line="27">
           <description>Maximum number of times to rotate the log file</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="34" namespace="global" package="Default">
         <name>$maxLogSize</name>
-        <default></default>
+        <default/>
         <docblock line="31">
           <description>Maximum filesize of the log in kB</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="38" namespace="global" package="Default">
         <name>$log</name>
-        <default></default>
+        <default/>
         <docblock line="35">
           <description>Current log text</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="protected" line="43" namespace="global" package="Default">
@@ -3270,7 +3807,7 @@ which will match a subdirectory of the language's code, ie;
         <default>2048</default>
         <docblock line="40">
           <description>Default max log size in bytes</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="protected" line="47" namespace="global" package="Default">
@@ -3278,7 +3815,7 @@ which will match a subdirectory of the language's code, ie;
         <default>5</default>
         <docblock line="44">
           <description>Default number of rotations before overwriting</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="60" package="logging">
@@ -3286,7 +3823,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>__construct</full_name>
         <docblock line="54">
           <description>Creates a logger for logName</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="54" name="param" description="Logname" type="String" variable="$logName">
             <type by_reference="false">String</type>
           </tag>
@@ -3296,7 +3833,7 @@ which will match a subdirectory of the language's code, ie;
         </docblock>
         <argument line="60">
           <name>$logName</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="60">
@@ -3310,14 +3847,14 @@ which will match a subdirectory of the language's code, ie;
         <full_name>setRotationLength</full_name>
         <docblock line="72">
           <description>Change the current rotation size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="72" name="param" description="New rotation max size" type="String" variable="$length">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="77">
           <name>$length</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3326,14 +3863,14 @@ which will match a subdirectory of the language's code, ie;
         <full_name>setMaxLogSize</full_name>
         <docblock line="81">
           <description>Change the current max log size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="81" name="param" description="New maximum log file size" type="String" variable="$max">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="86">
           <name>$max</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3342,14 +3879,14 @@ which will match a subdirectory of the language's code, ie;
         <full_name>setDefaultRotationLength</full_name>
         <docblock line="90">
           <description>Change the default max size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="90" name="param" description="Default max size" type="String" variable="$length">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="95">
           <name>$length</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3358,14 +3895,14 @@ which will match a subdirectory of the language's code, ie;
         <full_name>setDefaultMaxLogSize</full_name>
         <docblock line="99">
           <description>Change the default max log size</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="99" name="param" description="Default max log size" type="String" variable="$max">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
         <argument line="104">
           <name>$max</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3374,7 +3911,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>log</full_name>
         <docblock line="112">
           <description>Log data to EOF</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="112" name="param" description="text&#9;&#9;Level of severity" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
@@ -3387,7 +3924,7 @@ which will match a subdirectory of the language's code, ie;
         </docblock>
         <argument line="119">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="119">
@@ -3401,7 +3938,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>read</full_name>
         <docblock line="130">
           <description>Reads log file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="130" name="return" description="text" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -3412,7 +3949,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>append</full_name>
         <docblock line="147">
           <description>Append to current log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="147" name="param" description="" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
@@ -3422,7 +3959,7 @@ which will match a subdirectory of the language's code, ie;
         </docblock>
         <argument line="153">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3431,7 +3968,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>delete</full_name>
         <docblock line="165">
           <description>Deletes current log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="165" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -3442,7 +3979,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>create</full_name>
         <docblock line="176">
           <description>Creates log for current log name</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="176" name="param" description="Text to start with [default=Empty string]" type="String" variable="$text">
             <type by_reference="false">String</type>
           </tag>
@@ -3461,7 +3998,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>rotate</full_name>
         <docblock line="191">
           <description>Rotates log</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="191" name="param" description="Text for new log" type="String" variable="$text">
             <type by_reference="false">String</type>
           </tag>
@@ -3471,7 +4008,7 @@ which will match a subdirectory of the language's code, ie;
         </docblock>
         <argument line="197">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>

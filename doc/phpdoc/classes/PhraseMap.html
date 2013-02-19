@@ -42,7 +42,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">4</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">1</span>
@@ -74,6 +74,14 @@
 <li class="method public "><a href="#method_getPhrase" title="getPhrase :: Return a phrase based on the current language or given alternate
 language"><span class="description">Return a phrase based on the current language or given alternate
 language</span><pre>getPhrase()</pre></a></li>
+<li class="method public "><a href="#method_offsetExists" title="offsetExists :: Alias for phraseExists."><span class="description">Alias for phraseExists.</span><pre>offsetExists()</pre></a></li>
+<li class="method public "><a href="#method_offsetGet" title="offsetGet :: Alias for getPhrase."><span class="description">Alias for getPhrase.</span><pre>offsetGet()</pre></a></li>
+<li class="method public "><a href="#method_offsetSet" title="offsetSet :: This method is required by the array access interface, but will throw an
+exception if accessed"><span class="description">This method is required by the array access interface, but will throw an
+exception if accessed</span><pre>offsetSet()</pre></a></li>
+<li class="method public "><a href="#method_offsetUnset" title="offsetUnset :: This method is required by the array acces interface, but will throw an
+exception if used"><span class="description">This method is required by the array acces interface, but will throw an
+exception if used</span><pre>offsetUnset()</pre></a></li>
 <li class="method public "><a href="#method_phraseExists" title="phraseExists :: Checks if an phrase exists"><span class="description">Checks if an phrase exists</span><pre>phraseExists()</pre></a></li>
 <li class="method public "><a href="#method_setLanguage" title="setLanguage :: Set the current language"><span class="description">Set the current language</span><pre>setLanguage()</pre></a></li>
 </ul>
@@ -161,15 +169,80 @@ language</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$phraseID</h4>
-<code>String</code><p>Text element ID</p></div>
+<code>String</code><p>phraseID	Text element ID</p></div>
 <div class="subelement argument">
 <h4>$altLang</h4>
-<code><a href="../classes/Language.html">\Language</a></code><p>Alternate language to get phrase for (as opposed to current language)
-                        (use setLanguage instead if possible)</p>
+<code><a href="../classes/Language.html">\Language</a></code><p>altLang     Alternate language to get phrase for (as opposed to current language)
+                                    (use setLanguage instead if possible)</p>
 </div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>String</code>The formatted output or "Invalid element specified";</div>
+<code>String</code>The formatted output or null</div>
+</div></div>
+</div>
+<a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists" data-toggle="collapse" data-target=".method_offsetExists .collapse">
+<h2>Alias for phraseExists.</h2>
+<pre>offsetExists(string $phraseID) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Called when isset() is called on one of the elements
+of this instance</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$phraseID</h4>
+<code>string</code><p>phraseID		The ID of the phrase to check existance of</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the phrase exists</div>
+</div></div>
+</div>
+<a id="method_offsetGet"></a><div class="element clickable method public method_offsetGet" data-toggle="collapse" data-target=".method_offsetGet .collapse">
+<h2>Alias for getPhrase.</h2>
+<pre>offsetGet(string $phraseID) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Is called when $instance[$phraseID] is called.
+Calls without optional second parameter of getPhrase.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$phraseID</h4>
+<code>string</code><p>phraseID		Text element ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The formatted output or null;</div>
+</div></div>
+</div>
+<a id="method_offsetSet"></a><div class="element clickable method public method_offsetSet" data-toggle="collapse" data-target=".method_offsetSet .collapse">
+<h2>This method is required by the array access interface, but will throw an
+exception if accessed</h2>
+<pre>offsetSet($offset, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$offset</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td>If the user attempts to use this method</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_offsetUnset"></a><div class="element clickable method public method_offsetUnset" data-toggle="collapse" data-target=".method_offsetUnset .collapse">
+<h2>This method is required by the array acces interface, but will throw an
+exception if used</h2>
+<pre>offsetUnset($offset) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$offset</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td>If the user attempts to use this method</td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_phraseExists"></a><div class="element clickable method public method_phraseExists" data-toggle="collapse" data-target=".method_phraseExists .collapse">

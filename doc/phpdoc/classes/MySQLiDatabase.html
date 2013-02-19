@@ -42,7 +42,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">4</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">1</span>
@@ -76,6 +76,12 @@
 <li class="method public "><a href="#method_getAllQueries" title="getAllQueries :: Get the array of query strings executed on all MySQLi databases"><span class="description">Get the array of query strings executed on all MySQLi databases</span><pre>getAllQueries()</pre></a></li>
 <li class="method public "><a href="#method_getInsertID" title="getInsertID :: Gets the last inputted ID"><span class="description">Gets the last inputted ID</span><pre>getInsertID()</pre></a></li>
 <li class="method public "><a href="#method_getMySQLiObject" title="getMySQLiObject :: Get the MySQLi object related to this database abstractor"><span class="description">Get the MySQLi object related to this database abstractor</span><pre>getMySQLiObject()</pre></a></li>
+<li class="method public "><a href="#method_getPreparedQuery" title="getPreparedQuery :: Prepares, then executes, a query and returns the results as a numeric array
+of results which contain associative data fields."><span class="description">Prepares, then executes, a query and returns the results as a numeric array
+of results which contain associative data fields.</span><pre>getPreparedQuery()</pre></a></li>
+<li class="method public "><a href="#method_getPreparedQueryNumeric" title="getPreparedQueryNumeric :: Prepares, then executes, a query and returns the results as a numeric array
+of results which contain numeric data fields."><span class="description">Prepares, then executes, a query and returns the results as a numeric array
+of results which contain numeric data fields.</span><pre>getPreparedQueryNumeric()</pre></a></li>
 <li class="method public "><a href="#method_getQuery" title="getQuery :: Database Query
 Returns all results as an associative array"><span class="description">Database Query
 Returns all results as an associative array</span><pre>getQuery()</pre></a></li>
@@ -83,15 +89,24 @@ Returns all results as an associative array</span><pre>getQuery()</pre></a></li>
 Returns a numeric array"><span class="description">Database query
 Returns a numeric array</span><pre>getQueryNumeric()</pre></a></li>
 <li class="method public "><a href="#method_getTotalQueryCount" title="getTotalQueryCount :: Get the number of queries executed on MySQLi databases"><span class="description">Get the number of queries executed on MySQLi databases</span><pre>getTotalQueryCount()</pre></a></li>
+<li class="method public "><a href="#method_sendPreparedQuery" title="sendPreparedQuery :: Prepares, then executes, a query and returns the whether a query was successful
+Arguments for the prepared statement can either be given as an array in
+the second parameter or as n parameters."><span class="description">Prepares, then executes, a query and returns the whether a query was successful
+Arguments for the prepared statement can either be given as an array in
+the second parameter or as n parameters.</span><pre>sendPreparedQuery()</pre></a></li>
 <li class="method public "><a href="#method_sendQuery" title="sendQuery :: Database query
 Sends a query."><span class="description">Database query
 Sends a query.</span><pre>sendQuery()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="method private "><a href="#method_getQueryInternal" title="getQueryInternal :: Database Query
+                    <ul>
+<li class="method private "><a href="#method_getBoundPreparedStatement" title="getBoundPreparedStatement :: Get a prepared query"><span class="description">Get a prepared query</span><pre>getBoundPreparedStatement()</pre></a></li>
+<li class="method private "><a href="#method_getPreparedQueryInternal" title="getPreparedQueryInternal :: The internal generalise query processing"><span class="description">The internal generalise query processing</span><pre>getPreparedQueryInternal()</pre></a></li>
+<li class="method private "><a href="#method_getQueryInternal" title="getQueryInternal :: Database Query
 Returns all results as an associative array"><span class="description">Database Query
-Returns all results as an associative array</span><pre>getQueryInternal()</pre></a></li></ul>
+Returns all results as an associative array</span><pre>getQueryInternal()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties
@@ -214,6 +229,58 @@ abstract out the PHP mess</p>
 <code>Object</code>related to this abstracted database</div>
 </div></div>
 </div>
+<a id="method_getPreparedQuery"></a><div class="element clickable method public method_getPreparedQuery" data-toggle="collapse" data-target=".method_getPreparedQuery .collapse">
+<h2>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain associative data fields.</h2>
+<pre>getPreparedQuery(string $query, mixed $param1) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters.
+Requires PHP 5.3 or higher and mysqlnd.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>query		Query to be sent</p></div>
+<div class="subelement argument">
+<h4>$param1</h4>
+<code>mixed</code><p>param1		array of parameters or N individual parameters</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
+<td>When a query fails</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of results</div>
+</div></div>
+</div>
+<a id="method_getPreparedQueryNumeric"></a><div class="element clickable method public method_getPreparedQueryNumeric" data-toggle="collapse" data-target=".method_getPreparedQueryNumeric .collapse">
+<h2>Prepares, then executes, a query and returns the results as a numeric array
+of results which contain numeric data fields.</h2>
+<pre>getPreparedQueryNumeric(string $query, mixed $param1) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Arguments for the prepared statement
+can either be given as an array in the second parameter or as n parameters.
+Requires PHP 5.3 or higher and mysqlnd.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>query		Query to be sent</p></div>
+<div class="subelement argument">
+<h4>$param1</h4>
+<code>mixed</code><p>param1		array of parameters or N individual parameters</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
+<td>When a query fails</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of results</div>
+</div></div>
+</div>
 <a id="method_getQuery"></a><div class="element clickable method public method_getQuery" data-toggle="collapse" data-target=".method_getQuery .collapse">
 <h2>Database Query
 Returns all results as an associative array</h2>
@@ -238,14 +305,14 @@ Returns all results as an associative array</h2>
 <a id="method_getQueryNumeric"></a><div class="element clickable method public method_getQueryNumeric" data-toggle="collapse" data-target=".method_getQueryNumeric .collapse">
 <h2>Database query
 Returns a numeric array</h2>
-<pre>getQueryNumeric(String $query) : Array</pre>
+<pre>getQueryNumeric(string $query) : Array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$query</h4>
-<code>String</code><p>MySQL query to execute</p></div>
+<code>string</code><p>query		MySQL query to execute</p></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
@@ -265,6 +332,31 @@ Returns a numeric array</h2>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\Number</code>of queries executed on MySQLi databases</div>
+</div></div>
+</div>
+<a id="method_sendPreparedQuery"></a><div class="element clickable method public method_sendPreparedQuery" data-toggle="collapse" data-target=".method_sendPreparedQuery .collapse">
+<h2>Prepares, then executes, a query and returns the whether a query was successful
+Arguments for the prepared statement can either be given as an array in
+the second parameter or as n parameters.</h2>
+<pre>sendPreparedQuery(string $query, mixed $param1) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Requires PHP 5.3 or higher and mysqlnd.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>query		Query to be sent</p></div>
+<div class="subelement argument">
+<h4>$param1</h4>
+<code>mixed</code><p>param1		array of parameters or N individual parameters</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
+<td>When a query fails</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the query successfully executed</div>
 </div></div>
 </div>
 <a id="method_sendQuery"></a><div class="element clickable method public method_sendQuery" data-toggle="collapse" data-target=".method_sendQuery .collapse">
@@ -287,6 +379,53 @@ Intended for non-select queries.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>boolean</code>Result of query</div>
+</div></div>
+</div>
+<a id="method_getBoundPreparedStatement"></a><div class="element clickable method private method_getBoundPreparedStatement" data-toggle="collapse" data-target=".method_getBoundPreparedStatement .collapse">
+<h2>Get a prepared query</h2>
+<pre>getBoundPreparedStatement(string $query, $args) : <a href="http://php.net/manual/en/class.mysqli_stmt.php">\mysqli_stmt</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>query		The SQL with which to build the prepared query</p></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
+<td>When a query fails</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="http://php.net/manual/en/class.mysqli_stmt.php">\mysqli_stmt</a></code>The prepared query</div>
+</div></div>
+</div>
+<a id="method_getPreparedQueryInternal"></a><div class="element clickable method private method_getPreparedQueryInternal" data-toggle="collapse" data-target=".method_getPreparedQueryInternal .collapse">
+<h2>The internal generalise query processing</h2>
+<pre>getPreparedQueryInternal(string $query, mixed $args, bool $assoc) : Array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>query		Query to be sent</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>mixed</code><p>param1		array of parameters</p></div>
+<div class="subelement argument">
+<h4>$assoc</h4>
+<code>bool</code><p>assoc		True if associative</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/DatabaseQueryException.html">\DatabaseQueryException</a></code></th>
+<td>When a query fails</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Array</code>of results</div>
 </div></div>
 </div>
 <a id="method_getQueryInternal"></a><div class="element clickable method private method_getQueryInternal" data-toggle="collapse" data-target=".method_getQueryInternal .collapse">

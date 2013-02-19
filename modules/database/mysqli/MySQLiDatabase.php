@@ -204,7 +204,7 @@ class MySQLiDatabase implements Database {
 	* @return	Array of results
 	*/
 	private function getPreparedQueryInternal($query, $args, $assoc) {
-		$statement = $this->getBoundPreparedStatement($sql, $args);
+		$statement = $this->getBoundPreparedStatement($query, $args);
 		if($statement->execute()) {
 			if($assoc) {
 				$type = MYSQLI_ASSOC;
@@ -230,10 +230,10 @@ class MySQLiDatabase implements Database {
 	* Get a prepared query
 	*
 	* @throws	DatabaseQueryException	When a query fails
-	* @param	string		sql		The SQL with which to build the prepared query
+	* @param	string		query		The SQL with which to build the prepared query
 	* @return	mysqli_stmt		The prepared query
 	*/
-	private function getBoundPreparedStatement($sql, $args) {
+	private function getBoundPreparedStatement($query, $args) {
 		self::$queryCount++;
 		
 		$statement = $this->mySQLi->prepare($query);
