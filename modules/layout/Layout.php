@@ -15,7 +15,7 @@ CleanPHP::import('io.FileNotFoundException');
 *
 * @package	layout
 */
-class Layout {
+class Layout implements ArrayAccess {
 	/**
 	* The file for this layout
 	*/
@@ -55,6 +55,16 @@ class Layout {
 	}
 	
 	/**
+	* Check if a variable has been set already
+	*
+	* @param	string	name	The name of the variable you wish to see if has been set
+	* @return	boolean			True if the variable with the given name has been set
+	*/
+	public function isVariableSet($name) {
+		return isset($this->variables[$name]);
+	}
+	
+	/**
 	* Output this template by including the template
 	*
 	* @throws	FileNotFoundException	If the file cannot be found
@@ -72,5 +82,37 @@ class Layout {
 		if((include($_file)) != 1) {
 			throw new FileNotFoundException('Could not open layout');
 		}
+	}
+	
+	//================
+	// Array Access Methods
+	//================ 
+	
+	/**
+	* Alias for isVariableSet, used in ArrayAccess
+	*/
+	public function offsetExists($offset) { 
+		return $this->isVariableSet($offset);
+	} 
+	
+	/**
+	* Alias for addVariable, used in array access
+	*/
+	public function offsetSet($offset, $value) { 
+		$this->addVariable($offset, $value);
+	} 
+
+	/**
+	* Not supported, required for interface, this may change, do not rely on this behaviour
+	*/
+	public function offsetGet($offset) { 
+		// Not supported
+	} 
+
+	/**
+	* Not supported, required for interface, this may change, do not rely on this behaviour
+	*/
+	public function offsetUnset($offset) { 
+		// Not supported
 	}
 }

@@ -117,7 +117,7 @@
 </g>
 <!-- \\UnexpectedFieldException&#45;&gt;\\RuntimeException -->
 <g id="edge15" class="edge"><title>\\UnexpectedFieldException&#45;&gt;\\RuntimeException</title>
-<path fill="none" stroke="black" d="M648.49,-522.167C644.675,-519.502 641.141,-516.464 638,-513 507.845,-369.448 705.375,-217.618 566,-83 519.568,-38.1521 484.922,-49.5748 422,-64"/>
+<path fill="none" stroke="black" d="M648.49,-522.167C644.675,-519.502 641.141,-516.464 638,-513 507.845,-369.448 705.375,-217.618 566,-83 519.568,-38.1521 485.579,-52.819 422,-64"/>
 </g>
 <!-- \\Config -->
 <g id="node10" class="node"><title>\\Config</title>
@@ -181,25 +181,25 @@
 <!-- \\DatabaseConnectionException -->
 <g id="node17" class="node"><title>\\DatabaseConnectionException</title>
 <a xlink:href="modules.database.DatabaseConnectionException.html" xlink:title="DatabaseConnectionException" target="_parent">
-<polygon fill="none" stroke="black" points="837,-342 639,-342 639,-306 837,-306 837,-342"/>
-<text text-anchor="middle" x="738" y="-321.1" font-family="Courier,monospace" font-size="11.00">DatabaseConnectionException</text>
+<polygon fill="none" stroke="black" points="837,-504 639,-504 639,-468 837,-468 837,-504"/>
+<text text-anchor="middle" x="738" y="-483.1" font-family="Courier,monospace" font-size="11.00">DatabaseConnectionException</text>
 </a>
 </g>
 <!-- \\DatabaseConnectionException&#45;&gt;\\RuntimeException -->
 <g id="edge19" class="edge"><title>\\DatabaseConnectionException&#45;&gt;\\RuntimeException</title>
-<path fill="none" stroke="black" d="M649.591,-305.825C645.439,-303.253 641.536,-300.327 638,-297 564.916,-228.233 643.477,-146.777 566,-83 516.16,-41.9725 484.922,-49.5748 422,-64"/>
+<path fill="none" stroke="black" d="M648.145,-467.771C644.473,-465.204 641.058,-462.295 638,-459 522.253,-334.29 689.751,-199.772 566,-83 519.048,-38.696 485.579,-52.819 422,-64"/>
 </g>
 <!-- \\DatabaseQueryException -->
 <g id="node18" class="node"><title>\\DatabaseQueryException</title>
 <a xlink:href="modules.database.DatabaseQueryException.html" xlink:title="DatabaseQueryException" target="_parent">
-<polygon fill="none" stroke="black" points="820,-288 656,-288 656,-252 820,-252 820,-288"/>
-<text text-anchor="middle" x="738" y="-267.1" font-family="Courier,monospace" font-size="11.00">DatabaseQueryException</text>
+<polygon fill="none" stroke="black" points="820,-342 656,-342 656,-306 820,-306 820,-342"/>
+<text text-anchor="middle" x="738" y="-321.1" font-family="Courier,monospace" font-size="11.00">DatabaseQueryException</text>
 </a>
 </g>
 <!-- \\DatabaseQueryException&#45;&gt;\\RuntimeException -->
 <g id="edge21" class="edge"><title>\\DatabaseQueryException&#45;&gt;\\RuntimeException</title>
-<path fill="none" stroke="black" d="M655.27,-254.251C649.061,-251.144 643.201,-247.433 638,-243 578.652,-192.418 628.567,-129.542 566,-83 514.204,-44.4708 484.922,-49.5748 422,-64"/>
-<path fill="none" stroke="black" d="M422,-64C359.078,-78.4252 325.066,-38.8174 278,-83 148.331,-204.725 111.197,-805.033 104.296,-943.48"/>
+<path fill="none" stroke="black" d="M655.265,-309.049C648.98,-305.774 643.108,-301.806 638,-297 564.916,-228.233 643.477,-146.777 566,-83 516.16,-41.9725 485.579,-52.819 422,-64"/>
+<path fill="none" stroke="black" d="M422,-64C358.421,-75.181 325.066,-38.8174 278,-83 148.331,-204.725 111.197,-805.033 104.296,-943.48"/>
 <polygon fill="none" stroke="black" points="100.789,-943.535 103.8,-953.693 107.781,-943.875 100.789,-943.535"/>
 </g>
 <!-- \\MySQLiDatabase -->
@@ -300,9 +300,19 @@
 <!-- \\Layout -->
 <g id="node29" class="node"><title>\\Layout</title>
 <a xlink:href="modules.layout.Layout.html" xlink:title="Layout" target="_parent">
-<polygon fill="none" stroke="black" points="766,-504 710,-504 710,-468 766,-468 766,-504"/>
-<text text-anchor="middle" x="738" y="-483.1" font-family="Courier,monospace" font-size="11.00">Layout</text>
+<polygon fill="none" stroke="black" points="766,-234 710,-234 710,-198 766,-198 766,-234"/>
+<text text-anchor="middle" x="738" y="-213.1" font-family="Courier,monospace" font-size="11.00">Layout</text>
 </a>
+</g>
+<!-- \\ArrayAccess -->
+<g id="node57" class="node"><title>\\ArrayAccess</title>
+<ellipse fill="none" stroke="black" cx="422" cy="-18" rx="77.0746" ry="18.3848"/>
+<text text-anchor="middle" x="422" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\\ArrayAccess</text>
+</g>
+<!-- \\Layout&#45;&gt;\\ArrayAccess -->
+<g id="edge37" class="edge"><title>\\Layout&#45;&gt;\\ArrayAccess</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M709.354,-214.401C687.688,-211.85 658.303,-205.361 638,-189 583.827,-145.345 621.143,-92.4237 566,-50 549.091,-36.9908 527.937,-29.0598 507.093,-24.2794"/>
+<polygon fill="none" stroke="black" points="507.733,-20.8378 497.231,-22.2377 506.314,-27.6924 507.733,-20.8378"/>
 </g>
 <!-- \\LayoutLoader -->
 <g id="node30" class="node"><title>\\LayoutLoader</title>
@@ -345,19 +355,14 @@
 <!-- \\PhraseMap -->
 <g id="node34" class="node"><title>\\PhraseMap</title>
 <a xlink:href="modules.locale.PhraseMap.html" xlink:title="PhraseMap" target="_parent">
-<polygon fill="none" stroke="black" points="776,-234 700,-234 700,-198 776,-198 776,-234"/>
-<text text-anchor="middle" x="738" y="-213.1" font-family="Courier,monospace" font-size="11.00">PhraseMap</text>
+<polygon fill="none" stroke="black" points="776,-288 700,-288 700,-252 776,-252 776,-288"/>
+<text text-anchor="middle" x="738" y="-267.1" font-family="Courier,monospace" font-size="11.00">PhraseMap</text>
 </a>
 </g>
-<!-- \\ArrayAccess -->
-<g id="node57" class="node"><title>\\ArrayAccess</title>
-<ellipse fill="none" stroke="black" cx="422" cy="-18" rx="77.0746" ry="18.3848"/>
-<text text-anchor="middle" x="422" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\\ArrayAccess</text>
-</g>
 <!-- \\PhraseMap&#45;&gt;\\ArrayAccess -->
-<g id="edge37" class="edge"><title>\\PhraseMap&#45;&gt;\\ArrayAccess</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M699.018,-212.948C678.981,-209.654 655.223,-202.879 638,-189 583.827,-145.345 621.143,-92.4237 566,-50 549.091,-36.9908 527.937,-29.0598 507.093,-24.2794"/>
-<polygon fill="none" stroke="black" points="507.733,-20.8378 497.231,-22.2377 506.314,-27.6924 507.733,-20.8378"/>
+<g id="edge39" class="edge"><title>\\PhraseMap&#45;&gt;\\ArrayAccess</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M699.298,-267.916C678.85,-264.928 654.619,-258.136 638,-243 570.313,-181.354 635.058,-110.106 566,-50 549.907,-35.9933 529.039,-27.7139 508.208,-22.9176"/>
+<polygon fill="none" stroke="black" points="508.832,-19.4728 498.332,-20.892 507.425,-26.3301 508.832,-19.4728"/>
 </g>
 <!-- \\Logger -->
 <g id="node35" class="node"><title>\\Logger</title>

@@ -1241,7 +1241,7 @@ to PHP's substring</description>
   <file path="modules/database/Database.php" hash="7f5792fe3798ab309890a24bd14873f3" package="Default">
     <docblock line="2">
       <description>An interface for abstract database representation</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
@@ -1250,7 +1250,7 @@ to PHP's substring</description>
       <full_name>\Database</full_name>
       <docblock line="9">
         <description>Abstract database representation</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="9" name="package" description="database"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="database">
@@ -1258,7 +1258,7 @@ to PHP's substring</description>
         <full_name>getQueryNumeric</full_name>
         <docblock line="16">
           <description>Gets numeric ordered query (no field names)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="16" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1271,7 +1271,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="23">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1280,7 +1280,7 @@ to PHP's substring</description>
         <full_name>getQuery</full_name>
         <docblock line="25">
           <description>Gets an associative query</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="25" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1293,7 +1293,7 @@ to PHP's substring</description>
         </docblock>
         <argument line="32">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1320,7 +1320,7 @@ can either be given as an array in the second parameter or as n parameters&lt;/p
         </docblock>
         <argument line="44">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="44">
@@ -1353,7 +1353,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="57">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="57">
@@ -1367,7 +1367,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         <full_name>sendQuery</full_name>
         <docblock line="59">
           <description>Send a query with a boolean response such as INSERT</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="59" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1380,7 +1380,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="66">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1407,7 +1407,7 @@ the second parameter or as n parameters.</description>
         </docblock>
         <argument line="78">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="78">
@@ -1421,7 +1421,7 @@ the second parameter or as n parameters.</description>
         <full_name>getAffectedRows</full_name>
         <docblock line="80">
           <description>Get the number of affected rows</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="80" name="return" description="of affected rows" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
@@ -1432,7 +1432,7 @@ the second parameter or as n parameters.</description>
         <full_name>getInsertID</full_name>
         <docblock line="87">
           <description>Get the ID of the last insert</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="87" name="return" description="insert ID" type="\Last">
             <type by_reference="false">\Last</type>
           </tag>
@@ -1443,7 +1443,7 @@ the second parameter or as n parameters.</description>
         <full_name>closeConnection</full_name>
         <docblock line="94">
           <description>Closes the connection</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="94" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -1455,7 +1455,7 @@ the second parameter or as n parameters.</description>
         <docblock line="101">
           <description>Clean the input data value to prevent it causing
 injections</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="101" name="param" description="Input data (Not a query statement)" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1465,7 +1465,7 @@ injections</description>
         </docblock>
         <argument line="108">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1507,7 +1507,7 @@ injections</description>
       </docblock>
     </class>
   </file>
-  <file path="modules/database/mysqli/MySQLiDatabase.php" hash="f9ddd90bf970fc0a2704a2486503de3c" package="Default">
+  <file path="modules/database/mysqli/MySQLiDatabase.php" hash="4e49e2ca7c532fb251d304624f50f695" package="Default">
     <docblock line="2">
       <description>MySQLi class wrapper for the Database interface</description>
       <long-description></long-description>
@@ -1823,118 +1823,118 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="284" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="292" package="database\mysqli">
         <name>getQueryInternal</name>
         <full_name>getQueryInternal</full_name>
-        <docblock line="275">
+        <docblock line="283">
           <description>Database Query
 Returns all results as an associative array</description>
           <long-description></long-description>
-          <tag line="275" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
+          <tag line="283" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
-          <tag line="275" name="param" description="MySQL Query to execute" type="String" variable="$query">
+          <tag line="283" name="param" description="MySQL Query to execute" type="String" variable="$query">
             <type by_reference="false">String</type>
           </tag>
-          <tag line="275" name="param" description="MySQL Query type" type="\Constant" variable="$assoc">
+          <tag line="283" name="param" description="MySQL Query type" type="\Constant" variable="$assoc">
             <type by_reference="false">\Constant</type>
           </tag>
-          <tag line="275" name="return" description="Array of results or false" type="Array">
+          <tag line="283" name="return" description="Array of results or false" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
-        <argument line="284">
+        <argument line="292">
           <name>$query</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="284">
+        <argument line="292">
           <name>$assoc</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="336" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="344" package="database\mysqli">
         <name>getAffectedRows</name>
         <full_name>getAffectedRows</full_name>
-        <docblock line="331">
+        <docblock line="339">
           <description>Returns the amount of affected rows of the last query</description>
           <long-description></long-description>
-          <tag line="331" name="return" description="Count" type="int">
+          <tag line="339" name="return" description="Count" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="350" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="358" package="database\mysqli">
         <name>getInsertID</name>
         <full_name>getInsertID</full_name>
-        <docblock line="345">
+        <docblock line="353">
           <description>Gets the last inputted ID</description>
           <long-description></long-description>
-          <tag line="345" name="return" description="Last ID or NULL" type="int">
+          <tag line="353" name="return" description="Last ID or NULL" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="363" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="371" package="database\mysqli">
         <name>getMySQLiObject</name>
         <full_name>getMySQLiObject</full_name>
-        <docblock line="358">
+        <docblock line="366">
           <description>Get the MySQLi object related to this database abstractor</description>
           <long-description></long-description>
-          <tag line="358" name="return" description="related to this abstracted database" type="Object">
+          <tag line="366" name="return" description="related to this abstracted database" type="Object">
             <type by_reference="false">Object</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="372" package="database\mysqli">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="380" package="database\mysqli">
         <name>getTotalQueryCount</name>
         <full_name>getTotalQueryCount</full_name>
-        <docblock line="367">
+        <docblock line="375">
           <description>Get the number of queries executed on MySQLi databases</description>
           <long-description></long-description>
-          <tag line="367" name="return" description="of queries executed on MySQLi databases" type="\Number">
+          <tag line="375" name="return" description="of queries executed on MySQLi databases" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="381" package="database\mysqli">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="389" package="database\mysqli">
         <name>getAllQueries</name>
         <full_name>getAllQueries</full_name>
-        <docblock line="376">
+        <docblock line="384">
           <description>Get the array of query strings executed on all MySQLi databases</description>
           <long-description></long-description>
-          <tag line="376" name="return" description="of query string executed" type="Array">
+          <tag line="384" name="return" description="of query string executed" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="395" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="403" package="database\mysqli">
         <name>clean</name>
         <full_name>clean</full_name>
-        <docblock line="389">
+        <docblock line="397">
           <description>Sanitises the given input</description>
           <long-description></long-description>
-          <tag line="389" name="param" description="Data to be sanitised" type="string" variable="$string">
+          <tag line="397" name="param" description="Data to be sanitised" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="389" name="return" description="Sanitised data" type="String">
+          <tag line="397" name="return" description="Sanitised data" type="String">
             <type by_reference="false">String</type>
           </tag>
         </docblock>
-        <argument line="395">
+        <argument line="403">
           <name>$string</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="404" package="database\mysqli">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="412" package="database\mysqli">
         <name>closeConnection</name>
         <full_name>closeConnection</full_name>
-        <docblock line="399">
+        <docblock line="407">
           <description>Close the connection to the database</description>
           <long-description></long-description>
-          <tag line="399" name="return" description="" type="void">
+          <tag line="407" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
@@ -3103,7 +3103,7 @@ create it</description>
       </method>
     </class>
   </file>
-  <file path="modules/layout/Layout.php" hash="b0736e456aee6d143f2930658106302a" package="Default">
+  <file path="modules/layout/Layout.php" hash="216980bab5403101991abfa9d695b238" package="Default">
     <docblock line="2">
       <description>A PHP template class that loads templates written in PHP in an object
 oriented manner.</description>
@@ -3111,24 +3111,25 @@ oriented manner.</description>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="1"/>
     </docblock>
-    <include line="72" type="Include" package="Default">
+    <include line="82" type="Include" package="Default">
       <name/>
     </include>
     <class final="false" abstract="false" namespace="global" line="18" package="layout">
       <extends/>
+      <implements>\ArrayAccess</implements>
       <name>Layout</name>
       <full_name>\Layout</full_name>
       <docblock line="13">
         <description>PHP Templating layout class</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="13" name="package" description="layout"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$file</name>
-        <default/>
+        <default></default>
         <docblock line="19">
           <description>The file for this layout</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -3136,7 +3137,7 @@ oriented manner.</description>
         <default>array()</default>
         <docblock line="23">
           <description>Variables for this layout</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="layout">
@@ -3144,14 +3145,14 @@ oriented manner.</description>
         <full_name>__construct</full_name>
         <docblock line="28">
           <description>Create a new layout with the given file</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="28" name="param" description="file&#9;The layout file" type="\File" variable="$file">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
         <argument line="33">
           <name>$file</name>
-          <default/>
+          <default></default>
           <type>\File</type>
         </argument>
       </method>
@@ -3171,12 +3172,12 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="44">
           <name>$name</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="44">
           <name>$value</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -3192,22 +3193,105 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="53">
           <name>$variables</name>
-          <default/>
+          <default></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="layout">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="63" package="layout">
+        <name>isVariableSet</name>
+        <full_name>isVariableSet</full_name>
+        <docblock line="57">
+          <description>Check if a variable has been set already</description>
+          <long-description></long-description>
+          <tag line="57" name="param" description="name&#9;The name of the variable you wish to see if has been set" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="57" name="return" description="True if the variable with the given name has been set" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="63">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="72" package="layout">
         <name>display</name>
         <full_name>display</full_name>
-        <docblock line="57">
+        <docblock line="67">
           <description>Output this template by including the template</description>
-          <long-description/>
-          <tag line="57" name="throws" description="If the file cannot be found" type="\FileNotFoundException">
+          <long-description></long-description>
+          <tag line="67" name="throws" description="If the file cannot be found" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
         </docblock>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="94" package="layout">
+        <name>offsetExists</name>
+        <full_name>offsetExists</full_name>
+        <docblock line="91">
+          <description>Alias for isVariableSet, used in ArrayAccess</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="94">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="101" package="layout">
+        <name>offsetSet</name>
+        <full_name>offsetSet</full_name>
+        <docblock line="98">
+          <description>Alias for addVariable, used in array access</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="101">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="101">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="108" package="layout">
+        <name>offsetGet</name>
+        <full_name>offsetGet</full_name>
+        <docblock line="105">
+          <description>Not supported, required for interface, this may change, do not rely on this behaviour</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="108">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="115" package="layout">
+        <name>offsetUnset</name>
+        <full_name>offsetUnset</full_name>
+        <docblock line="112">
+          <description>Not supported, required for interface, this may change, do not rely on this behaviour</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="115">
+          <name>$offset</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
     </class>
+    <parse_markers>
+      <error line="91" code="50015">Argument $offset is missing from the Docblock of offsetExists()</error>
+      <error line="98" code="50015">Argument $offset is missing from the Docblock of offsetSet()</error>
+      <error line="98" code="50015">Argument $value is missing from the Docblock of offsetSet()</error>
+      <error line="105" code="50015">Argument $offset is missing from the Docblock of offsetGet()</error>
+      <error line="112" code="50015">Argument $offset is missing from the Docblock of offsetUnset()</error>
+    </parse_markers>
   </file>
   <file path="modules/layout/LayoutLoader.php" hash="04770741a7871db6c9feac3d67749181" package="Default">
     <docblock line="2">
@@ -3457,7 +3541,7 @@ which will match a subdirectory of the language's code, ie;
   <file path="modules/locale/PhraseMap.php" hash="ddbc264c1b578ea6ab2d1722bc06c24c" package="Default">
     <docblock line="2">
       <description>A map of phrases identified by an ID and parsed from a file</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="2"/>
     </docblock>
@@ -3468,7 +3552,7 @@ which will match a subdirectory of the language's code, ie;
       <full_name>\PhraseMap</full_name>
       <docblock line="13">
         <description>A map of phrases loaded from a given file</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="locale"/>
       </docblock>
       <constant namespace="global" line="30" package="locale">
@@ -3477,15 +3561,15 @@ which will match a subdirectory of the language's code, ie;
         <value>''</value>
         <docblock line="27">
           <description>Default phrase index</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </constant>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$curLang</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>The current language</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -3493,7 +3577,7 @@ which will match a subdirectory of the language's code, ie;
         <default>array()</default>
         <docblock line="23">
           <description>The store of phrases for this map</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="locale">
@@ -3501,7 +3585,7 @@ which will match a subdirectory of the language's code, ie;
         <full_name>__construct</full_name>
         <docblock line="32">
           <description>Create a phrase map from the given file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="32" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
             <type by_reference="false">\MissingPhraseMapException</type>
           </tag>
@@ -3514,12 +3598,12 @@ which will match a subdirectory of the language's code, ie;
         </docblock>
         <argument line="39">
           <name>$file</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="39">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type>\Language</type>
         </argument>
       </method>
@@ -3529,7 +3613,7 @@ which will match a subdirectory of the language's code, ie;
         <docblock line="48">
           <description>Return a phrase based on the current language or given alternate
 language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="48" name="param" description="phraseID&#9;Text element ID" type="String" variable="$phraseID">
             <type by_reference="false">String</type>
           </tag>
@@ -3542,7 +3626,7 @@ language</description>
         </docblock>
         <argument line="57">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="57">
@@ -3556,7 +3640,7 @@ language</description>
         <full_name>getLanguage</full_name>
         <docblock line="77">
           <description>Get the current language code</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="77" name="return" description="language for this phrase map" type="\The">
             <type by_reference="false">\The</type>
           </tag>
@@ -3567,14 +3651,14 @@ language</description>
         <full_name>setLanguage</full_name>
         <docblock line="90">
           <description>Set the current language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="90" name="param" description="Current language" type="\Language" variable="$lang">
             <type by_reference="false">\Language</type>
           </tag>
         </docblock>
         <argument line="95">
           <name>$lang</name>
-          <default></default>
+          <default/>
           <type>\Language</type>
         </argument>
       </method>
@@ -3583,7 +3667,7 @@ language</description>
         <full_name>phraseExists</full_name>
         <docblock line="103">
           <description>Checks if an phrase exists</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="103" name="param" description="Phrase name" type="String" variable="$phraseID">
             <type by_reference="false">String</type>
           </tag>
@@ -3593,7 +3677,7 @@ language</description>
         </docblock>
         <argument line="109">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3602,7 +3686,7 @@ language</description>
         <full_name>loadFile</full_name>
         <docblock line="117">
           <description>Loads file into the language memory for the current language</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="117" name="throws" description="When a phrase map is missing or damaged" type="\MissingPhraseMapException">
             <type by_reference="false">\MissingPhraseMapException</type>
           </tag>
@@ -3615,7 +3699,7 @@ language</description>
         </docblock>
         <argument line="124">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3624,7 +3708,7 @@ language</description>
         <full_name>parseLocaleElement</full_name>
         <docblock line="151">
           <description>Parse the phrases into the phrases list</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="151" name="param" description="The element to parse" type="\SimpleXMLElement" variable="$elem">
             <type by_reference="false">\SimpleXMLElement</type>
           </tag>
@@ -3634,12 +3718,12 @@ language</description>
         </docblock>
         <argument line="157">
           <name>$elem</name>
-          <default></default>
+          <default/>
           <type>\SimpleXMLElement</type>
         </argument>
         <argument line="157">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3659,7 +3743,7 @@ of this instance&lt;/p&gt;</long-description>
         </docblock>
         <argument line="196">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3679,7 +3763,7 @@ Calls without optional second parameter of getPhrase.&lt;/p&gt;</long-descriptio
         </docblock>
         <argument line="207">
           <name>$phraseID</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3689,19 +3773,19 @@ Calls without optional second parameter of getPhrase.&lt;/p&gt;</long-descriptio
         <docblock line="211">
           <description>This method is required by the array access interface, but will throw an
 exception if accessed</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="211" name="throws" description="If the user attempts to use this method" type="\RuntimeException">
             <type by_reference="false">\RuntimeException</type>
           </tag>
         </docblock>
         <argument line="217">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="217">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3711,14 +3795,14 @@ exception if accessed</description>
         <docblock line="221">
           <description>This method is required by the array acces interface, but will throw an
 exception if used</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="221" name="throws" description="If the user attempts to use this method" type="\RuntimeException">
             <type by_reference="false">\RuntimeException</type>
           </tag>
         </docblock>
         <argument line="227">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
