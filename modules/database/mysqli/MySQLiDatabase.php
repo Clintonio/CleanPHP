@@ -109,7 +109,7 @@ class MySQLiDatabase implements Database {
 			array_shift($args);
 		}
 		
-		$statement = $this->getBoundPreparedStatement($sql, $args);
+		$statement = $this->getBoundPreparedStatement($query, $args);
 		if($statement->execute()) {
 			$statement->get_result();
 			
