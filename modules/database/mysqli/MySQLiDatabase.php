@@ -239,30 +239,38 @@ class MySQLiDatabase implements Database {
 		$statement = $this->mySQLi->prepare($query);
 		if($statement instanceof mysqli_stmt) {
 			$size = count($args);
+			$types = "";
 			for($i = 0; $i < $size; $i++) {
 				$arg = $args[$i];
 				if(is_double($arg)) {
-					$type = "d";
+					$types .= "d";
 				} elseif(is_int($arg)) {
-					$type = "i";
+					$types .= "i";
 				} else {
-					$type = "s";
+					$types .= "s";
 					if(!is_object($arg)) {
-						$arg = (string) $arg;				
+						$args[$i] = (string) $arg;				
 					} else if(method_exists($arg, '__toString')) {
-						$arg = $arg->__toString();
+						$args[$i] = $arg->__toString();
 					} else {
 						throw new DatabaseQueryException('Parameter ' . $i .' cannot
 						be converted to a string, it is of type: ' . get_class($arg));
 					}
 				}
-					
-				if(!$statement->bind_param($type, $arg)) {
-					throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
-						". Error text: " . $this->mySQLi->error . " for query . " . $query);
-				}
 			}
 			
+			// Hack required to call the binding method. One step forwards, two
+			// steps backwards.
+			$refs = array();
+			foreach($args as $key => $value) {
+				$refs[$key] = &$args[$key];
+			}
+			
+			array_unshift($refs, $types);
+			if((count($args) > 0) && !call_user_func_array(array($statement, 'bind_param'), $refs)) {
+				throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
+					". Error text: " . $this->mySQLi->error . " for query . " . $query);
+			}
 			
 		} else {
 			throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
