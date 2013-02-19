@@ -66,6 +66,18 @@ interface Database {
 	function sendQuery($query);
 	
 	/**
+	* Prepares, then executes, a query and returns the whether a query was successful
+	* Arguments for the prepared statement can either be given as an array in 
+	* the second parameter or as n parameters. Requires PHP 5.3 or higher and mysqlnd.
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters or N individual parameters
+	* @return	bool	True if the query successfully executed
+	*/
+	function sendPreparedQuery($query, $param1 = array());
+	
+	/**
 	* Get the number of affected rows
 	*
 	* @return	Number of affected rows

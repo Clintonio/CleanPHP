@@ -91,6 +91,40 @@ class MySQLiDatabase implements Database {
 		}
 	}
 	
+	/**
+	* Prepares, then executes, a query and returns the whether a query was successful
+	* Arguments for the prepared statement can either be given as an array in 
+	* the second parameter or as n parameters. Requires PHP 5.3 or higher and mysqlnd.
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string	query		Query to be sent
+	* @param	mixed	param1		array of parameters or N individual parameters
+	* @return	bool	True if the query successfully executed
+	*/
+	public function sendPreparedQuery($query, $param1 = array()) {
+		if(is_array($param1)) {
+			$args = $param1;
+		} else {
+			$args = func_get_args();
+			array_shift($args);
+		}
+		
+		$statement = $this->getBoundPreparedStatement($sql, $args);
+		if($statement->execute()) {
+			$statement->get_result();
+			
+			$output = ($statement->affected_rows > 0);
+			
+			$statement->free_result();			
+			return $output;
+		} else {
+			throw new DatabaseQueryException("Invalid query structure. Errorno: " . $statement->errno .
+				". Error text: " . $statement->error . " for query . " . $query);
+				
+			return false;
+		}
+	}
+	
 	/** 
 	* Database Query
 	* Returns all results as an associative array
@@ -170,6 +204,38 @@ class MySQLiDatabase implements Database {
 	* @return	Array of results
 	*/
 	private function getPreparedQueryInternal($query, $args, $assoc) {
+		$statement = $this->getBoundPreparedStatement($sql, $args);
+		if($statement->execute()) {
+			if($assoc) {
+				$type = MYSQLI_ASSOC;
+			} else {
+				$type = MYSQLI_NUM;	
+			}
+			
+			// If you get an error here, you might need mysqlnd
+			$result = $statement->get_result();
+			
+			$output = $result->fetch_all($type);
+			
+			$result->free();
+			
+			return $output;
+		} else {
+			throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->statement->errno .
+				". Error text: " . $statement->mySQLi->error . " for query . " . $query);
+		}
+	}
+	
+	/**
+	* Get a prepared query
+	*
+	* @throws	DatabaseQueryException	When a query fails
+	* @param	string		sql		The SQL with which to build the prepared query
+	* @return	mysqli_stmt		The prepared query
+	*/
+	private function getBoundPreparedStatement($sql, $args) {
+		self::$queryCount++;
+		
 		$statement = $this->mySQLi->prepare($query);
 		if($statement instanceof mysqli_stmt) {
 			$size = count($args);
@@ -197,25 +263,13 @@ class MySQLiDatabase implements Database {
 				}
 			}
 			
-			if($statement->execute()) {
-				if($assoc) {
-					$type = MYSQLI_ASSOC;
-				} else {
-					$type = MYSQLI_NUM;	
-				}
-				
-				// If you get an error here, you might need mysqlnd
-				$result = $statement->get_result();
-				
-				return $result->fetch_all($type);
-			} else {
-				throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->statement->errno .
-					". Error text: " . $statement->mySQLi->error . " for query . " . $query);
-			}
+			
 		} else {
 			throw new DatabaseQueryException("Invalid query structure. Errorno: " . $this->mySQLi->errno .
 				". Error text: " . $this->mySQLi->error . " for query . " . $query);
 		}
+		
+		return $statement;
 	}
 	
 	/** 
