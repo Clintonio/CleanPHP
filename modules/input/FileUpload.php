@@ -151,7 +151,7 @@ class FileUpload {
 				throw new FileNotFoundException(new String('Could not move uploaded file, it does not exist'));
 			}
 		} catch (ErrorException $e) {
-			throw new IOException(new String('Could not upload file, see cause exception', $e));
+			throw new IOException('Could not upload file, see cause exception', $e);
 		}
 		
 		ErrorHandler::reset();
