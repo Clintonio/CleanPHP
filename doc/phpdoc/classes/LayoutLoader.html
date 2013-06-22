@@ -77,6 +77,7 @@ which will match a subdirectory of the language's code, ie;
 &lt;LAYOUT_DIR&gt;/&lt;LANG_CODE&gt;/&lt;FILE&gt;.&lt;EXT&gt;"><span class="description">Get a layout from this content with an optional language parameter
 which will match a subdirectory of the language's code, ie;
 &lt;LAYOUT_DIR&gt;/&lt;LANG_CODE&gt;/&lt;FILE&gt;.&lt;EXT&gt;</span><pre>getLayout()</pre></a></li>
+<li class="method public "><a href="#method_layoutExists" title="layoutExists :: Check if the given layout exists"><span class="description">Check if the given layout exists</span><pre>layoutExists()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -149,6 +150,24 @@ which will match a subdirectory of the language's code, ie;
 <h3>Returns</h3>
 <div class="subelement response">
 <code><a href="../classes/Layout.html">\Layout</a></code>A layout file corresponding to the parameters</div>
+</div></div>
+</div>
+<a id="method_layoutExists"></a><div class="element clickable method public method_layoutExists" data-toggle="collapse" data-target=".method_layoutExists .collapse">
+<h2>Check if the given layout exists</h2>
+<pre>layoutExists(string $layoutName, \Language $lang) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$layoutName</h4>
+<code>string</code><p>layoutName	The name of the layout file to load</p></div>
+<div class="subelement argument">
+<h4>$lang</h4>
+<code><a href="../classes/Language.html">\Language</a></code><p>lang		The language directory, default: none</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the layout exists</div>
 </div></div>
 </div>
 <h3>

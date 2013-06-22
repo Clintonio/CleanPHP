@@ -1510,7 +1510,7 @@ injections</description>
   <file path="modules/database/mysqli/MySQLiDatabase.php" hash="4e49e2ca7c532fb251d304624f50f695" package="Default">
     <docblock line="2">
       <description>MySQLi class wrapper for the Database interface</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Clinton Alexander"/>
       <tag line="2" name="version" description="3.0"/>
     </docblock>
@@ -1523,7 +1523,7 @@ injections</description>
         <description>Each database instance holds onto a single connection
 and acts as a wrapper to MySQLi intending to
 abstract out the PHP mess</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="database\mysqli"/>
       </docblock>
       <property final="false" static="true" visibility="private" line="24" namespace="global" package="Default">
@@ -1531,7 +1531,7 @@ abstract out the PHP mess</description>
         <default>array()</default>
         <docblock line="21">
           <description>A store of all queries run during this session</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="true" visibility="private" line="28" namespace="global" package="Default">
@@ -1539,15 +1539,15 @@ abstract out the PHP mess</description>
         <default>0</default>
         <docblock line="25">
           <description>A counter of the number of queries run during this session</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="33" namespace="global" package="Default">
         <name>$mySQLi</name>
-        <default></default>
+        <default/>
         <docblock line="30">
           <description>Current MySQLi connection</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="database\mysqli">
@@ -1555,7 +1555,7 @@ abstract out the PHP mess</description>
         <full_name>__construct</full_name>
         <docblock line="35">
           <description>Create a new MySQLi database with the given connection details</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="35" name="param" description="Username for database" type="String" variable="$username">
             <type by_reference="false">String</type>
           </tag>
@@ -1571,17 +1571,17 @@ abstract out the PHP mess</description>
         </docblock>
         <argument line="43">
           <name>$username</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
           <name>$dbname</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="43">
@@ -1610,7 +1610,7 @@ Intended for non-select queries.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="66">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1637,7 +1637,7 @@ the second parameter or as n parameters.</description>
         </docblock>
         <argument line="104">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="104">
@@ -1652,7 +1652,7 @@ the second parameter or as n parameters.</description>
         <docblock line="128">
           <description>Database Query
 Returns all results as an associative array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="128" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1665,7 +1665,7 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="136">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1675,7 +1675,7 @@ Returns all results as an associative array</description>
         <docblock line="140">
           <description>Database query
 Returns a numeric array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="140" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1688,7 +1688,7 @@ Returns a numeric array</description>
         </docblock>
         <argument line="148">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1716,7 +1716,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="164">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="164">
@@ -1749,7 +1749,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="186">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="186">
@@ -1763,7 +1763,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         <full_name>getPreparedQueryInternal</full_name>
         <docblock line="197">
           <description>The internal generalise query processing</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="197" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1782,17 +1782,17 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="206">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="206">
           <name>$args</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="206">
           <name>$assoc</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1801,7 +1801,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         <full_name>getBoundPreparedStatement</full_name>
         <docblock line="229">
           <description>Get a prepared query</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="229" name="throws" description="When a query fails" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1814,12 +1814,12 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="236">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="236">
           <name>$args</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1829,7 +1829,7 @@ Requires PHP 5.3 or higher and mysqlnd.&lt;/p&gt;</long-description>
         <docblock line="283">
           <description>Database Query
 Returns all results as an associative array</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="283" name="throws" description="When a query is invalid" type="\DatabaseQueryException">
             <type by_reference="false">\DatabaseQueryException</type>
           </tag>
@@ -1845,12 +1845,12 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="292">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="292">
           <name>$assoc</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1859,7 +1859,7 @@ Returns all results as an associative array</description>
         <full_name>getAffectedRows</full_name>
         <docblock line="339">
           <description>Returns the amount of affected rows of the last query</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="339" name="return" description="Count" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1870,7 +1870,7 @@ Returns all results as an associative array</description>
         <full_name>getInsertID</full_name>
         <docblock line="353">
           <description>Gets the last inputted ID</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="353" name="return" description="Last ID or NULL" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1881,7 +1881,7 @@ Returns all results as an associative array</description>
         <full_name>getMySQLiObject</full_name>
         <docblock line="366">
           <description>Get the MySQLi object related to this database abstractor</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="366" name="return" description="related to this abstracted database" type="Object">
             <type by_reference="false">Object</type>
           </tag>
@@ -1892,7 +1892,7 @@ Returns all results as an associative array</description>
         <full_name>getTotalQueryCount</full_name>
         <docblock line="375">
           <description>Get the number of queries executed on MySQLi databases</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="375" name="return" description="of queries executed on MySQLi databases" type="\Number">
             <type by_reference="false">\Number</type>
           </tag>
@@ -1903,7 +1903,7 @@ Returns all results as an associative array</description>
         <full_name>getAllQueries</full_name>
         <docblock line="384">
           <description>Get the array of query strings executed on all MySQLi databases</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="384" name="return" description="of query string executed" type="Array">
             <type by_reference="false">Array</type>
           </tag>
@@ -1914,7 +1914,7 @@ Returns all results as an associative array</description>
         <full_name>clean</full_name>
         <docblock line="397">
           <description>Sanitises the given input</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="397" name="param" description="Data to be sanitised" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
@@ -1924,7 +1924,7 @@ Returns all results as an associative array</description>
         </docblock>
         <argument line="403">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1933,7 +1933,7 @@ Returns all results as an associative array</description>
         <full_name>closeConnection</full_name>
         <docblock line="407">
           <description>Close the connection to the database</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="407" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
@@ -2368,7 +2368,7 @@ This overwrites any current exception handler</description>
       </method>
     </class>
   </file>
-  <file path="modules/input/FileUpload.php" hash="2b8a549727ed77f444cb92a29640ad50" package="Default">
+  <file path="modules/input/FileUpload.php" hash="7eef5ccc9973c22fa8fd9babd00cd563" package="Default">
     <docblock line="2">
       <description>An abstract representation of a temporarily uploaded
 file uploaded via the POST file upload mechanism</description>
@@ -3121,15 +3121,15 @@ oriented manner.</description>
       <full_name>\Layout</full_name>
       <docblock line="13">
         <description>PHP Templating layout class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="13" name="package" description="layout"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="22" namespace="global" package="Default">
         <name>$file</name>
-        <default></default>
+        <default/>
         <docblock line="19">
           <description>The file for this layout</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="26" namespace="global" package="Default">
@@ -3137,7 +3137,7 @@ oriented manner.</description>
         <default>array()</default>
         <docblock line="23">
           <description>Variables for this layout</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="layout">
@@ -3145,14 +3145,14 @@ oriented manner.</description>
         <full_name>__construct</full_name>
         <docblock line="28">
           <description>Create a new layout with the given file</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="28" name="param" description="file&#9;The layout file" type="\File" variable="$file">
             <type by_reference="false">\File</type>
           </tag>
         </docblock>
         <argument line="33">
           <name>$file</name>
-          <default></default>
+          <default/>
           <type>\File</type>
         </argument>
       </method>
@@ -3172,12 +3172,12 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="44">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="44">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3193,7 +3193,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="53">
           <name>$variables</name>
-          <default></default>
+          <default/>
           <type>array</type>
         </argument>
       </method>
@@ -3202,7 +3202,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>isVariableSet</full_name>
         <docblock line="57">
           <description>Check if a variable has been set already</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="param" description="name&#9;The name of the variable you wish to see if has been set" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
@@ -3212,7 +3212,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="63">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3221,7 +3221,7 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>display</full_name>
         <docblock line="67">
           <description>Output this template by including the template</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="67" name="throws" description="If the file cannot be found" type="\FileNotFoundException">
             <type by_reference="false">\FileNotFoundException</type>
           </tag>
@@ -3232,11 +3232,11 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>offsetExists</full_name>
         <docblock line="91">
           <description>Alias for isVariableSet, used in ArrayAccess</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
         <argument line="94">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3245,16 +3245,16 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>offsetSet</full_name>
         <docblock line="98">
           <description>Alias for addVariable, used in array access</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
         <argument line="101">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="101">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3263,11 +3263,11 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>offsetGet</full_name>
         <docblock line="105">
           <description>Not supported, required for interface, this may change, do not rely on this behaviour</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
         <argument line="108">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3276,11 +3276,11 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
         <full_name>offsetUnset</full_name>
         <docblock line="112">
           <description>Not supported, required for interface, this may change, do not rely on this behaviour</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
         <argument line="115">
           <name>$offset</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -3293,11 +3293,11 @@ _file, standard PHP reserved names.&lt;/p&gt;</long-description>
       <error line="112" code="50015">Argument $offset is missing from the Docblock of offsetUnset()</error>
     </parse_markers>
   </file>
-  <file path="modules/layout/LayoutLoader.php" hash="04770741a7871db6c9feac3d67749181" package="Default">
+  <file path="modules/layout/LayoutLoader.php" hash="4327b82f7d32a0a109f94a700b3765f0" package="Default">
     <docblock line="2">
       <description>A class for loading layout objects from a common directory with language
 based directory support.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Clinton Alexander"/>
     </docblock>
     <class final="false" abstract="false" namespace="global" line="16" package="Default">
@@ -3307,22 +3307,22 @@ based directory support.</description>
       <docblock line="12">
         <description>A layoutloader which can locate layouts based on constructor variables
 abstracting the need to rewrite multiple paths if a layout directory moves</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <property final="false" static="false" visibility="private" line="20" namespace="global" package="Default">
         <name>$ext</name>
-        <default/>
+        <default></default>
         <docblock line="17">
           <description>The file extention we are loading layouts from</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="24" namespace="global" package="Default">
         <name>$layoutDir</name>
-        <default/>
+        <default></default>
         <docblock line="21">
           <description>The directory to search for layous in</description>
-          <long-description/>
+          <long-description></long-description>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="Default">
@@ -3331,7 +3331,7 @@ abstracting the need to rewrite multiple paths if a layout directory moves</desc
         <docblock line="26">
           <description>Create a new layout loader, with the given layout extention, and an optional
 layout directory (will default to current directory)</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="26" name="param" description="ext&#9;&#9;&#9;The layout extention, default &quot;php&quot;" type="string" variable="$ext">
             <type by_reference="false">string</type>
           </tag>
@@ -3350,33 +3350,60 @@ layout directory (will default to current directory)</description>
           <type>\Folder</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="52" package="Default">
-        <name>getLayout</name>
-        <full_name>getLayout</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="Default">
+        <name>layoutExists</name>
+        <full_name>layoutExists</full_name>
         <docblock line="42">
-          <description>Get a layout from this content with an optional language parameter
-which will match a subdirectory of the language's code, ie;
-&lt;LAYOUT_DIR&gt;/&lt;LANG_CODE&gt;/&lt;FILE&gt;.&lt;EXT&gt;</description>
-          <long-description/>
-          <tag line="42" name="throws" description="" type="\FileNotFoundException">
-            <type by_reference="false">\FileNotFoundException</type>
-          </tag>
+          <description>Check if the given layout exists</description>
+          <long-description></long-description>
           <tag line="42" name="param" description="layoutName&#9;The name of the layout file to load" type="string" variable="$layoutName">
             <type by_reference="false">string</type>
           </tag>
           <tag line="42" name="param" description="lang&#9;&#9;The language directory, default: none" type="\Language" variable="$lang">
             <type by_reference="false">\Language</type>
           </tag>
-          <tag line="42" name="return" description="A layout file corresponding to the parameters" type="\Layout">
+          <tag line="42" name="return" description="True if the layout exists" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$layoutName</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="49">
+          <name>$lang</name>
+          <default>NULL</default>
+          <type>\Language</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="Default">
+        <name>getLayout</name>
+        <full_name>getLayout</full_name>
+        <docblock line="61">
+          <description>Get a layout from this content with an optional language parameter
+which will match a subdirectory of the language's code, ie;
+&lt;LAYOUT_DIR&gt;/&lt;LANG_CODE&gt;/&lt;FILE&gt;.&lt;EXT&gt;</description>
+          <long-description></long-description>
+          <tag line="61" name="throws" description="" type="\FileNotFoundException">
+            <type by_reference="false">\FileNotFoundException</type>
+          </tag>
+          <tag line="61" name="param" description="layoutName&#9;The name of the layout file to load" type="string" variable="$layoutName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="61" name="param" description="lang&#9;&#9;The language directory, default: none" type="\Language" variable="$lang">
+            <type by_reference="false">\Language</type>
+          </tag>
+          <tag line="61" name="return" description="A layout file corresponding to the parameters" type="\Layout">
             <type by_reference="false">\Layout</type>
           </tag>
         </docblock>
-        <argument line="52">
+        <argument line="71">
           <name>$layoutName</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="52">
+        <argument line="71">
           <name>$lang</name>
           <default>NULL</default>
           <type>\Language</type>
