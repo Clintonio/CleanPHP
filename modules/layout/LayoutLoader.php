@@ -40,6 +40,25 @@ class LayoutLoader {
 	}
 	
 	/**
+	* Check if the given layout exists
+	*
+	* @param	string		layoutName	The name of the layout file to load
+	* @param	Language	lang		The language directory, default: none
+	* @return	bool		True if the layout exists
+	*/
+	public function layoutExists($layoutName, Language $lang = NULL) {
+		$layoutFileName = $layoutName . '.' . $this->ext;
+		if($lang instanceof Language) {
+			$langDir = $lang->getLanguageCode();
+			$layoutFile = $this->layoutDir->getFolder($langDir)->getFile($layoutFileName);
+		} else {
+			$layoutFile = $this->layoutDir->getFile($layoutFileName);
+		}
+		
+		return $layoutFile->exists();
+	}
+	
+	/**
 	* Get a layout from this content with an optional language parameter
 	* which will match a subdirectory of the language's code, ie;
 	* <LAYOUT_DIR>/<LANG_CODE>/<FILE>.<EXT>
