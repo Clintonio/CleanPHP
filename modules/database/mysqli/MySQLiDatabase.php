@@ -401,7 +401,7 @@ class MySQLiDatabase implements Database {
 	* @return	String		Sanitised data
 	*/
 	public function clean($string) {
-		return new String($this->mySQLi->real_escape_string((string) $string));	
+		return new CoreString($this->mySQLi->real_escape_string((string) $string));	
 	}
 	
 	/**

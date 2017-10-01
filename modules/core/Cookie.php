@@ -64,7 +64,7 @@ class Cookie {
 			$value = $this->value; 	
 		}
 		
-		return new String($value);
+		return new CoreString($value);
 	}
 	
 	/**

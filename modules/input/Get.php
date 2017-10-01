@@ -27,12 +27,12 @@ class Get {
 			if(is_array($value)) {
 				return $value;
 			} else {
-				return new String($value);
+				return new CoreString($value);
 			}
 		} else {
 			// Not in either, return default
 			if(is_string($default)) {
-				return new String($default);	
+				return new CoreString($default);	
 			} else {
 				return $default;
 			}

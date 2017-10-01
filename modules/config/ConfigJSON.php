@@ -73,9 +73,9 @@ class ConfigJSON implements Config {
 		$file = (string) $file;
 		
 		if(file_exists($file) && !@unlink($file)) {
-			throw new IOException(new String('Could not remove existing file'));
+			throw new IOException(new CoreString('Could not remove existing file'));
 		} else if(!@file_put_contents($file, '{}')) {
-			throw new IOException(new String('Could not create new file'));
+			throw new IOException(new CoreString('Could not create new file'));
 		} else {
 			return new ConfigJSON($file);
 		}

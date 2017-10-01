@@ -39,7 +39,7 @@ class Session {
 			session_start();	
 		}
 		
-		self::$ip = new String(getenv('REMOTE_ADDR'));
+		self::$ip = new CoreString(getenv('REMOTE_ADDR'));
 		
 		self::updateToken();
 		
@@ -60,7 +60,7 @@ class Session {
 	* @return	String		Session token
 	*/
 	public static function getToken() {
-		return new String($_SESSION[self::TOKEN_INDEX]);
+		return new CoreString($_SESSION[self::TOKEN_INDEX]);
 	}
 	
 	/**
@@ -90,7 +90,7 @@ class Session {
 	* @param	string 	token	Value to check against
 	*/
 	public static function isTokenValid($token) {
-		$token = new String($token);
+		$token = new CoreString($token);
 		return ($token->equals(self::getToken()));
 	}
 }

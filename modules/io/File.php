@@ -26,7 +26,7 @@ class File {
 	* @param	string		path	Path of the file we are representing
 	*/
 	public function __construct($path) {
-		$this->path = new String($path);
+		$this->path = new CoreString($path);
 	}
 	
 	/**

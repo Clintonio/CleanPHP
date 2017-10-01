@@ -190,7 +190,7 @@ class Debug {
 					$args[] = $a;
 					break;
 				case 'string':
-					$str = new String($a);
+					$str = new CoreString($a);
 					$a = htmlspecialchars($str->trunc(64, '...'));
 					$args[] ="\"$a\"";
 					break;

@@ -35,7 +35,7 @@ class Folder extends File {
 	* @param	string		folder		Folder path
 	*/
 	public function __construct($folder) {
-		$folder = new String($folder);
+		$folder = new CoreString($folder);
 		if(!$folder->substring($folder->length() - 1, 1)->equals('/')) {
 			$folder = $folder->append('/');	
 		}

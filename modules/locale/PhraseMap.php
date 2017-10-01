@@ -172,7 +172,7 @@ class PhraseMap implements ArrayAccess {
 		// or a default exists we will use that if no other does
 		$patterns 		= array('/<locale[\s]+code=[\'"][A-Z\-0-9]+[\'"]([\s]+default=[\'"][A-Z\-0-9]+[\'"])?[\s]*>/i', '/<\/locale>/i');
 		$replacements 	= array('','');
-		$phrase 		= new String(trim(preg_replace($patterns, $replacements, $elem->asXML())));
+		$phrase 		= new CoreString(trim(preg_replace($patterns, $replacements, $elem->asXML())));
 		
 		$this->phrases[$name][$locale] = $phrase;
 		
